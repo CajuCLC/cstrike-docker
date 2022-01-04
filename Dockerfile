@@ -20,11 +20,11 @@ USER steam
 ADD files/steam_appid.txt steam_appid.txt
 
 # Add maps
-ADD maps/maps/* cstrike/maps/
-ADD maps/gfx/* cstrike/gfx/
-ADD maps/overviews/* cstrike/overviews/
-ADD maps/sound/* cstrike/sound/
-ADD maps/sprites/* cstrike/sprites/
+COPY maps/maps/* cstrike/maps/
+COPY maps/gfx/* cstrike/gfx/
+COPY maps/overviews/* cstrike/overviews/
+COPY maps/sound/* cstrike/sound/
+COPY maps/sprites/* cstrike/sprites/
 ADD files/mapcycle.txt cstrike/mapcycle.txt
 
 # Add default config
