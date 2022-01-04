@@ -15,11 +15,16 @@ RUN ./steamcmd.sh +login anonymous +force_install_dir ../cstrike +app_update 10 
 RUN ./steamcmd.sh +login anonymous +force_install_dir ../cstrike +app_update 90 validate +quit
 
 WORKDIR ${CSTRIKE}
+USER steam
 
 ADD files/steam_appid.txt steam_appid.txt
 
 # Add maps
-ADD maps/ cstrike/
+ADD maps/* cstrike/maps/
+ADD gfx/* cstrike/gfx/
+ADD overviews/* cstrike/overviews/
+ADD sound/* cstrike/sound/
+ADD sprites/* cstrike/sprites/
 ADD files/mapcycle.txt cstrike/mapcycle.txt
 
 # Add default config
