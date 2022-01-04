@@ -1,0 +1,363 @@
+# Polish version Translated by 
+# Zipper < Zipper@inetia.pl >
+# komentarze mile widziane
+#
+# All Bot Chat Messages are stored here
+# All comments start with a "#" char
+# You can write as much comments as you like, but
+# please avoid using tabs, whitespaces and blank lines
+# (they will be parsed out but you never know!)
+# Also be sure that a Line doesn't exceed 80 chars
+# (including carriage return)
+#
+# Messages for each Type of Chat begin with a marker
+# enclosed in []
+# Marker Types:
+# [BOMBPLANT] Holds the Messages for the Counter Terrorists
+#	      if a Bomb got planted
+# [KILLED]    Bots say this Message if they killed somebody
+# [DEADCHAT]  Bots say these Lines if they are dead and in
+#	      Spectator Mode
+#
+# Maybe more Message types will be added in the future...
+#
+#
+#
+#
+# Counter Messages for Bomb planted:
+# Minimum Number is 1
+#
+
+[BOMBPLANT]
+
+Jeeezussss Marriaa, znowu!
+Rozwalcie cos innego, mendy!
+Ostatnio potrzebowalem az 5s. zeby ja znalezc i rozbroic...
+Ciekawe... to byl czerwony czy niebieski kabel... ?
+Ja uciekam :)
+Kurwa, bombe podlozyli!
+...I moje serce zrobilo booom :)
+#
+#
+#
+#
+#
+#
+# Messages after killing somebody:
+# Minimum Number is 1
+# For the %v the name of the victim will
+# be inserted
+#
+
+[KILLED]
+
+%v, Jestes zbyt cienki !
+Sory, %v. Wszedles mi w droge.
+Niezle latasz, %v.
+Gdzie ty masz oczy %v ?!?!
+Powiedz czesc mojemu malemu przyjacielowi, %v :)
+Musialem to zrobic, %v. Rozumiesz?
+Trzeba bylo uciekac poki jeszcze mogles, %v.
+Zawsze bylem lepszy, %v. Zawsze.
+Pewnie nie cierpisz gdy tak sie dzieje, %v?
+To cie nauczy, %v !
+No wiesz co, %v! Tym razem prawie mnie zraniles.
+Ha...ha!
+Jestes niczym, %v. Zupelnie niczym.
+%v Martwie sie o ciebie...
+Przykro mi %v, moj Headshot Script jest lepszy niz twoj.
+#
+#
+#
+#
+#
+#
+#
+# Chat Messages when dead and bored
+# !!Minimum Number is 9!!
+#
+
+[DEADCHAT]
+
+Rzygac mi sie chce jak patrze na tych debili.
+Czy aby nie czas na zmiane mapki?
+Kamperzy jebani!
+NUUUUDA!
+Jak sie runda zacznie to krzyczcie :)
+Mogli by sie sprezyc.
+Napewno wygramy :)
+Bycie Spectator'em jest do bani...
+Chcialbym, aby ktos dobry przyszedl grac.
+To bolalo...
+Fajna zabawa.
+Nie sadzilem, ze mozna grac az tak zle.
+Czemu wszyscy wciaz usiluja mnie zabic? :)
+Moj nadgarstek juz boli...
+Ale ch... mapka...
+Mam zly dzien
+Smierc kamperom!
+Przestana w koncu kampowac?
+Lepszy jestem w Quake 3, Z pewnoscia!
+Nie sadzicie, ze AndroidBot jest lepszy?
+Jestem pewny, ze ten facet uzywa AIMBOT'a
+Botman to pewnie fajny facet...
+Glupie Boty!
+Co za idioci!
+Moja siostrzyczka gra lepiej niz oni!
+Ale jestem zmeczony...
+Naprawde musze juz isc spac.
+Zwykle nie gram tak zle!
+Tylko snajperzyc potrafia...
+W nastepnej rundzie im dowale.
+Zaglosujcie na zmiane mapki !!!
+Ja tez chce taka pukawke :)
+Zablokowal sie juz jakis bot?
+Boooooom !!! *lol*
+Czy w grze sa boty?
+Dasz mi swoj Headshot Script?
+W nastepnej rundzie musimy trzymac sie razem.
+Nie wychodzi mi chodzenie po drabinach...
+O co chodzi z tymi klanami? Zupelnie tego nie rozumiem...
+Znacie Jumbot'a? Naprawde zajebisty!
+Kurwa mac!!
+Chyba musze sobie myszke przeczyscic.
+IMHO NNBot jest o wiele lepszy niz RealBot.
+Ide na sztyfta, brb...
+Czemu dolaczyli pojazdy w CS?
+Musialem przeladowac, a on mi strzelil w glowe!!
+
+# Start of the "dynamic" replies from here
+# After each @KEY Tag you need to specify the
+# keywords in quotation marks and uppercase. You can
+# have several keywords (aliases) each separated by a comma.
+# After the keywords line, the answers or messages to this
+# special keyword need to be given. In theory there can be an unlimited
+# number of answers of course you should care about the used memory ;)    
+
+[REPLIES]
+
+@KEY " ZNOWU "
+%s, historia sie powtarza - nieprawdaz ?
+I jestem pewny, ze to nie bylo ostatni raz...
+Jest sposob, odejdz ,hey...
+
+@KEY "AIMBOT", "WALLHACK"
+%s, czatujesz ?
+Nawet PunkBuster nie umie wykryc ktoregos z nich...
+Nie mozesz byc pewny dnia gdy ktos dobry gra i czatuje
+AIMBOT'y sa fajne, zamknij sie %s !
+
+
+@KEY " ZAWSZE "
+Tak nie jest zawsze, %s !
+Wlasnie to lubie :-)
+Przestan %s, to bylo dopiero drugi raz !
+
+@KEY "ANDROID"
+Ach tak, to by³o kiedys...
+%s, to byl tez twoj pierwszy BOT ?
+Czy wie ktos, co robi dzisiaj DaTa ?
+Nie mozesz grac Androidem na %m, nieprawdaz ?
+
+
+@KEY "BOTMAN"
+Kim jest ten Botman, o ktorym wszyscy mowia ???
+Bez jego kodow zrodlowych wiele botow nie mogloby istniec !
+Bedzie cudownie jak HPB-Bot bedzie skonczony...
+Grasz jeszcze jego HPB-Bot'em ?
+
+@KEY " BOT ", "BOTY"
+Dlaczego zawsze mowicie o nich ?
+Nie ma botow na tym serwerze %s, mowie Ci !
+Boty sy fajne !!!
+Jaki jest twoj ulubiony bot, %s ?
+Jesli chcesz aprogramowac swojego wlasnego, zapytaj Botmana !
+Boty zawsze beda botami - powiniene zaczac grac z ludzmi .
+Najlepsze boty sa ciagle bardzo glupie !
+
+
+@KEY "KAMPER", "KAMPOWA"
+Naprawde nienawidze kamperow !
+Kampiace skurwysyny !
+Nie kampujesz czasem %s ?
+Kampowanie jest czesto jedyna opcja do wygrania...
+Tak , dobrze 'ole Camper-Strike...
+
+@KEY "CHEAT", "CZAT"
+Czatujacy rujnuja gre !
+Zauwazam, ze %f czatuje .
+Nienawidze czeaterow !
+Czatujace skurwysyny !
+Dlaczego tak wielu ludzi czatuje ?
+Punkbuster moglby pomoc...
+Graj z botami - one nie czatuja !
+
+@KEY " KLAN "
+O co chodzi z tymi klanami ?
+Bylem kiedys raz w klanie, ale byl piekielnie trudny.
+Z ktorego klanu jestes, %s?
+Czy chcesz wejsc do naszego klanu %s?
+Granie w klanie jest dla ludzi , ktorzy nie maja zycia...
+
+@KEY " CS ", "COUNTERSTRIKE", "COUNTER-STRIKE", "CSTRIKE"
+Counter-Strike urodzil sie dawno ...
+%s jak dlugo grasz w CS ?
+Zbyt wielu ludzi online chatuja w CS
+
+@KEY "KURWA", "DAMN", "PISS"
+Nie obiecuj, %s !
+Przyjemniaczek %s !
+Tak, masz racje ,, %s. Ale teraz zamknij sie !
+Kontroluj swoj jezyk, %s!
+%s, nie uzywaj znowu tego slowa - to niepolityczne !
+
+
+@KEY "HEHE", "HAHA", "LOL", ":)"
+Jestem przekonany, ze jestes co najmniej swoim fanem, %s...
+Odwal sie, jesli jeszcze mozesz , %s!
+Bardzo pieknie wymyslone, %s ...
+Dobry %s!
+
+@KEY "MYSLE ", "WIERZE "
+Zbyt wiele myslisz, %s ;-)
+I mysle ze powinienes zamknac sie i grac!
+Rzeczywiscie w to wierzysz, %s?
+Wiec co wymysliles ?
+Prosze daj mi twoj numer ICQ, %s
+
+@KEY "JOEBOT"
+Tak, JoeBot nie jest zly...
+JoeBot mily, gdy odszedl NNBot ...
+Marze zeby neutralna siec byla dostepna.
+Wiec myslisz, ze JoeBot odlatuje ?
+
+@KEY "JUMBOT"
+JB ? Byl dobry wstecz, ale ParaBot jest wiele lepszy teraz !
+JB byl jak MOD, anie dolaczany DLL
+
+
+@KEY " MUSIC ", " BAND "
+Uhm... Nie dbam o to tak dlugo, jak nie jest to komerycjne gowno.
+Umm...I don't care as long as it's no commercial shit
+Uzywasz ciagle jeszcze Napstera %s ?
+Ma ktos dobre linki do MP3 ? 
+
+
+@KEY "NNBOT"
+Zbyl zly NNBot nie jest kontynuowany...
+Sprobuj JoeBot'a jesli lubisz NNBot'a, %s.
+%s, slyszales o nowym MOD'zie Ditlew'a ?
+
+@KEY "PARABOT"
+ParaBot jest najfajniejszym Botem dla DeathMatcha jakim gralem. 
+%s, powinienes sprobowac ParaBota'a, jest swietny!
+Juz bylo mowione, ze nie ma lepszego Bota dla CS niz ParaBot.
+Slyszalem, ze obsluguje juz 3 MOD'y dla HL.
+
+@KEY " PING ", "LAGG"
+Zawsze mam PING 5, jest na DSL !!
+Moje pieprzone polaczenie ...
+Skad jestes , %s ?
+Graj offline, jesli masz slabe polaczenie.
+To zmien swojego provider'a $s!
+
+@KEY "POD-BOT", " POD ", "PODBOT"
+Slyszalem, ze to jest najlepszy BOT dla CS, nie jestem pewien gdzie...
+Ludzie mowia ,ze one uzywaja jakis hakow do scian, jest to prawda ?
+
+@KEY "PUNKBUSTER"
+Nie badz Punkiem (support www.punkbuster.com)
+Zawsze smieje sie , gdy uzywam PunkBustera.
+
+@KEY "Q3", "QUAKE"
+Q3 byl zle oswietlony, w/g mnie...
+Half-Life ciagle rozwija sie $s !
+Slyszales o DMC, %s? ;-)
+
+@KEY "REALBOT"
+Czy jest jakis dobry, %s ?
+Czy RB ciagle jest bez waypointow $s ?
+Tak, pamietam. Pierwszy bot bez waypointow, prawda ?
+Slyszalem, ze RB probuje cos jak ParaBot ?!?
+
+@KEY "SCRIPT"
+Skrypty sa dla przegranych.
+%s, naprawde nie wiesz, jak przyciskac klawisze ? 
+Czy wiecie czy skrypty do kupowania sa dostepne na forum?
+
+
+@KEY "SERVER", "SERWER"
+Zawsze jestem na tym serwerze.
+Ja z przyjaciolmi gram duzo na tym serwerze.
+Wierze, ze ten serwer ma dobra rotacje map.
+
+@KEY "SORRY" , "PRZYKRO"
+Tak, wszyscy cos robia , a potem mowia sorry!
+Wyjatkowo to mi nie pomoze teraz, %s !
+Nastepnym razem lepiej pomysl zanim zaczniesz cos robic, %s!
+Mnie rowniez przykro !!!
+Nie wiesz jak bedzie ci przykro, jak bedziesz to robil...
+
+@KEY "TEAMKILL", " TK "
+Teamkillersi powinni byc usuniecci z tego serwera.
+Kto jest teamkillerem $s?
+Lubie karac swoich teamkillerow, uhaha !!
+Czy %t zabil cie? On czesto to robi !
+Gdzie jest Admin ? Powinien uwazac na to ...
+%s natychmiast siadz naprzeciw %r i odplac mu z powrotem !
+
+@KEY "TIRED", "SLEEP", "ZMECZONY", "SPAC"
+Idz do lozka, %s .
+Masz juz dosz, %s...
+Czy ktos chce kawy?
+Oh chodz %s ! Jeszcze jedna runda wiecej ...
+
+@KEY "VOTE", "MAPCHANGE", "GLOSUJ", "GLOSO"
+No, lubie %m .
+To wlasnie dlatego, ze zawsze jestes martwy %s ?
+%m jest swietna, zamknijcie sie!
+Tak. Powinnismy glsowac teraz.
+
+
+@KEY "CO ", "DLACZEGO ", "GDZIE ", "SKAD", "KTO", "KIEDY ", "JAK"
+Nigdy sie nie dowiesz, %s !
+Tak to naprawde wazne %s...
+Odpowiedz jest na zewnatrz, %s ;-)
+Nie mam pomyslu , %s.
+O czym myslisz %s?
+Nie chce Ci powiedziec, %s !
+Znajdz sie sam na zewnatrz, %s!
+Dobre pytanie , %s!
+
+
+[UNKNOWN]
+Bla bla bla...
+Co powiedziales, %s ?
+Skoncentuj sie na grze, %s !
+Chatowanie z Toba %s jest tak wspaniale!
+To czatowanie powoduje wywalanie mnie !
+Nie spamuj, %s !
+Jak znajdujesz czas na wypisywanie takich glupot ???
+Tak, %s. Masz racje !
+Nie ma mowy , %s ...
+Skad jestes , %s?
+Nie moge uwierzyc, jak mozesz grac i pisac jednoczesnie, %s !
+Jestes pewny , %s?
+Rozumiem , %s !
+Dlaczego zawsze wszyscy mowia to samo ???
+Co za kretyn mowi o tym, %s?
+Hey - zamknik sie i graj , %s !
+Mowiles cos , %s ?
+Kto to powiedzial ?
+Oh , naprawde?
+Pieknie, %s !
+Jestem w najlepszym klanie w moim kraju !!!
+Nienawidze tych glupich komentarzy, %s !
+Wie ktos, jak zrobic dlugi skok ?
+O co chodzi?
+Jestem naprawde wsciekly...
+Masz numer ICQ , %s ?
+Jestem dzis zbyt wolny...
+Chcecie grac czy czatowac caly czas ?
+Ja naprawde nie chce tego wiedziec %s
+Rzeczywiscie.

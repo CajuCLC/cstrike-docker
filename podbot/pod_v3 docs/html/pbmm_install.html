@@ -1,0 +1,254 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Installation</title>
+<link rel="stylesheet" type="text/css" href="../index/index.css">
+<!-- ###START: MetaData### -->
+ <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=ISO-8859-1" />
+ <meta name="author" content="SpLoRyGoN & KWo" />
+ <meta http-equiv="ImageToolbar" content="no" />
+ <meta name="MSSmartTagsPreventParsing" content="true" />
+<!-- ###END: MetaData### -->
+
+</head>
+<body>
+<!-- ###START: Body### -->
+<table>
+<!-- ###START: Header Table### -->
+ <tbody><tr>
+  <td id="Banner"><img alt="PODBot MetaMod" src="../index/blank.png"></td>
+  <td>
+   <ul id="MainNav">
+    <li><a href="../index.html">Introduction</a></li>
+    <li><a href="./pbmm_install.html">Installation</a></li>
+    <li><a href="./pbmm_configuration.html">Settings and commands</a></li>
+    <li><a href="./pbmm.html">Usage</a></li>
+    <li><a href="./pbmm_wp_basic.html">Waypoints - Basic</a></li>
+    <li><a href="./pbmm_wp_commonerrors.html">Waypoints - Common errors</a></li>
+    <li><a href="./pbmm_wp_binding.html">Waypoints - Useful keys binding</a></li>
+   </ul>
+  </td>
+  <td>
+   <ul id="MainNav">
+    <li><a href="./pbmm_credits.html">Credits</a></li>
+    <li><a href="./pbmm_versionhistory.html">Version History</a></li>
+    <li><a href="./pbmm_linksfiles.html">Links</a></li>
+   </ul>
+  </td>
+ </tr>
+<!-- ###END: Header Table### -->
+</tbody></table>
+
+<table id="MainContentNavigationTable">
+<!-- ###START: MainContent Navigation Table### -->
+ <tr>
+  <td>
+   <table>
+    <tr>
+     <td>
+      <ul>
+<!-- ###START: MainContent Navigation### -->
+       <li><p class="style_white"><a href="#I">Assuming</a></p></li>
+       <li><p class="style_white"><a href="#II">Retrieving</a></p></li>
+       <li><p class="style_white"><a href="#III">Arranging</a></p></li>
+       <li><p class="style_white"><a href="#IV">Setting</a></p></li>
+       <li><p class="style_white"><a href="#V">Uninstalling</a></p></li>
+<!-- ###END: MainContent Navigation### -->
+      </ul>
+	  </td>
+    </tr>
+   </table>
+  </td>
+
+  <td>
+<!-- ###START: Page Title### -->
+   <span>Installation</span>
+<!-- ###END: Page Title### -->
+  </td>
+
+ </tr>
+<!-- ###END: MainContent Navigation Table### -->
+</table>
+
+<table id="MainContent">
+<!-- ###START: MainContent Table### -->
+ <tr>
+  <td>
+   <table>
+    <tr>
+     <td>
+	<p class="style_note">NOTE:</p><br>
+	This Install procedure is primarily written for podbot, but many other metamod plugins work the same so can be used similarly.<br>
+	plugin.dll should be of the form "plugin_mm.dll" and resides normally in directory as follows.<br><br>
+
+   <ul>
+    <li><a name="I"></a>Assuming
+     <span>
+     We assume:
+      <span>
+      You already have <a href="http://www.steampowered.com/">Steam</a> or CS1.5 installed;<br>
+      You have bought and ran <a href="http://www.counter-strike.net/">Counter-Strike</a> at least once;<br>
+      You are not installing PODBot mm from <a href="http://filebase.bots-united.com/index.php?act=view&id=222">All-In-One package</a><br>
+      You have basic computer knowledge (if not - go ask for help at the <a href="http://forums.bots-united.com/">forums</a>, 
+      but use "search function).<br>
+      You know what is the <font class="style_red_bold">listenserver</font> (the PC when You create a game,
+      You are playing from it and Your friends are able to join the game on Your PC)<br> 
+      and the <font class="style_red_bold">dedicated server</font> (the PC-box You start the game and You can see
+      only the console of it, but You are not playing from this PC).
+     </span>
+    </li>
+
+    <li><a name="II"></a>Retrieving
+     <span>Download the latest <a href="http://metamod.org/">Metamod</a>.
+      <span>Choose one of the Metamod Binaries according to the operating system You have.
+       <span>Most likely :<br>
+       a) for windows <font class="style_file_path">metamod-1.19-win.zip</font><br>
+       b) for linux32 <font class="style_file_path">metamod-1.19-tar.gz</font><br>
+       c) for linux amd64 <font class="style_file_path">metamod-1.19-amd64.tar.gz</font><br>
+       </span>
+      You may save it anywhere.
+      </span>
+     Download <a href="http://filebase.bots-united.com/index.php?act=view&id=401/">the lastest fullpack of PODBot mm</a>.
+     <span>You may save it anywhere.</span>
+     </span>
+    </li>
+
+    <li>Arranging
+     <span>
+     Extract the files from the archives.
+      <span>
+      Use something like <a href="http://sevenzip.sourceforge.net/">7-Zip</a>.
+      </span>
+     Find the <font class="style_file_path">cstrike</font> or <font class="style_file_path">czero</font> folder (according to 
+     the game You have (CS1.5, CS1.6-Steam, CZERO-Steam supported).
+      <span>
+      On CS1.5 most likely <font class="style_file_path">
+      C:\Program Files\Sierra\Counter-Strike\cstrike</font><br>
+      On CS1.6 listensever most likely <font class="style_file_path">
+      C:\Program Files\Steam\steamapps\your@email\Counter-Strike\cstrike</font><br>
+      On CS1.6 dedicated server most likely <font class="style_file_path">
+      C:\Program Files\Steam\steamapps\your@email\dedicated server\cstrike</font><br>
+      On CZERO listensever most likely <font class="style_file_path">
+      C:\Program Files\Steam\steamapps\your@email\Counter-Strike\czero</font><br>
+      On CZERO dedicated server most likely <font class="style_file_path">
+      C:\Program Files\Steam\steamapps\your@email\dedicated server\czero</font><br>
+      Once You know where is Your the most important folder (cstrike or czero) Yoy can go ahead with installing.
+      </span>
+     Create a folder called <font class="style_file_path">addons</font> in the above folder.<br/>
+     Create a folder called <font class="style_file_path">metamod</font> in the <font class="style_file_path">addons</font> 
+     folder.<br>
+     Create a folder called <font class="style_file_path">dlls</font> in the <font class="style_file_path">metamod</font> folder.<br>
+     Move the file called - if You have:<br>
+      <span>
+      a) windows - <font class="style_file_path">metamod.dll</font><br>
+      b) linux - <font class="style_file_path">metamod_i386.so</font><br>
+      c) linux amd64 - <font class="style_file_path">metamod_amd64.so</font>
+      </span>
+     into the <font class="style_file_path">dlls</font> folder.<br>
+     Move the folder called <font class="style_file_path">podbot</font> extracted from 
+     <font class="style_file_path">podbot_full_V3_BXY.zip</font> to the <font class="style_file_path">addons</font> folder.
+     </span>
+     <span>
+     <p class="style_note">NOTE:</p>
+     If You had already installed some older than podbot 2.6 mm version (some podbot_mm.dll created after 26.04.2004), 
+     we advise you to delete any previous .pxp files (bots experience files). You can find them inside 
+     <font class="style_file_path">addons\podbot\wptdefaut</font> folder.<br>
+	  Since the bot now supports the new CS 1.6 weapons, you MUST use the included botweapons.cfg file which takes them into account. 
+     If you attempt to use an older weapon configuration file from POD-bot 2.5 or 2.6 (but not 2.6mm) or some old &quot;.pxp&quot; 
+     files the bot will crash!!!<br>
+     Podbot mm requires all new config files (included in the fullpack) to the correct work.<br>
+     </span>
+    </li>
+
+    <li>Setting
+     <span>Set Metamod to load PODBot mm
+      <span>Run Notepad.<br>
+      Type:<br>
+       <span>
+       a) windows: <font class="style_red_bold">win32 addons/podbot/podbot_mm.dll</font><br>
+       b) linux: <font class="style_red_bold">linux addons/podbot/podbot_mm_i386.so</font><br>
+       c) linux amd64: <font class="style_red_bold">linux addons/podbot/podbot_mm_amd64.so</font>
+       </span>
+      into the textarea exactly as-is.
+      </span>
+      <span>
+      Go to Your <font class="style_file_path">addons/metamod</font> folder. Check if there is a file called 
+      <font class="style_file_path">plugins.ini</font>.<br>
+      If you already have metamod installed (and the above file is there), You only need to add one of these 
+      above lines to metamod's plugins.ini file.<br>
+      If no - You need to save Your file You created by Notepad as plugins.ini in the correct folder. To do this - 
+      Push Ctrl and S at the same time.<br>
+      Change <font class="style_red_bold">Save as type:</font> to <font class="style_red_bold">All files</font><br>
+      Browse to your <font class="style_file_path">addons/metamod</font> folder.<br>
+      Type <font class="style_red_bold">plugins.ini</font> into the textbox labeled <font class="style_red_bold">
+      File name:</font> exactly as-is.<br>Left click Save.
+      At this moment You have prepared metamod to load podbot mm.
+      </span>
+     Set Counter-Strike to launch Metamod
+      <span>
+      Inside the cstrike (or czero) folder You need to find the file called <font class="style_file_path">liblist.gam</font> .
+      Make a copy of it and rename the copy to <font class="style_file_path">liblist.old</font><br>
+      Open by Notepad the file liblist.gam, find the line <font class="style_red_bold">gamedll "dlls\mp.dll"</font>
+      and change it to:<br>
+       <span>
+	    a) windows users: <font class="style_red_bold">gamedll "addons\metamod\dlls\metamod.dll"</font><br>
+	    b) linux users: <font class="style_red_bold">gamedll_linux "addons/metamod/dlls/metamod_i386.so"</font><br>
+	    c) linux amd64 bit users: <font class="style_red_bold">gamedll_linux "addons/metamod/dlls/metamod_amd64.so"</font><br>
+       </span>
+	   then save it.
+      </span>
+      <span>
+      If You have CS1.6 or CZERO - Run Steam.<br>Login to your account.<br>Right click on Counter-Strike.<br>
+      Left click on Properties.<br>Left click on Set launch options...<br>Make sure that textbox is empty or at least it calls metamod
+      with on such command lines:<br>
+       <span>
+       a) for windows - <font class="style_red_bold">-dll addons/metamod/dlls/metamod.dll</font><br>
+       b) for linux 32 - <font class="style_red_bold">-dll addons/metamod/dlls/metamod_i386.so</font><br>
+       b) for linux amd64 - <font class="style_red_bold">-dll addons/metamod/dlls/metamod_amd64.so</font></span>
+      Left click OK.<br>Left click Close.
+      </span>
+      <span>
+      That command line here and the liblist.gam calls for metamod they are equivalent, but the higher pririty to call the game dll
+      is the command line from launch priporeties.<br>
+      At this moment You have prepared Counter-Strike to load metamod.
+      </span>
+     </span>
+    </li>
+
+
+    <li><a name="V"></a>Uninstalling
+     <span>
+     If You want to uninstall podbot mm only, but Yo still want to use metamod (because of using other mm plugins like AMX MOD X, 
+     AMX etc.) all You need is just remove the line from <font class="style_file_path">addons\metamod\plugins\ini file</font>:
+      <span>
+       a) windows: <font class="style_red_bold">win32 addons/podbot/podbot_mm.dll</font><br>
+       b) linux: <font class="style_red_bold">linux addons/podbot/podbot_mm_i386.so</font><br>
+       c) linux amd64: <font class="style_red_bold">win32 addons/podbot/podbot_mm_amd64.so</font>
+      </span>
+     save the file and remove the whole podbot folder if You don't wish to use it anymore.<br>
+     </span>
+     <span>
+     If You want to uninstall everything (metamod and podbot mm) You need to either rename the file 'liblist.old' (You should've 
+     to create it before from the original 'liblist.gam' file - see above) to 'liblist.gam' in your cstrike (or czero) folder or
+     You need to edit Your liblist.gam and replace the line:<br>
+      <span>
+	   a) windows users: <font class="style_red_bold">gamedll "addons\metamod\dlls\metamod.dll"</font><br>
+	   b) linux users: <font class="style_red_bold">gamedll_linux "addons/metamod/dlls/metamod_i386.so"</font><br>
+	   c) linux amd64 bit users: <font class="style_red_bold">gamedll_linux "addons/metamod/dlls/metamod_amd64.so"</font><br>
+      </span>
+     by the line <font class="style_red_bold">gamedll "dlls\mp.dll"</font>, then remove the whole metamod folder 
+     if You don't wish to use it anymore.<br>
+     </span>
+<!-- ###END: MainContent### -->
+      </ul>
+     </td>
+    </tr>
+   </table>
+  </td>
+ </tr>
+<!-- ###END: MainContent Table### -->
+</table>
+<!-- ###END: Body### -->
+</body>
+</html>

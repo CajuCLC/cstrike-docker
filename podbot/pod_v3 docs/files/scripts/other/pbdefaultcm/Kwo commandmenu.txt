@@ -1,0 +1,282 @@
+//Kwo's Command Menu v1.0
+// Command Menu definition
+// 
+// Basic Format:
+//		"<Bound Key>" "<Button Text>" "<Command sent to server>"
+//
+//
+// Buttons can also open up submenus, as follows:
+// {
+// 	"Some More Options",
+//	{
+//		...
+//	}
+// }
+//
+//
+// Buttons preceded with "CUSTOM" are handled in special ways. They can only be moved
+// around or deleted.
+//
+//
+// Limitations:
+//		Maximum of 40 menus.
+//		Maximum of 100 buttons per menu.
+//--------------------------------------------------------
+// Everything below here is editable
+"1" "HELP"
+{
+	CUSTOM
+		"1" "Map Description" "!MAPBRIEFING"
+		"2" "Time Left" "timeleft"
+		"3" "Adjust Crosshair" "adjust_crosshair"
+		"4" "Use Left Hand" "cl_righthand 0"
+		"5" "Use Right Hand" "cl_righthand 1"
+}
+
+"2" "CHANGE TEAM" "chooseteam"
+// Here are the rest of the buttons and submenus
+// You can change these safely if you want.
+
+"3" "TEAM MESSAGE"
+{
+// Map Specific
+	MAP cs_siege "1" "map cs_siege"
+	{
+		"1" "'Take the underground'" "say_team Take the underground!"
+		"2" "'Enemy in parking garage'" "say_team Enemy in parking garage!"
+		"3" "'Rush hostage room!'" "say_team Rush the hostage room!"
+		"4" "'Snipers! Watch out!'" "say_team Snipers! Watch out!"
+		"5" "'Take the upper route'" "say_team Take the upper route!"
+	}
+
+	MAP de_train "1" "map de_train"
+	{
+		"1" "'Rush trainyard bomb!'" "say_team Rush the trainyard bomb site!"
+		"2" "'Rush enclosed bomb site!'" "say_team Rush the enclosed bomb site!"
+		"3" "'Flank them!'" "say_team Flank them!"
+		"4" "'Bomb site secure!'" "say_team Bomb site secure!"
+		"5" "'Lend me your blaster!'" "say_team Lend me your blaster!"
+	}
+
+	MAP de_vertigo "1" "map de_vertigo"
+	{
+		"1" "'Rush the upper level!'" "say_team Rush the upper level!"
+		"2" "'Rush the lower level!'" "say_team Rush the lower level!"
+		"3" "'Flank them!'" "say_team Flank them!"
+		"4" "'Snipers! Watch out!'" "say_team Snipers! Watch out!"
+		"5" "'Bomb site secure'" "say_team Bomb site secure"
+	}
+	
+	MAP de_prodigy "1" "map de_prodigy"
+	{
+		"1" "'Rush to pipes'" "say_team Rush to the pipes bomb site!"
+		"2" "'Rush to the lab!'" "say_team Rush to lab!"
+		"3" "'Take the hallway!'" "say_team Take the hallway!"
+		"4" "'Flank them!'" "say_team Flank them!"
+		"5" "'Take the APC route!'" "say_team Take the APC route!"
+	}
+
+	MAP de_aztec "1" "map de_aztec"
+	{
+		"1" "'Take the bridge!'" "say_team Take the bridge!"
+		"2" "'Enemy at bomb site'" "say_team Narby, enemy at bomb site!"
+		"3" "'Rush to bomb site'" "say_team Rush to the bomb site!"
+		"4" "'Bomb site secure'" "say_team Bomb site secure!"
+		"5" "'Take the water route!'" "say_team Take the water route!"
+	}
+
+	MAP de_inferno "1" "map de_inferno"
+	{
+		"1" "'Take the bridge!'" "say_team Take the bridge!"
+		"2" "'Enemy at bomb site'" "say_team Narby, enemy at bomb site!"
+		"3" "'Rush to bomb site'" "say_team Rush to the bomb site!"
+		"4" "'Bomb site secure'" "say_team Bomb site secure!"
+		"5" "'Take the water route!'" "say_team Take the water route!"
+	}
+
+	MAP cs_office "1" "map cs_office"
+	{
+		"1" "'Take the back route!'" "say_team Take the back route!"
+		"2" "'Rush to the hostages!'" "say_team Rush to the hostages!"
+		"3" "'Do it for Manilov!'" "say_team Do it for Manilov!"
+		"4" "'Take the front route!'" "say_team Take the front route!"
+		"5" "'Flank them!'" "say_team Flank them!"
+	}
+
+	MAP cs_backalley "1" "map cs_backalley"
+	{
+		"1" "'Flank them!'" "say_team Flank them!"
+		"2" "'Enemy overhead!'" "say_team Enemy overhead!"
+		"3" "'Rush to the hostages!'" "say_team Rush to the hostages!"
+		"4" "'Go you blaster!'" "say_team Go you blaster!"
+		"5" "'Taking heavy blaster fire!'" "say_team Taking heavy blaster fire!"
+	}
+
+	MAP cs_747 "1" "map cs_747"
+	{
+		"1" "'Rush the plane'" "say_team Rush the plane!"
+		"2" "'Meet in terminal'" "say_team Meet in the terminal"
+		"3" "'Enemy outside plane'" "say_team Enemy outside plane!"
+		"4" "'Enemy in cargo hold!'" "say_team Enemy in cargo hold!"
+		"5" "'Flank them'" "say_team Flank them!"
+	}
+
+	MAP as_oilrig "1" "map as_oilrig"
+	{
+		"1" "'Rush to chopper!'" "say_team Rush to the chopper!"
+		"2" "'To the elevator'" "say_team To the elevator!"
+		"3" "'VIP spotted!'" "say_team VIP spotted!"
+		"4" "'Sniped spotted'" "say_team Sniper spotted! Look out!"
+		"5" "'Protect the VIP'" "say_team Protect the VIP!"
+	}
+	
+	MAP cs_assault "1" "map cs_assault"
+	{
+		"1" "'Rush the building!'" "say_team Rush the building!"
+		"2" "'Take the vents!'" "say_team Take the vents!"
+		"3" "'Enemy in vents!'" "say_team Enemy in vents!"
+		"4" "'Rush hostage room!'" "say_team Rush the hostage room!"
+		"5" "'Team! Regroup!'" "say_team Team! Regroup!"
+	}
+
+	MAP de_nuke "1" "map de_nuke"
+	{
+		"1" "'Go To Main hall'" "say_team Go to the main hall"
+		"2" "'Go To the Basement'" "say_team Go to basement"
+		"3" "'Flank Yard'" "say_team Flank Yard"
+		"4" "'Flank Comm-room'" "say_team Flank comm-room"
+		"5" "'At the Entrance hall'" "say_team At the entrance hall"
+	}
+
+	MAP de_cbble "1" "map de_cbble"
+	{
+		"1" "'Heading Central Hallway'" "say_team Heading to central hallway!"
+		"2" "'Heading to Underpass'" "say_team Heading to underpass!"
+		"3" "'Sniper in Tower'" "say_team Enemy in sniper tower!"
+		"4" "'Bomb target areas secure'" "say_team Bomb target areas secure"
+		"5" "'Guard start area'" "say_team Guard start area"
+	}
+
+	MAP de_dust "1" "map de_dust"
+	{
+		"1" "'Heading to Hallway'" "say_team Heading to hallway!"
+		"2" "'Heading to Underpass'" "say_team Heading to underpass!"
+		"3" "'Bomb A secure'" "say_team Bomb area A secure"
+		"4" "'Bomb B secure'" "say_team Bomb area B secure"
+		"5" "'Sniper at Underpass'" "say_team Snipers at underpass"
+	}
+
+	MAP de_dust2 "1" "map de_dust2"
+	{
+		"1" "'Heading to Hallway'" "say_team Heading to hallway!"
+		"2" "'Heading to Underpass'" "say_team Heading to underpass!"
+		"3" "'Bomb A secure'" "say_team Bomb area A secure"
+		"4" "'Bomb B secure'" "say_team Bomb area B secure"
+		"5" "'Heading to tunnel'" "say_team Heading to tunnel!"
+	}
+	
+	MAP cs_italy "1" "map cs_italy"
+	{
+		"1" "'Meet at Market'" "say_team Meet at the market!"
+		"2" "'Rush the House'" "say_team Rush through the house!"
+		"3" "'Head to Wine Cellar'" "say_team Head for the wine cellar!"
+		"4" "'Rush Long Passage'" "say_team Rush the long passage!"
+		"5" "'Hostages being rescued'" "say_team Hostages being rescued!"
+	}
+
+	MAP cs_estate "1" "map cs_estate"
+	{
+		"1" "'Go to sewer'" "say_team Go to the sewer!"
+		"2" "'Enemy on first story'" "say_team Enemy on first story!"
+		"3" "'Enemy on second story'" "say_team Enemy on second story!"
+		"4" "'Enemy in back'" "say_team Enemy in back of house!"
+		"5" "'Enemy in front'" "say_team Enemy in front of house!"
+	}
+
+	MAP as_tundra "1" "map as_tundra"
+	{
+		"1" "'Use secondary route'" "say_team Use the secondary route!"
+		"2" "'Use primary route'" "say_team Use the primary route!"
+		"3" "'Snipers! Watch out!'" "say_team Snipers! Look out!"
+		"4" "'Rush to APC'" "say_team Rush to the APC!"
+		"5" "'Rush to chopper!'" "say_team Rush to the chopper!"
+	} 
+
+	MAP cs_militia "1" "map cs_militia"
+	{
+		"1" "'Meet at garage vent'" "say_team Meet at garage vent!"
+		"2" "'Meet at front of house'" "say_team Meet at front of house!"
+		"3" "'Meet in backyard'" "say_team Meet in backyard!"
+		"4" "'Enemy is topside!'" "say_team Enemy is topside!"
+		"5" "'Enemy is in sewers!'" "say_team Enemy is in sewers!"
+	}
+}
+
+"4" "PODBOT WPMENU 1" 
+{
+	"1" "WP editor on/off" "pb wpmenu;menuselect 9;menuselect 1"
+	"2" "Autowp on/off" "pb wpmenu;menuselect 9;menuselect 2"
+	"3" "Cache waypoint" "pb wpmenu;menuselect 9;menuselect 7"
+	"4" "Pathwaypoint add" "pb wpmenu;menuselect 5"
+	"5" "Pathwaypoint delete" "pb wpmenu;menuselect 6;menuselect 1"
+	"6" "Flagmenu" "pb wpmenu;menuselect 4"
+	"7" "Setradius menu" "pb wpmenu;menuselect 3"
+	"8" "WP's check" "pb wpmenu;menuselect 7"
+	"9" "Wp's save" "pb wpmenu;menuselect 8"
+}
+
+"5" "PODBOT WPMENU 2" 
+{
+	"1" "Noclip on/off" "pb wpmenu;menuselect 9;menuselect 3"
+	"2" "Peace mode on/off" "pb wpmenu;menuselect 9;menuselect 4"
+	"3" "Show/hide flags" "pb wpmenu;menuselect 9;menuselect 5"
+	"4" "AutoPath max distance" "pb wpmenu;menuselect 9;menuselect 6"
+	"5" "WP's stats" "waypoint stats"
+}
+
+"6" "PODBOT MENU"
+{
+	"1" "Bot chat"
+	{
+		"1" "On" "pb_chat 1"
+		"2" "Off" "pb_chat 0"
+	}
+	"2" "Adding Bot"
+	{
+		"1" "To CT Team"
+		{
+			"1" "Botskill 10" "pb add 10 5 2 5"
+			"2" "Botskill 20" "pb add 20 5 2 5"
+			"3" "Botskill 30" "pb add 30 5 2 5"
+			"4" "Botskill 40" "pb add 40 5 2 5"
+			"5" "Botskill 50" "pb add 50 5 2 5"
+			"6" "Botskill 60" "pb add 60 5 2 5"
+			"7" "Botskill 70" "pb add 70 5 2 5"
+			"8" "Botskill 80" "pb add 80 5 2 5"
+			"9" "Botskill 90" "pb add 90 5 2 5"
+			"0" "Botskill 100" "pb add 100 5 2 5"
+		}
+		"2" "To T Team"
+		{
+			"1" "Botskill 10" "pb add 10 5 1 5"
+			"2" "Botskill 20" "pb add 20 5 1 5"
+			"3" "Botskill 30" "pb add 30 5 1 5"
+			"4" "Botskill 40" "pb add 40 5 1 5"
+			"5" "Botskill 50" "pb add 50 5 1 5"
+			"6" "Botskill 60" "pb add 60 5 1 5"
+			"7" "Botskill 70" "pb add 70 5 1 5"
+			"8" "Botskill 80" "pb add 80 5 1 5"
+			"9" "Botskill 90" "pb add 90 5 1 5"
+			"0" "Botskill 100" "pb add 100 5 1 5"
+		}
+	} 
+	"3" "Removing Bot"
+	{
+		"1" "From T Team" "pb menu; menuselect 6; menuselect 1"
+		"2" "From CT Team" "pb menu; menuselect 6; menuselect 2"
+	}
+	"4" "Kill All Bots" "pb killbots"
+	"5" "Round End" "pb menu; menuselect 4"
+	"6" "Remove All Bots" "pb removebots"
+	"7" "Fillserver By Bots" "pb fillserver"
+}

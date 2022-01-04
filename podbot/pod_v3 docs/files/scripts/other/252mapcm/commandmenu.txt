@@ -1,0 +1,509 @@
+//Scarlet Spider's Command Menu v2.0
+//
+//This new command menu fixed up issues like menu's going offscren and a few
+//new things have been added including the ability to have 250+ maps stored here
+//so you don't have to reme,ber your favourite map or the console to find one
+//
+// Command Menu definition
+// 
+// Basic Format:
+//		"<Bound Key>" "<Button Text>" "<Command sent to server>"
+//
+//
+// Buttons can also open up submenus, as follows:
+// {
+// 	"Some More Options",
+//	{
+//		...
+//	}
+// }
+//
+// Buttons preceded with "CUSTOM" are handled in special ways. They can only be moved
+// around or deleted.
+//
+// Limitations:
+//		Maximum of 40 menus.
+//		Maximum of 100 buttons per menu.
+//		A Button Cannot be without a command (hence: "1" "NUMBERED Maps" "  "
+//		has a blank command it is the title and not a command for a menu)
+//
+//
+// Everything below here is editable
+//-------------------------------------------------------------------------------------
+// Quickly Change Maps
+// Just change the map names to the ones you want.
+// ie If you  want to add the map de_vertigo
+// Goto "DE Maps" 
+// Just add the line "1" "Vertigo" "map de_vertigo" replacing the quoted 
+// bits or write it in yourself and your done
+//
+"1" "CHANGE MAP" 
+{
+	"1" "DE Maps"
+	{
+		"1" "Maps A-E"
+		{
+			"1" "Maps F-J"
+			{
+				"1" "Maps K-O"
+				{
+					"1" "Maps P-T"
+					{
+						"1" "Maps U-Z"
+						{
+							"1" "NUMBERED Maps" "  "
+							"2" "De " "  "
+							"3" "De " "  "
+							"4" "De " "  "
+							"5" "De " "  "
+							"6" "De " "  "
+							"7" "De " "  "
+							"8" "De " "  "
+							"9" "De " "  "
+							"10" "De " "  "
+							"11" "De " "  "
+							"12" "De " "  "
+							"13" "De " "  "
+						}//Maps U-Z
+						"2" "De " "  "
+						"3" "De " "  "
+						"4" "De " "  "
+						"5" "De " "  "
+						"6" "De " "  "
+						"7" "De " "  "
+						"8" "De " "  "
+						"9" "De " "  "
+						"10" "De " "  "
+						"11" "De " "  "
+						"12" "De " "  "
+						"13" "De " "  "	
+					}//Maps P-T
+					"2" "De " "  "
+					"3" "De " "  "
+					"4" "De " "  "
+					"5" "De " "  "
+					"6" "De " "  "
+					"7" "De " "  "
+					"8" "De " "  "
+					"9" "De " "  "
+					"10" "De " "  "
+					"11" "De " "  "
+					"12" "De " "  "
+					"13" "De " "  "			
+				}//Maps K-O
+				"2" "De " "  "
+				"3" "De " "  "
+				"4" "De " "  "
+				"5" "De " "  "
+				"6" "De " "  "
+				"7" "De " "  "
+				"8" "De " "  "
+				"9" "De " "  "
+				"10" "De " "  "
+				"11" "De " "  "
+				"12" "De " "  "
+				"13" "De " "  "		
+			}//Maps F-J
+			"2" "De " "  "
+			"3" "De " "  "
+			"4" "De " "  "
+			"5" "De " "  "
+			"6" "De " "  "
+			"7" "De " "  "
+			"8" "De " "  "
+			"9" "De " "  "
+			"10" "De " "  "
+			"11" "De " "  "
+			"12" "De " "  "
+			"13" "De " "  "		
+		}//Maps A-E
+		"2" "De " "  "
+		"3" "De " "  "
+		"4" "De " "  "
+		"5" "De " "  "
+		"6" "De " "  "
+		"7" "De " "  "
+		"8" "De " "  "
+		"9" "De " "  "
+		"10" "De " "  "
+		"11" "De " "  "
+		"12" "De " "  "
+		"13" "De " "  "		
+	}
+	"2" "CS Maps"
+	{
+		"1" "Maps A-E"
+		{
+			"1" "Maps F-J"
+			{
+				"1" "Maps K-O"
+				{
+					"1" "Maps P-T"
+					{
+						"1" "Maps U-Z"
+						{
+							"1" "NUMBERED Maps" "  "
+							"2" "Cs " "  "
+							"3" "Cs " "  "
+							"4" "Cs " "  "
+							"5" "Cs " "  "
+							"6" "Cs " "  "
+							"7" "Cs " "  "
+							"8" "Cs " "  "
+							"9" "Cs " "  "
+							"10" "Cs " "  "
+							"11" "Cs " "  "
+							"12" "Cs " "  "
+						}//Maps U-Z
+						"2" "Cs " "  "
+						"3" "Cs " "  "
+						"4" "Cs " "  "
+						"5" "Cs " "  "
+						"6" "Cs " "  "
+						"7" "Cs " "  "
+						"8" "Cs " "  "
+						"9" "Cs " "  "
+						"10" "Cs " "  "
+						"11" "Cs " "  "
+						"12" "Cs " "  "
+					}//Maps P-T
+					"2" "Cs " "  "
+					"3" "Cs " "  "
+					"4" "Cs " "  "
+					"5" "Cs " "  "
+					"6" "Cs " "  "
+					"7" "Cs " "  "
+					"8" "Cs " "  "
+					"9" "Cs " "  "
+					"10" "Cs " "  "
+					"11" "Cs " "  "
+					"12" "Cs " "  "		
+				}//Maps K-O
+				"2" "Cs " "  "
+				"3" "Cs " "  "
+				"4" "Cs " "  "
+				"5" "Cs " "  "
+				"6" "Cs " "  "
+				"7" "Cs " "  "
+				"8" "Cs " "  "
+				"9" "Cs " "  "
+				"10" "Cs " "  "
+				"11" "Cs " "  "
+				"12" "Cs " "  "		
+			}//Maps F-J
+			"2" "Cs " "  "
+			"3" "Cs " "  "
+			"4" "Cs " "  "
+			"5" "Cs " "  "
+			"6" "Cs " "  "
+			"7" "Cs " "  "
+			"8" "Cs " "  "
+			"9" "Cs " "  "
+			"10" "Cs " "  "
+			"11" "Cs " "  "
+			"12" "Cs " "  "		
+		}//Maps A-E
+		"2" "Cs " "  "
+		"3" "Cs " "  "
+		"4" "Cs " "  "
+		"5" "Cs " "  "
+		"6" "Cs " "  "
+		"7" "Cs " "  "
+		"8" "Cs " "  "
+		"9" "Cs " "  "
+		"10" "Cs " "  "
+		"11" "Cs " "  "
+		"12" "Cs " "  "	
+	}
+	"3" "KA-Other Maps"
+	{
+		"1" "Maps A-E"
+		{
+			"1" "Maps F-J"
+			{
+				"1" "Maps K-O"
+				{
+					"1" "Maps P-T"
+					{
+						"1" "Maps U-Z"
+						{
+							"1" "NUMBERED Maps" "  "
+							"2" "Ka " "  "
+							"3" "Ka " "  "
+							"4" "Ka " "  "
+							"5" "Ka " "  "
+							"6" "Ka " "  "
+							"7" "Ka " "  "
+							"8" "Ka " "  "
+							"9" "Ka " "  "
+							"10" "Ka " "  "
+							"11" "Ka " "  "
+						}//Maps U-Z
+						"2" "Ka " "  "
+						"3" "Ka " "  "
+						"4" "Ka " "  "
+						"5" "Ka " "  "
+						"6" "Ka " "  "
+						"7" "Ka " "  "
+						"8" "Ka " "  "
+						"9" "Ka " "  "
+						"10" "Ka " "  "
+						"11" "Ka " "  "
+					}//Maps P-T
+					"2" "Ka " "  "
+					"3" "Ka " "  "
+					"4" "Ka " "  "
+					"5" "Ka " "  "
+					"6" "Ka " "  "
+					"7" "Ka " "  "
+					"8" "Ka " "  "
+					"9" "Ka " "  "
+					"10" "Ka " "  "
+					"11" "Ka " "  "		
+				}//Maps K-O
+				"2" "Ka " "  "
+				"3" "Ka " "  "
+				"4" "Ka " "  "
+				"5" "Ka " "  "
+				"6" "Ka " "  "
+				"7" "Ka " "  "
+				"8" "Ka " "  "
+				"9" "Ka " "  "
+				"10" "Ka " "  "
+				"11" "Ka " "  "	
+			}//Maps F-J
+			"2" "Ka " "  "
+			"3" "Ka " "  "
+			"4" "Ka " "  "
+			"5" "Ka " "  "
+			"6" "Ka " "  "
+			"7" "Ka " "  "
+			"8" "Ka " "  "
+			"9" "Ka " "  "
+			"10" "Ka " "  "
+			"11" "Ka " "  "		
+		}//Maps A-E
+		"2" "Ka " "  "
+		"3" "Ka " "  "
+		"4" "Ka " "  "
+		"5" "Ka " "  "
+		"6" "Ka " "  "
+		"7" "Ka " "  "
+		"8" "Ka " "  "
+		"9" "Ka " "  "
+		"10" "Ka " "  "
+		"11" "Ka " "  "		
+	}
+	"4" "AS-AWP Maps"
+	{
+		"1" "Maps A-E"
+		{
+			"1" "Maps F-J"
+			{
+				"1" "Maps K-O"
+				{
+					"1" "Maps P-T"
+					{
+						"1" "Maps U-Z"
+						{
+							"1" "NUMBERED Maps" " 
+							""2" "As " "  "
+							"3" "As " "  "
+							"4" "As " "  "
+							"5" "As " "  "
+							"6" "As " "  "
+							"7" "As " "  "
+							"8" "As " "  "
+							"9" "As " "  "
+							"10" "As " "  "
+						}//Maps U-Z
+						"2" "As " "  "
+						"3" "As " "  "
+						"4" "As " "  "
+						"5" "As " "  "
+						"6" "As " "  "
+						"7" "As " "  "
+						"8" "As " "  "
+						"9" "As " "  "
+						"10" "As " "  "
+					}//Maps P-T
+					"2" "As " "  "
+					"3" "As " "  "
+					"4" "As " "  "
+					"5" "As " "  "
+					"6" "As " "  "
+					"7" "As " "  "
+					"8" "As " "  "
+					"9" "As " "  "
+					"10" "As " "  "		
+				}//Maps K-O
+				"2" "As " "  "
+				"3" "As " "  "
+				"4" "As " "  "
+				"5" "As " "  "
+				"6" "As " "  "
+				"7" "As " "  "
+				"8" "As " "  "
+				"9" "As " "  "
+				"10" "As " "  "	
+			}//Maps F-J
+			"2" "As " "  "
+			"3" "As " "  "
+			"4" "As " "  "
+			"5" "As " "  "
+			"6" "As " "  "
+			"7" "As " "  "
+			"8" "As " "  "
+			"9" "As " "  "
+			"10" "As " "  "		
+		}//Maps A-E
+		"2" "As " "  "
+		"3" "As " "  "
+		"4" "As " "  "
+		"5" "As " "  "
+		"6" "As " "  "
+		"7" "As " "  "
+		"8" "As " "  "
+		"9" "As " "  "
+		"10" "As " "  "
+	}
+}
+"2" "PODBOT MM MENU"
+{
+	"1" "ADD BOTS" 
+	// addbot [skill] [personality] [team] [class] [name]
+	{
+		"1" "Counter Terrorist"
+		{
+			"1" "Botskill 10" "pb add 10 5 2 5"
+			"2" "Botskill 20" "pb add 20 5 2 5"
+			"3" "Botskill 30" "pb add 30 5 2 5"
+			"4" "Botskill 40" "pb add 40 5 2 5"
+			"5" "Botskill 50" "pb add 50 5 2 5"
+			"6" "Botskill 60" "pb add 60 5 2 5"
+			"7" "Botskill 70" "pb add 70 5 2 5"
+			"8" "Botskill 80" "pb add 80 5 2 5"
+			"9" "Botskill 90" "pb add 90 5 2 5"
+			"0" "Botskill 100" "pb add 100 5 2 5"
+		}
+		"2" "Terrorist"
+		{
+			"1" "Botskill 10" "pb add 10 5 1 5"
+			"2" "Botskill 20" "pb add 20 5 1 5"
+			"3" "Botskill 30" "pb add 30 5 1 5"
+			"4" "Botskill 40" "pb add 40 5 1 5"
+			"5" "Botskill 50" "pb add 50 5 1 5"
+			"6" "Botskill 60" "pb add 60 5 1 5"
+			"7" "Botskill 70" "pb add 70 5 1 5"
+			"8" "Botskill 80" "pb add 80 5 1 5"
+			"9" "Botskill 90" "pb add 90 5 1 5"
+			"0" "Botskill 100" "pb add 100 5 1 5"
+		}
+	}
+	"2" "REMOVE BOTS"
+	{
+		"1" "REMOVE SELECTED BOT"
+		{
+			"1" "Counter Terrorist" "pb menu; menuselect 6; menuselect 2"
+			"2" "Terrorist" "pb menu; menuselect 6; menuselect 1"
+		}
+		"2" "REMOVE ALL BOTS" "pb removebots"
+	}
+	"3" "WEAPON MODE"
+	{
+		"1" "Knife only AKA JasonMode!" "pb menu; menuselect 8; menuselect 1"
+		"2" "Pistols" "pb menu; menuselect 8; menuselect 2"
+		"3" "Shotguns" "pb menu; menuselect 8; menuselect 3"
+		"4" "Machine Guns" "pb menu; menuselect 8; menuselect 4"
+		"5" "Rifles" "pb menu; menuselect 8; menuselect 5"
+		"6" "Sniper Weapons" "pb menu; menuselect 8; menuselect 6"
+		"7" "All Weapons AKA Standard" "pb menu; menuselect 8; menuselect 7"
+	}
+	"4" "OTHER"
+	{
+		"1" "FILLSEVER" "pb fillserver"
+		"2" "KILL ALL BOTS" "pb killbots"
+		"3" "END ROUND" "pb menu; menuselect 4"
+		"4" "VERSION" "meta list"
+	}
+	"5" "CHAT"
+	{
+		"1" "ON" "pb_chat 1"
+		"2" "OFF" "pb_chat 0"
+	}
+}
+"3" "MP COMMANDS"
+{
+	"1" "FREEZETIME"
+	{
+		"1" "0.0" "mp_freezetime 0.0"
+		"2" "0.5" "mp_freezetime 0.5"
+		"3" "1.0" "mp_freezetime 1.0"
+		"4" "1.5" "mp_freezetime 1.5"
+		"5" "2.0" "mp_freezetime 2.0"
+		"6" "2.5" "mp_freezetime 2.5"
+		"7" "3.0" "mp_freezetime 3.0"
+		"8" "3.5" "mp_freezetime 3.5"
+		"9" "4.0" "mp_freezetime 4.0"
+		"0" "5.0" "mp_freezetime 5.0"
+	}	
+	"2" "ROUNDTIME"
+	{
+		"1" "0.0" "mp_roundtime 0.0"
+		"2" "2.0" "mp_roundtime 2.0"
+		"3" "2.5" "mp_roundtime 2.5"
+		"4" "3.0" "mp_roundtime 3.0"
+		"5" "3.5" "mp_roundtime 3.5"
+		"6" "4.0" "mp_roundtime 4.0"
+		"7" "4.5" "mp_roundtime 4.5"
+		"8" "5.0" "mp_roundtime 5.0"
+		"9" "7.0" "mp_roundtime 7.0"
+		"0" "9.0" "mp_roundtime 9.0"
+	}
+	"3" "STARTMONEY"
+	{
+		"1" "800" "mp_startmoney 800"
+		"2" "1000" "mp_startmoney 1000"
+		"3" "1500" "mp_startmoney 1500"
+		"4" "2000" "mp_startmoney 2000"
+		"5" "2500" "mp_startmoney 2500"
+		"6" "5000" "mp_startmoney 5000"
+		"7" "7500" "mp_startmoney 7500"
+		"8" "10000" "mp_startmoney 10000"
+		"9" "16000" "mp_startmoney 16000"
+	}
+	"4" "BUYTIME"
+	{
+		"1" "30" "mp_buytime 30"
+		"2" "45" "mp_buytime 45"
+		"3" "60" "mp_buytime 60"
+		"4" "90" "mp_buytime 90"
+	}
+	"5" "TIMELIMIT"
+	{
+		"1" "30" "mp_timelimit 30"
+		"2" "45" "mp_timelimit 45"
+		"3" "60" "mp_timelimit 60"
+		"4" "90" "mp_timelimit 90"
+	}
+	"6" "C4 TIMER"
+	{
+		"1" "30" "mp_c4timer 30"
+		"2" "45" "mp_c4timer 45"
+		"3" "60" "mp_c4timer 60"
+	}
+}
+"4" "HELP"
+{
+	CUSTOM	
+		"1" "Change Team" "chooseteam"
+		"2" "Map Description" "!MAPBRIEFING"
+		"3" "Time Left" "timeleft"
+		"4" "Adjust Crosshair" "adjust_crosshair"
+		"5" "Fast Switching" "hud_fastswitch 1"
+		"6" "Friendlyfire On" "mp_friendlyfire 0"
+		"7" "Friendlyfire Off" "mp_friendlyfire 1"
+		"8" "Use Left Hand" "cl_righthand 0"
+		"9" "Use Right Hand" "cl_righthand 1"
+}
+"5" "EXIT CS" "exit"

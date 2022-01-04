@@ -1,0 +1,128 @@
+# This File contains all Botnames which are used if you don't
+# specify a name using "pb add"
+# There must be at least 9 names in here and you're allowed a maximum
+# of 21 chars for the name ! Why ? The "[POD]" will be
+# placed before the Name and the Skill will be appended...
+#
+# Line below contains 21 chars as a marker for you
+#23456789012345678901
+#
+#
+Danny_Devito
+Clint_Eastwood
+Wesley_Snipes
+Joe_Pesci
+George_Hamilton
+Jackie_Chan
+Jet_Li
+Jack_Palance
+Sean_Penn
+John_Malkovich
+Bruce_Lee
+Nicole_Kidman
+Chris_Tucker 
+Larry_Fishbourne
+Samuel_L_Jackson
+Keanau_Reeves
+Will_Smith
+Tommy_Lee_Jones
+Woody_Harrelson
+Sean_Connery
+Harrison_Ford
+Jeff_Bridges
+Stacy_Keech
+George_Clooney
+Sylvester_Stallone
+Jean_Claude_Van_Damme
+Arnold_Schwarzenegger
+Kim_Basinger
+Tom_Cruise
+Robert_Redford
+Andrew_Dice_Clay
+Jennifer_Anniston
+Matt_Damon
+#
+# 32 Names
+# 
+Bridget_Fonda
+Anthony_Hopkins
+Charlie_Sheen
+Juliet_Lewis
+Robert_Downey_Jr
+Jim_Carrey
+Patrick_Swayze
+Chris_Rock
+Rodney_Dangerfield
+Kate_Winslet
+Heather_Locklear
+Leonardo_DiCaprio
+Mel_Gibson
+Bruce_Willis
+Quentin_Tarantino
+Harvey_Keitel
+Sigourney_Weaver
+Heather_Graham
+Burt_Reynolds
+Jennifer_Love_Hewitt
+Drew_Barrymore
+Marylin_Monroe
+Adam_Sandler
+Cheech Marin
+Mickey_Rourke
+Sharon_Stone
+Al_Pacino
+Marlon_Brando
+Robert_Deniro
+Jack_Nicholson
+Thomas Chong
+#
+# 64 Names
+#
+Fragnatic
+DaTa
+Botman
+V0id
+Android
+M0rbid Desire
+Ping of Death
+Killing Frenzy
+Campers Death
+Count Floyd
+Polymorph
+Headshot Deluxe
+Trust Noone
+Borg Queen
+Make me Laugh
+Psyke
+Eliza
+Die Humans
+Alloc
+killaruna
+Electrica
+Ivan
+Laserdance
+S.E.S.
+L33t B0t
+U're Dead
+Violently Happy
+Make my Day
+Fuzzy Logic
+Pissed Off
+Neuromancer
+Neural Noise
+#
+# 96 Names
+# 
+Dr. No
+Kugelfang
+Murder Inc.
+Bloodlust
+Pseudolukian
+Zap!
+Rambotnic
+Hemp Invader
+Dredd
+Botsie Collins
+BotsBlitz
+Funky Byte
+Berzerk Bot

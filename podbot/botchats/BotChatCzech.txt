@@ -1,0 +1,346 @@
+# This is the Czech Version translated by
+# [RWM] <RWM@zde.cz>
+#
+# All Bot Chat Messages are stored here
+# All comments start with a "#" char
+# You can write as much comments as you like, but
+# please avoid using tabs, whitespaces and blank lines
+# (they will be parsed out but you never know!)
+# Also be sure that a Line doesn't exceed 80 chars
+# (including carriage return)
+#
+# Messages for each Type of Chat begin with a marker
+# enclosed in []
+# Marker Types:
+# [BOMBPLANT] Holds the Messages for the Counter Terrorists
+#	      if a Bomb got planted
+# [KILLED]    Bots say this Message if they killed somebody
+# [DEADCHAT]  Bots say these Lines if they are dead and in
+#	      Spectator Mode
+#
+# Maybe more Message types will be added in the future...
+#
+#
+#
+#
+# Counter Messages for Bomb planted:
+# Minimum Number is 1
+#
+[BOMBPLANT]
+Kurva, polozili bombu!
+No snad ne ? Jak se jim to povedlo?!
+To jsou svine! Polozili bombu!
+Tak panove, jdeme to deaktivovat!
+Tak to teda ne! To je naposled!
+Vy devky! Uz ted jste mrtvy!
+Terroristi se prekonali ... to je naposled!
+Deaktivujte to nekdo!
+Zabte je vsechny!
+Polozili bombu!
+Rychle ... dem to deaktivovat...
+#
+#
+#
+#
+#
+#
+# Messages after killing somebody:
+# Minimum Number is 1
+# For the %v the name of the victim will
+# be inserted
+#
+[KILLED]
+No to si nezvlad %v !
+Hahaha ... %v is death!
+%v, miluji te! Kdyz jses death!
+%v, ty me nemuzes ohrozit!
+Sorry, %v. Prekazel jsi mi v ceste.
+Jses dobrej, ale mrtvej, %v.
+Nemam na tebe cas, %v. Hnij rychle!
+Nemas zadnou sanci, %v.
+Vzdycky budu lepsi, %v. Vzdycky!
+Co se ti stalo, %v?
+Chcipni %v !!!
+Hej, prijd zas %v! 
+Jses %v dobrej ale Fatty je lepsi!
+Ha...ha, ty jsi ale lama!
+Na me nemas, %v. Nemas na nic!
+%v rad jsem te poznal mrtvolo ...
+Sorry %v, muj Headshot script je lepsi nez ten tvuj.
+%v, jses lama !
+%v, co to tu provadis, amatere ?!
+%v, co to melo jako bejt ?!
+Videli jste to ? %v je lama !
+%v je ale amater ! 
+%v sel k zemi!
+%v uz prekazet nebude!
+%v, nauc se to hrat a pak prijd.
+Hele ... mrtvej %v.
+Chce nekdo videt mrtvolu %v ?!
+Hele mam tu mrtvolu %v ... hihi.
+To je zivot %v !
+Sejdeme se v pekle, %v !
+Chcipni %v ...
+%v je krasna mrtvola!
+%v prave zhebnul ...
+Tak to jsi nezvlad %v !
+#
+#
+#
+#
+#
+#
+#
+# Chat Messages when dead and bored
+# !!Minimum Number is 9!!
+#
+[DEADCHAT]
+Zabili jste Kennyho ... to jste nemeli delat!
+No tak se muzu aspon koukat jak vam to nejde!
+Tak to bylo naposled, panove... 
+Priste budu vic kempovat! 
+Jsem ale lama! 
+Priste urcite vyhraju:)
+Kurva ... zase... 
+Je dobry bejt na tomhle serveru. 
+Tohle super hra. 
+Jdu si dat drink, pak vam to ukazu! 
+Tak to bylo drsny! 
+Jdu se zeptat RWM jak se to hraje ...
+Tak to jsem nezvlad... 
+Tahle mapa je kurevsky tezka... 
+Hmmm...dneska mam spatnej den. 
+Zabite vsechny kemplery! 
+Kurva, zabili Kennyho! 
+Koncim s kempem! 
+Tohle je urcite lepsi nez Quake 3! 
+Tyhle boti jsou ale cool! 
+Zkurveni Boti! 
+Blbi Boti! 
+Cumel jsem jak idiot. 
+Menim taktiku! 
+Nebylo to tak spatny! 
+Ne! De_dust proste, prosim! 
+Miluju tuhle mapu :) 
+Pristi kolo je moje! 
+Zmente mapu kurva! 
+Chcipnete! 
+Chcipnete Boti! 
+Zkurvena prace!
+Tak na to mi IQ nestaci ...
+Jste moc dobry ...
+Sraci! Priste si vas podam!
+
+# Start of the "dynamic" replies from here
+# After each @KEY Tag you need to specify the
+# keywords in quotation marks and uppercase. You can
+# have several keywords (aliases) each separated by a comma.
+# After the keywords line, the answers or messages to this
+# special keyword need to be given. In theory there can be an unlimited
+# number of answers of course you should care about the used memory ;)    
+
+[REPLIES]
+
+@KEY " AGAIN ", " ZASE "
+%s, ye by dejavu?
+A jsem si jisty ze to nebylo naposled...
+Takhle se to dela u nas na vesnici...
+
+@KEY "AIMBOT", "WALLHACK"
+%s, ty citujes ?
+Dokonce i pres VAC nekdy selze ...
+Nikdy si nemuzes byt jisty zda je nekdo tak dobry nebo pouziva cheaty
+Aimbot je skvely, tak drz pec %s!
+Wallhack je pekelna utilita pro dabla ;)
+
+@KEY " ALWAYS ", " VZDYCKY "
+To neni porad, %s!
+Proste to mam rad :-)
+Come on %s, zatim to bylo jen podruhe!
+
+@KEY "ANDROID"
+Ou jee, to byly casy...
+%s take vidis poprve Bota ?
+Nevi nekdo, co dela DaTa dnes ?
+Nemuzes hrat s Androidem na %m, co ?
+
+@KEY "BOTMAN"
+Kdo je botman, o kterem tu vsichni porad mluvi ???
+Navstiv http://www.planethalflife.com/botman
+Bez toho zdrojoveho kodu by mnoho botu vubec nebylo!
+Doufam ze HPB-Bot bude brzo hotovy...
+Doted jsi hral jen s HPB-Botem ?
+
+@KEY " BOT ", "BOTS"
+Proc porad mluvite o botech?
+Rikam ti, tady na serveru zadni boti nejsou, %s!
+Boti jsou rulezni!!!
+Jaky je tvuj oblibeny bot, %s?
+Pokud chces taky program, zeptej se botmana!
+Boti, porad sami boti - mel by jsi zacit hrat take s lidma.
+Vetsina botu je velmi stupidni!
+
+@KEY "CAMPER", "CAMPING", " KEMP "
+Nesnasim kempy!
+Kemping sucks!
+Ty nikdy nekempujes, %s ?
+Kempovani je nekdy jedina moznost jak vyhrat...
+Joo, old-school Camper-Strike...
+
+@KEY "CHEAT"
+Ti posrani cheateri porad kazi hru!
+Myslim ze %f cheatuje
+Nesnasim cheatery!
+Cheating sucks!
+Proc tolik lidi cheatuje?
+Hrej s boty - ti nikdy necituji!
+
+@KEY " CLAN "
+Co to je klan?
+Jednou jsem byl v klanu, ale byl nahovno.
+Z jakeho klanu jsi, %s?
+Hej nechces k nam do klanu, %s?
+Hrani v klanu je pro lidi co nemaji zadny osobni zivot...
+
+@KEY " CS ", "COUNTERSTRIKE", "COUNTER-STRIKE", "CSTRIKE"
+Counter-Strike je nuda...
+%s jak dlouho hrajes CS ?
+CS hraji jiz od prvni bety!
+Je tady moc newbiku.
+Prilis mnoho lidi cheatuje
+Neni to takova sranda jak jsem cekal
+
+@KEY " DOD ", "DAY OF DEFEAT"
+Nechapu lidi co hraji DoD
+CS navzdycky...
+%s myslis ze to bude nekdy tak populatni jako CS ?
+%s ty davas prednost DoD pred CS ?
+Day of Defeat je beznadejny MOD, IMHO.
+
+@KEY " ENGINE "
+Slysel jsem, ze HL Engine je hybrid mezi Quake1 & Quake2?
+HL Engine je stale dobry, i kdyz je tak stary...
+Naprogramuj si vlastni %s !
+
+@KEY "FUCK", "DAMN", "PISS", " PICA ", " KURVA "
+Nenadavej, %s!
+Sprostak %s!
+Mas pravdu, %s. A ted DRZ HUBU!
+Davej bacha na to co rikas, %s!
+%s, uz nikdy nepouzivej tohle slovo - neni to slusne!
+
+@KEY "HEHE", "HAHA", "LOL", ":)"
+Jsem rad ze se prinejmensim bavis, %s...
+Uzivej si dokud muzes, %s!
+Velmi vtipne, opravdu, %s...
+Tak ten byl dobrej %s!
+
+@KEY "I THINK ", "I BELIEVE ", " MYSLIM "
+Moc premyslis, %s ;-)
+A ja myslim ze bys mel ztichnout a zacit hrat!
+A ty tomu opravdu veris, %s?
+Proc si to myslis?
+Plz dej mi sve ICQ %s
+
+@KEY " MUSIC ", " BAND "
+Hmm...Nemam zajem o takove komercni sracky
+Stejne je nejlepsi metal!
+Tak mate radi RATM ?
+Kdyz se citim smutne poustim si Napalm Death...
+
+@KEY " PING ", "LAG"
+Mam vzdycky ping 5, mam DSL !!
+Mam pripojeni nahouby...
+Tvuj problem, %s ...
+Tak hrej offline kdyz mas blbe pripojeni!
+Tak zmen providera %s!
+
+@KEY "POD-BOT", " POD ", "PODBOT"
+Slysel jsem ze je to nejlepsi Bot na svete...
+Yeah, it rulez !
+Nekteri rikaji ze pouzivaj wallhack, je to pravda ?
+
+@KEY "Q3", "QUAKE"
+Q3 je narocnejsi nez CS IMO
+Half-Life stale ruluje %s!
+Slysel jsi o DMC, %s? ;-)
+
+@KEY "SCRIPT"
+Skripty jsou pro losery
+%s, ty ani nevis, jak se binduji klavesy ?
+Vis, ze nektere skripty jsou vyhodnocovany jako cheaty ?
+
+@KEY "SERVER"
+Jsem porad na tomhle serveru
+Ja a mi kamosi tu casto hrajem
+Myslim ze tenhle server ma dobre mapy
+
+@KEY "SORRY", " PROMIN "
+Jo jo, PO tom se kazdej omlouva!
+Omluva mi ted uz nepomuze, %s!
+Priste se nejdriv rozmysli nez neco udelas, %s!
+Me je to taky lito!
+
+@KEY "TEAMKILL", " TK "
+Teamkilleri by meli byt banovani.
+Kdo je teamkiller %s ?
+Taky te zabil %t ? To on casto dela!
+Kde je admin ? O tohle by se mel postarat...
+
+@KEY "TIRED", "SLEEP", " SPAT "
+Bez do postele, %s
+Tak si odpocin, %s...
+Chces kafe %s?
+Ale no tak %s ! Jeste jedno kolo...
+
+@KEY "VOTE", "MAPCHANGE"
+Nee, mam rad %m
+Jenom proto ze jsi porad mrtvej %s ?
+%m je skvela, tak ticho!
+%m ownz!
+Yep. Pojdme hlasovat.
+
+@KEY "WHAT ", "WHY ", "WHERE ", "WHO ", "WHEN ", "HOW "
+Na to nikdy neprijdes, %s!
+Yeah, to bylo opravdu divne %s...
+Odpoved mas primo pred nosem, %s ;-)
+Nemam tuseni, %s
+Nevim.
+Co si myslis %s?
+To ti nereknu, %s!
+Zkus na to prijit, %s!
+Dobra otazka, %s!
+
+[UNKNOWN]
+Bla bla bla...
+Co jsi rikal, %s?
+Koncentruj se radsi na hru, %s!
+Povidani s tebou %s je skvele!
+Tyhle proklate say texty jsou tak otravne!
+Nespamuj, %s!
+Kolik ti zabere casu nez vymyslis takovou kravinu???
+Yeah, %s. Mas pravdu!
+V zadnem pripade, %s...
+Odkud jsi, %s?
+Nemuzu uverit ze dokazes zaroven psat a hrat, %s!
+Jsi si jisty, %s?
+To vidim, %s!
+Proc kazdy pise to same ???
+O cem to sakra mluvis, %s?
+Hey, bud ticho a hrej, %s!
+Rikal jsi neco, %s?
+Kdo to rekl?
+Opravdu?
+Opravdu vtipne, %s!
+Jsem v nejlepsim klanu nasi zeme!
+Nesnasim debilni komenty, %s!
+Umi tu nekdo Gauss-jump?
+ZZZZZZZzzzzzz
+Wazzzzuuuuuuup?
+Nudaaaaaaaa... 
+Mas ICQ, %s?
+OMG jsi divnej!
+To si budes porad povidat ?
+To bych taky rad vedel %s
+Urcite.
+Huh? WTF ?

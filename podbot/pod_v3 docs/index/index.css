@@ -1,0 +1,285 @@
+/* Initialize tags */
+a, body, div, img, li, ol, p, table, tr, td, ul
+{
+	border: 0;
+	color: #BBBBBB;
+	font-family: Tahoma, sans-serif;
+	font-size: 12px;
+	margin: 0;
+	padding: 0;
+	text-align: middle;
+	text-decoration: none;
+}
+
+/* Link styles */
+a:active, a:link, a:visited
+{
+/* 	color: #005FFF; */
+	color: #6666FF;
+}
+
+a:hover
+{
+	color: #0000FF;
+	text-decoration: overline underline;
+}
+
+/* Set background color
+   Add space between user agent's borders and page content*/
+body
+{
+	background-color: #000000;
+	counter-reset: x;
+	margin: 5px;
+}
+
+/* Navigation Table Styles */
+td#Banner img
+{
+	background-image: url("../images/podbot.png");
+	height: 161px;
+	width: 575px;
+}
+
+ul#MainNav
+{
+	list-style: circle outside url("../images/arrow.gif");
+	margin-left: 24px;
+}
+
+/* Set Main Content Styles */
+table#MainContent
+{
+	margin: 5px;
+	width: 90%;
+}
+
+/*
+table#MainContent tr
+{
+	background-color: #000020;
+	border: 1px solid #000040;
+	padding: 10px;
+	width: 100%;
+}
+*/
+
+table#MainContent table
+{
+	background-color: #000020;
+	border: 1px solid #000040;
+	margin: 0 0 0 32px;
+}
+
+
+table#MainContent table ul
+{
+	list-style: upper-roman outside;
+	margin: 0 16px 0 16px;
+}
+
+table#MainContent table ul li
+{
+	background-color: #000020;
+	border: 2px solid #000040;
+	margin: 0 32px 0 32px;
+	padding: 4px;
+}
+
+table#MainContent table ul li span
+{
+	background-color: #000024;
+	display: block;
+	margin: 16px 0 0 16px;
+	padding: 2px;
+}
+
+table#MainContent table ul li span span
+{
+	background-color: #000028;
+	display: block;
+	margin: 2px 2px 2px 8px;
+	padding: 2px;
+}
+
+table#MainContent table ul li span span span
+{
+	background-color: #00002C;
+	display: block;
+	margin: 2px 2px 2px 8px;
+	padding: 2px;
+}
+
+table#MainContent table ul li span span span span
+{
+	background-color: #000030;
+	display: block;
+	margin: 2px 2px 2px 8px;
+	padding: 2px;
+}
+
+/* Navigation for Main Content Styles */
+table#MainContentNavigationTable
+{
+	margin: 4px;
+	width: 90%;
+}
+
+table#MainContentNavigationTable table
+{
+	background-color: #000020;
+	border: 1px solid #000040;
+	margin: 0 0 0 160px;
+}
+
+
+table#MainContentNavigationTable table ul
+{
+	list-style: upper-roman outside;
+	margin: 16px 32px 16px 32px;
+}
+
+
+table#MainContentNavigationTable table ul li
+{
+	background-color: #000020;
+/*	border: 1px solid #000040;*/
+	margin: 0 10px;
+}
+
+table#MainContentNavigationTable span
+{
+	background-color: #000020;
+	border: 2px solid #000040;
+	font-size: 48px;
+	margin: 0 160px 0 0;
+	padding: 0 10px 0 10px;
+}
+
+.style_chapter_title
+{
+	font-family: "Times New Roman", Times, serif;
+	font-size: xx-large;
+	color: #CCCCCC;
+	font-weight: bold;
+}
+
+.style_file_path
+{
+	font-family: "Courier New", Courier, mono;
+	font-size: small;
+	color: #CCCCFF;
+	font-weight: bold;
+}
+
+.style_server_cvar
+{
+	font-family: "Courier New", Courier, mono;
+	font-size: small;
+	color: #FF0000;
+	font-weight: bold;
+}
+
+.style_picture_description
+{
+	font-family: "Times New Roman", Courier, mono;
+	font-size: large;
+	color: #0066FF;
+	font-weight: bold;
+}
+
+.style_end_chapter
+{
+	font-family: "Times New Roman", Courier, mono;
+	font-size: small;
+	color: #0066FF;
+	font-weight: bold;
+}
+
+.style_note
+{
+	font-family: "Courier New", Courier, mono;
+	font-size: small;
+	color: #0099FF;
+	font-weight: bold;
+}
+
+.style_paragraphes
+{
+	font-family: "Courier New", Courier, mono;
+	font-size: medium;
+	color: #0099FF;
+	font-weight: bold;
+}
+
+.style_red
+{
+	color: #FF0000
+}
+
+.style_red_bold
+{
+	color: #FF0000;
+	font-weight: bold;
+}
+
+.style_pb_commands
+{
+	color: #00FF66
+}
+
+.style_green
+{
+	color: #00FF66
+}
+
+.style_radio_commands
+{
+	color: #FFFF00
+}
+
+.style_yellow
+{
+	color: #FFFF00
+}
+
+.style_white
+{
+	color: #FFFFFF
+}
+
+.style_blue
+{
+	color: #0033FF
+}
+
+.style_green
+{
+	color: #00FF00
+}
+
+.style_cyan
+{
+	color: #00FFFF
+}
+
+.style_pink
+{
+	color: #FF00FF
+}
+
+.style_orange
+{
+	color: #FF9933
+}
+
+.style_magenta
+{
+	color: #6600FF
+}
+
+.style_sea
+{
+	color: #00CC99
+}
+

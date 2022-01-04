@@ -1,0 +1,345 @@
+# Icelandic Translation by
+# [.evil.]Dust Puppy <ks42@mi.is>
+#
+# All Bot Chat Messages are stored here
+# All comments start with a "#" char
+# You can write as much comments as you like, but
+# please avoid using tabs, whitespaces and blank lines
+# (they will be parsed out but you never know!)
+# Also be sure that a Line doesn't exceed 80 chars
+# (including carriage return)
+#
+# Messages for each Type of Chat begin with a marker
+# enclosed in []
+# Marker Types:
+# [BOMBPLANT] Holds the Messages for the Counter Terrorists
+#	      if a Bomb got planted
+# [KILLED]    Bots say this Message if they killed somebody
+# [DEADCHAT]  Bots say these Lines if they are dead and in
+#	      Spectator Mode
+#
+# Maybe more Message types will be added in the future...
+#
+#
+#
+#
+# Counter Messages for Bomb planted:
+# Minimum Number is 1
+#
+[BOMBPLANT]
+Andskotinn..... ekki aftur!
+Sprengid eitthvad annad aular !
+Siðast tok þad mig 5 sekundur ad finna og defusa sprengjuna....
+Ummmm... er thad raudi eda blai virinn... ?
+#
+#
+#
+#
+#
+#
+# Messages after killing somebody:
+# Minimum Number is 1
+# For the %v the name of the victim will
+# be inserted
+#
+[KILLED]
+%v, eg verd alltaf betri en thu !
+Fyrirgefdu, %v. Thu varst fyrir mer.
+Djofull flaugstu mar, %v.
+Eg vard ad gera thetta, %v. thu skilur.
+Thu hefdir att ad hlaupa thegar thu hafdir taekifaeri, %v.
+Eg thori ad vedja ad thu tholir ekki thegar thetta gerist, %v?
+Thetta aetti ad kenna ther, %v !
+Hey, %v! thu meiddir mig naestum tvi nuna.
+Ha...ha!
+Thu er aumingi, %v. Algjor aumingi
+%v eg hef ahyggjur af ther...
+Fyrirgefdu %v, Headshot Scriptid mitt er betra en thitt.
+#
+#
+#
+#
+#
+#
+#
+# Chat Messages when dead and bored
+# !!Minimum Number is 9!!
+#
+[DEADCHAT]
+Mer leidist
+Fer ekki ad koma nytt map??
+Sja thessa campara aumingja !
+Vid vinnum thetta round :)
+Eg vildi ad einhver godur kaemi inn a serverinn
+Thetta var sart.
+Thetta er helviti gaman.
+Eg vissi ekki ad that vaeri haegt ad spila svona illa.
+af hverju eru allir ad reyna ad meida mig :)
+heimsaekid http://www.geocities.com/countfloyd_1999/
+Thetta map sygur
+Mer gengur illa i dag
+Daudi yfir alla campara !
+Fara their ekki ad haetta ad campa ?
+Heimsku Bottar!
+Sja thessa bjana
+Litla systir min spilar betur en thetta
+Eg er svo threyttur i dag
+Eg thart ad fara ad sofa
+Ekki DE_DUST i dag, please !
+Geridi that votum annad map
+Er einn bottinn fastur strax?
+
+# Start of the "dynamic" replies from here
+# After each @KEY Tag you need to specify the
+# keywords in quotation marks and uppercase. You can
+# have several keywords (aliases) each separated by a comma.
+# After the keywords line, the answers or messages to this
+# special keyword need to be given. In theory there can be an unlimited
+# number of answers of course you should care about the used memory ;)    
+
+[REPLIES]
+
+@KEY " AGAIN "
+%s, things are always repeating - aren't they?
+And I'm sure it wasn't the last time...
+That's the way things go, hey...
+
+@KEY "AIMBOT", "WALLHACK"
+%s, are you cheating ?
+Even PunkBuster fails to detect some of them...
+You can't be sure nowadays if someones's good at playing or cheats
+Aimbots are cool, shut up %s!
+Wallhacks are evil tools of the devil ;)
+
+@KEY " ALWAYS "
+That's not always, %s!
+I just like it :-)
+Come on %s, that was only the second time!
+
+@KEY "ANDROID"
+Ah yes, those were the times...
+%s was it your first Bot too ?
+Does anybody know what DaTa does today ?
+You can't play with Android on %m, can you ?
+
+@KEY "BOTMAN"
+Who is this botman everybody is talking about???
+Visit his website at http://www.planethalflife.com/botman
+Whithout his sourcecode many bots wouldn't exist!
+I wonder when HPB-Bot will be finished...
+Did you play his HPB-Bot yet ?
+
+@KEY " BOT ", "BOTS"
+Why are you always talking about them?
+There are no bots on this server %s, I tell you!
+Bots are cool!!!
+What's your favourite bot, %s?
+If you want to program your own, ask botman!
+Bots, all the time bots - you should start playing with humans.
+Most bots are still very stupid!
+
+@KEY "CAMPER", "CAMPING"
+I really hate those campers!
+Camping sucks!
+Don't you camp sometimes %s ?
+Camping's often the only option to win...
+Yes, good 'ole Camper-Strike...
+
+@KEY "CHEAT"
+Those damn cheaters are ruining the entire game!
+I suspect that %f is cheating
+I hate cheaters!
+Cheating sucks!
+Why are so many people cheating?
+Punkbuster could help...
+Play with bots - they don't cheat!
+
+@KEY " CLAN "
+What are these clans all about?
+I was in a clan once, but it sucked hard.
+What clan are you from, %s?
+Do you want to enter our clan, %s?
+Playing in a clan is for people who got no life...
+
+@KEY " CS ", "COUNTERSTRIKE", "COUNTER-STRIKE", "CSTRIKE"
+Counter-Strike is boring nowadays...
+%s how long do you play CS ?
+CS all the way from the very first beta!
+There are too much newbies playing it.
+Too many people online cheat in CS
+It's not as much fun as it used to be
+
+@KEY " DOD ", "DAY OF DEFEAT"
+I don't get what people like in DoD
+CS all the way...
+%s do you think it will get as popular as CS ?
+%s do you prefer DoD over CS ?
+Day of Defeat is a hopeless MOD, IMHO.
+
+@KEY " ENGINE "
+I heard the HL Engine is a hybrid between Quake1 & Quake2, odd huh?
+%s, don't you miss the time when an engine was a Software Engine ?
+The HL Engine is still quite good, despite its age...
+Code your own engine %s !
+
+@KEY "FUCK", "DAMN", "PISS"
+Don't swear, %s!
+Nasty %s!
+Yes, you're right, %s. Now SHUT UP!
+Watch your language, %s!
+%s, don't use this word again - that's impolite!
+
+@KEY "HEHE", "HAHA", "LOL", ":)"
+I'm glad that at least you have your fun, %s...
+Enjoy yourself while you still can, %s!
+Very funny indeed, %s...
+Good one %s!
+
+@KEY "I THINK ", "I BELIEVE "
+You think too much, %s ;-)
+And I think you should shut up and play!
+And you really do believe that, %s?
+What makes you think so?
+Plz give me your ICQ Number %s
+
+@KEY "JOEBOT"
+Yes, JoeBot isn't bad...
+Funnily JoeBot got famous when NNBot quit...
+I wonder where else Neural Networks could be applied
+So you think JoeBot rocks ?
+
+@KEY "JUMBOT"
+JB ? It was good back then but ParaBot is much better now!
+JB's advantage has been that it was a MOD, not a hooking DLL
+Ah yes, Jumbot and The Fatal. Wonder what he's up to now.
+Rumours have it that The Fatal now does AHL Bots ? 
+
+@KEY " MUSIC ", " BAND "
+Umm...I don't care as long as it's no commercial shit
+Underground Electro Polka is the real deal!
+Do you still use Napster %s ?
+Somebody got good MP3 Links ?
+
+@KEY "NNBOT"
+Too bad NNBot is discontinued...
+Try JoeBot if you liked NNBot %s
+%s did you hear of Ditlew's new MOD ?
+
+@KEY "PARABOT"
+ParaBot is a the coolest Deathmatch Bot I've ever played
+%s you should try ParaBot, it's great!
+It's so sad no CSBot has the great Nav of Parabot so far
+I heard it already supports 3 HL MODS by now
+
+@KEY " PING ", "LAGG"
+I always have a Ping of 5, I'm on DSL !!
+My connection sucks...
+Where are you from %s ?
+Play offline with Bots if your connection sucks
+Just change your provider %s!
+
+@KEY "POD-BOT", " POD ", "PODBOT"
+I heard it's the best Bot for CS, I'm not sure though...
+Yeah, it rulez !
+People tell they use some kind of wallhack, is it true ?
+
+@KEY "PUNKBUSTER"
+Don't be a PUNK! (support www.punkbuster.com)
+I'm always lagging when using PunkBuster
+Tony Ray of PB is kind of weird...
+
+@KEY "Q3", "QUAKE"
+Q3 has a bad lighting IMO
+Half-Life still rules %s!
+Have you heard of DMC, %s? ;-)
+
+@KEY "REALBOT"
+Is it any good %s?
+Is RB still unwaypointed %s ?
+Yep, I remember RB. First unwaypointed Bot right ?
+I heard RB now tries to do something like ParaBot ?!?
+Once lovingly called 'the wallhuggers'
+
+@KEY "SCRIPT"
+Scripts are for losers
+%s, you prolly don't know how to bind keys ?
+Did you know that even buying scripts are considered cheating ?
+
+@KEY "SERVER"
+I'm always on this Server
+Me & my friends play a lot on this Server
+I believe this Server's got a good Map Rotation
+
+@KEY "SORRY"
+Yeah, afterwards everybody says he's sorry!
+The excuse doesn't help me now, %s!
+Next time you better think before you start doing something, %s!
+I'm sorry, too!
+You don't know how sorry you will be for doing that...
+
+@KEY "TEAMKILL", " TK "
+Teamkillers should be banned from this server.
+Who's the teamkiller %s ?
+I like stabbing my teammates, MWUHAHA!!
+Did %t kill you ? He often does!
+Where's the Admin ? He should take care of it...
+%s just sit out %r and pay him back! 
+
+@KEY "TIRED", "SLEEP"
+Go to bed, %s
+Have some rest, %s...
+Want some coffee %s?
+Oh come on %s ! One more round... 
+
+@KEY "VOTE", "MAPCHANGE"
+Nah, I like %m
+Just because you're always dead %s ?
+%m is great, shut up!
+%m ownz!
+Yep. We should vote now.
+
+@KEY "WHAT ", "WHY ", "WHERE ", "WHO ", "WHEN ", "HOW "
+You will never find out, %s!
+Yeah, that's really strange %s...
+The answer is out there, %s ;-)
+No idea, %s
+Dunno.
+What do you think %s?
+I won't tell you, %s!
+Find out yourself, %s!
+Good question, %s!
+
+[UNKNOWN]
+Bla bla bla...
+What did you say, %s?
+Concentrate on the game, %s!
+Chatting with you %s is so great!
+These damn chat-messages are freaking me out!
+Don't spam, %s!
+How do you find the time to type all this crap???
+Yeah, %s. You're right!
+No way, %s...
+Where are you from, %s?
+I can't believe how you can play and type at the same time, %s!
+Are you sure, %s?
+I see, %s!
+Why is everybody always saying the same things???
+What the heck are you talkin' about, %s?
+Hey, shut up and play, %s!
+You said somethin', %s?
+Who said that?
+Oh, really?
+Very funny, %s!
+I'm in the best clan of my country!
+I hate these stupid comments, %s!
+Does anybody know how to do the Gauss-jump?
+ZZZZZZZzzzzzz
+Wazzzzuuuuuuup?
+I´m so booooored... 
+Have you got ICQ, %s?
+It's damn slow today...
+OMG you're weird!
+Do you want to play or chat all the time ?
+I don't really want to know %s
+Certainly.
+Huh? WTF ?

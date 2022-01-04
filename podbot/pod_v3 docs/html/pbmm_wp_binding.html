@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Binding for waypointing</title>
+<link rel="stylesheet" type="text/css" href="../index/index.css">
+<!-- ###START: MetaData### -->
+ <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=ISO-8859-1" />
+ <meta name="author" content="SpLoRyGoN & KWo" />
+ <meta http-equiv="ImageToolbar" content="no" />
+ <meta name="MSSmartTagsPreventParsing" content="true" />
+<!-- ###END: MetaData### -->
+</head>
+<body>
+<!-- ###START: Body### -->
+<table>
+<!-- ###START: Header Table### -->
+ <tbody><tr>
+  <td id="Banner"><img alt="PODBot MetaMod" src="../index/blank.png"></td>
+  <td>
+   <ul id="MainNav">
+    <li><a href="../index.html">Introduction</a></li>
+    <li><a href="./pbmm_install.html">Installation</a></li>
+    <li><a href="./pbmm_configuration.html">Settings and commands</a></li>
+    <li><a href="./pbmm.html">Usage</a></li>
+    <li><a href="./pbmm_wp_basic.html">Waypoints - Basic</a></li>
+    <li><a href="./pbmm_wp_commonerrors.html">Waypoints - Common errors</a></li>
+    <li><a href="./pbmm_wp_binding.html">Waypoints - Useful keys binding</a></li>
+   </ul>
+  </td>
+  <td>
+   <ul id="MainNav">
+    <li><a href="./pbmm_credits.html">Credits</a></li>
+    <li><a href="./pbmm_versionhistory.html">Version History</a></li>
+    <li><a href="./pbmm_linksfiles.html">Links</a></li>
+   </ul>
+  </td>
+ </tr>
+<!-- ###END: Header Table### -->
+</tbody></table>
+
+<table id="MainContentNavigationTable">
+<!-- ###START: MainContent Navigation Table### -->
+ <tr>
+  <td>
+   <table>
+    <tr>
+     <td>
+      <ul>
+<!-- ###START: MainContent Navigation### -->
+       <li><p class="style_white"><a href="#I">Some SoUlFaThEr's binds</a></p></li>
+       <li><p class="style_white"><a href="#II">Some KWo's binds</a></p></li>
+<!-- ###END: MainContent Navigation### -->
+      </ul>
+	  </td>
+    </tr>
+   </table>
+  </td>
+  <td>
+<!-- ###START: Page Title### -->
+   <span>Waypoints - Useful keys binding</span>
+<!-- ###END: Page Title### -->
+  </td>
+ </tr>
+<!-- ###END: MainContent Navigation Table### -->
+</table>
+
+<table id="MainContent">
+<!-- ###START: MainContent Table### -->
+ <tr>
+  <td>
+   <table>
+    <tr>
+     <td>
+      <p><font class="style_note">NOTE:</font></p>
+      <p>To make waypointing more easy and faster here You have some binds. 
+         You need to add them to Your config.cfg file in CSTRIKE directory.</p>
+	   <p>Add only these lines started from "bind ...". These started from "//" are comments only here to help You 
+         in understanding what they are used for. Make sure if the binds proposed here don't overwrite some of Your 
+         existing (and maybe necessary) binds.</p><br>
+   <ul>
+<!-- ###START: MainContent### -->
+    <li><a name="I"></a>Some SoUlFaThEr's binds
+    <span>
+     <p>// G = Main Menu<br>
+     bind "g" "pb wpmenu"</p>
+     <p>// O = Waypoint Add Menu<br>
+     bind "o" "pb wpmenu;menuselect 1"</p>
+     <p>// P = Waypoint Delete, and answering YES to "Are you sure?"<br>
+     bind "p" "pb wpmenu;menuselect 2;menuselect 1"</p>
+     <p>// U = Pathwaypoint Add<br>
+     bind "[" "pb wpmenu;menuselect 5"</p>
+     <p>// * = Pathwaypoint Delete, and answering YES to "Are you sure?"<br>
+     bind "]" "pb wpmenu;menuselect 6;menuselect 1"</p>
+     <p>// H = Flagmenu<br>
+     bind "h" "pb wpmenu;menuselect 4"</p>
+     <p>// L = Waypoint Setradius Menu<br>
+     bind "l" "pb wpmenu;menuselect 3"</p>
+     <p>// K = Auto Path Max Distance Menu<br>
+     bind "k" "pb wpmenu;menuselect 9;menuselect 6"</p>
+     </span></li>
+
+    <li><a name="I"></a>Some KWo's binds
+    <span>
+     <p>// U = Opens Waypoint Editor Menu<br>
+     bind "u" "pb wpmenu"</p>     
+     <p>// Y = Turns on/off Waypoint Editor<br>
+     bind "y" "pb wpmenu;menuselect 9;menuselect 1"</p>
+     <p>// [ = Waypoint Add Menu<br>
+     bind "[" "pb wpmenu;menuselect 1"
+     <p>// ] = Waypoint Delete, and answering YES to "Are you sure?"<br>
+     bind "]" "pb wpmenu;menuselect 2;menuselect 1"</p>
+     <p>// I = Turns on/off Auto-Waypointing<br>
+     bind "i" "pb wpmenu;menuselect 9;menuselect 2"</p>
+     <p>// P = Pathwaypoint Add<br>
+     bind "p" "pb wpmenu;menuselect 5"</p>
+     <p>// O = Pathwaypoint Delete, and answering YES to "Are you sure?"<br>
+     bind "o" "pb wpmenu;menuselect 6;menuselect 1"
+     <p>// ; = Flagmenu<br>
+     bind ";" "pb wpmenu;menuselect 4"</p>
+     <p>// F6 = Waypoint Setradius Menu<br>
+     bind "F6" "pb wpmenu;menuselect 3"</p>
+     <p>// F7 = Cache waypoint<br>
+     bind "F7" "pb wpmenu;menuselect 9;menuselect 7"</p>
+     <p>// F8 = Waypoint check<br>
+     bind "F8" "pb wpmenu;menuselect 7"</p>
+     <p>// F9 = Waypoint save<br>
+     bind "F9" "pb wpmenu;menuselect 8"</p>
+     <p>// F11 = Checks waypoints' statistics<br>
+     bind "F11" "pb wp stats"</p>
+     </span></li>
+<!-- ###END: MainContent### -->
+      </ul>
+     </td>
+    </tr>
+   </table>
+  </td>
+ </tr>
+<!-- ###END: MainContent Table### -->
+</table>
+<!-- ###END: Body### -->
+</body>
+</html>

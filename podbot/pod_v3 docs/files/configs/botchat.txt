@@ -1,0 +1,329 @@
+# All Bot Chat Messages are stored here
+#
+# Any line begining with '#' in the first column is a comment line
+# No line should pass 79 Characters!(equivilent to this alphabetical line)
+#
+#abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz
+#
+# Messages for each Type of Chat begin with a marker enclosed in []
+#
+# Marker Types:
+#
+# [BOMBPLANT] Holds the Messages for the Counter Terrorists
+#	        if a Bomb got planted
+# [KILLED]    Bots say this Message if they killed somebody
+# [DEADCHAT]  Bots say these Lines if they are dead and in
+#	        Spectator Mode
+#
+# %f = Name of Player with the most frags
+# %m = Mapname
+# %r = Time until Round ends
+# %s = Name of Player to reply
+# %t = Name of Teammate alive
+# %v = Last Victim of this Bot
+#
+# Counter Messages for Bomb planted:
+# Minimum Number is 1!
+#
+[BOMBPLANT]
+HEY!!! They're tryin to kill Kenny! Those bastards!!!!
+oh no %t, what did they do to the plants?
+we got %r left to figure what they want to bomb!!
+FIDEL CASTRO DID IT! no....WAIT SADDAM DID IT!! no....wait...
+sssshhhhh... %t, did you hear that beeping noise? was that your watch?
+...Aaaaaaaaaaaa I DON'T WANN DIE....im famous and yer not %t.
+#
+#
+# Messages after killing somebody:
+# Minimum Number is 1
+# For the %v the name of the victim will
+# be inserted
+# NOTE: Include a %v placeholder in every Line!
+#
+[KILLED]
+%v,  this reminds me of a Slayer song...all this bloodshed
+Sorry, %v. can we do the scene again?
+so....how do you like being worm food %v???
+Yer supposed to be dead, %v its part of the game!!!!!
+Sorry, %v. that looked as good as an Andy Worhol painting!
+%v, ill use the rubber bullets next time !
+Whatsamatter, %v?? lose your head? hahaha gotta keep cool!!
+I had to do it, %v. You understand. The Director said so!!
+hey %v.......MUAHAHAHAHAHAHAHAHAHAHA
+%v, I enjoyed that one!! Lets play it again Sam
+I've always been better, %v. AND YOU KNOW THIS ...MAN!!!!!!.
+Hip-Hop is phat %v!!
+Look at all that blood %v  YEEEEEEEEEEEHAAAAAAAAAAAAAAA?
+That'll teach you, %v !
+Hey, %v! Ju can start callin me Scarface..Ju Piece o' CHIT!!!!
+are you talking to me %v?? 
+%v get it right this time, dont stand in front of my bullets.
+%v, what are you laying around for??? hehe
+#
+#
+# Chat Messages when dead and bored
+# Minimum Number is 9!
+#
+[DEADCHAT]
+Stop playing Dead....we see that you do that well now get up.
+It makes me sick to look at you FAMOUS idiots!
+It's time to change your diapers %v haha yer acting like a baby
+I am an actor not a game player, thats why im losing
+I get weak in the knees when I see %s comin at me!
+no way %f!! No human is that quick
+Look at that score!!.. %f is good at this gaming stuff, too bad the movies suck!!
+Spectating is something normal people do....not us.
+Have you heard of Metallica?
+My whole family is full of winners....so i will win too!
+Why are we playing this game, we should be shooting a scene?
+WTF, I wish someone better than %s would join the server.
+are James and Lars still on???
+why is %f always winning??
+The game is ok but all this waiting........
+Why does everyone keep trying to hurt me, where are my stuntmen??
+Our team is going to win for sure
+CS, a game for the rich!
+This is even close to real looking, good work on the set !!
+%r and %t are still alive! Something must be very wrong...
+Stop waiting around you freaks!! There's only %r left !!
+How much money does the winner get? hehe
+Still %r left in this round...do something!!! 
+This game isnt going to get me more famous than I already am!
+you know for famous people we sure are stipud, uh, i mean stupid
+I can't believe this...this is crazy!
+this game is good to take out some of that agresion i have
+Look at those well-paid retarded idiots !
+I usually don't play this with famous people !
+%f You act like my sister...she's a Tomboy
+Not %m again!!! Be original for crying out loud!
+%f is really rockin the set
+%f when's your next movie coming out?
+%f are you coming to the award show again this year?
+%f how much money do you make a year nowadays?
+%f get off your lazy butt and find them!!
+%f The day is long and you are making it longer again
+%f were your parents musicians?
+%f i need some more sugar with this coffee
+%f gimme a smoke please
+What music are you listening to??
+I need my beauty sleep %t, you guys take em out for me!
+...All that and a bag of chips with a side order of bacon!
+I really like this %m, it jams on gameplay.
+I want more money for this...they arent paying me enough for the humiliation
+Who's on first??? 
+Whatever happened to Wu-Tang?? they had style for musicians
+Im rich...i dont have to put up with this crap
+Well, I believe my contract is up....time to go.
+Anyone here like doing love scenes???
+Where have all the good times gone??
+Dear fellow famous people....KILL FASTER !!!!
+I think i have to go now...bye, cu at the coke party later
+LOL! Look at %t ... WTF ?...never seen anything like that before !
+I have an audition, B R B
+Are any of these weapons real, i never used them in my scenes?
+I need to understand this agresion I see here today
+I would have made more money with Porn
+I'm off ta snort this real fast, B R B
+WTF, I mean why not guys, vote me as Mayor, Jesse the Body Ventura did it...
+Vote %f out he didnt bring enough cash to place his bet on who wins!!!
+Aren't we getting a bit old for this?
+I didnt realize that this was so difficult...Movies are cooler
+Anyone remember Animal House??
+HEY %f isnt it time you stopped using that weapon?
+Lets all act like we are dead....see if we can fool em next round.
+Woah %f has better stats than me again, he must be on caine!!
+I'm really good at this, its not special effects !
+I'm tired, lets leave %t !!
+I smoke a lot when i have to wait, why do famous actors have to wait?
+WTF, ....??
+#
+#
+# Start of the "dynamic" replies from here
+# After each @KEY Tag you need to specify the
+# keywords in quotation marks and uppercase. You can
+# have several keywords (aliases) each separated by a comma.
+# After the keywords line, the answers or messages to this
+# special keyword need to be given. In theory there can be an unlimited
+# number of answers of course you should care about the used memory ;)    
+#
+#
+[REPLIES]
+@KEY "WHO'S ON FIRST"
+Whats on Second?, %s
+I don't know but this isnt Baseball
+I forgot how that one goes, it was a classic tho!
+I'm not a fan of baseball, sorry %s
+
+@KEY "AGRESION"
+I think you need to learn how to spell first it's aggression
+you cant spell you way out of a paper bag...a.g.g.r.e.s.s.i.o.n
+the correct spelling is AGGRESSION
+
+@KEY "FAMOUS"
+Who's famous %s??
+Whats so cool about Fame?  THE MONEY!!!!!
+My fame is due to hard work *snicker*
+Ever see a drugged up famous person??? lol
+Famous Schmamous....we are all normal people
+
+@KEY "PORN"
+yeah %s, you need to enjoy anal for that though....
+I already saw some early footage of you %s, with Ron Jeremy hehe
+mmmmmmmmm Chasey Lain
+Porn??? ARE YOU NUTS??
+
+@KEY "ANIMAL HOUSE"
+John Belushi ruled in that movie %s
+Thats how my College scene went down !!
+wow, %s, you like those vintage films...vintage for me anyway :) 
+I'm gonna order a pizza and rent that right now CU L8TR !
+
+@KEY "WAIT", "WAITING"
+MAN you are so impatient %s
+Would you please stop complaining %s have patience
+back in my Army days it was all....Hurry up and Wait
+You are just going to have to deal with it
+Please tell some jokes %s, I'm bored too
+
+@KEY "AGAIN"
+quit your whining, it will all be over soon
+I think you have a serious problem
+yeah and dont let that happen again
+
+@KEY "WISH"
+%s, what do you want ?
+Wishes are cool, Can i have 3 of them %s!
+Wish wish wish.....andthing else you do?
+thats wishful thinking
+
+@KEY "B R B"
+NOOOOOOOOO DONT GOOOOOOOOOOOOO %s!
+can someone tell me what brb means?
+Come on %s, you keep saying you're leaving but you're still here!
+ok see you around %s
+CU
+bye, take care
+
+@KEY "HEHE", "HAHA", "LOL", ":)", "WTF"
+yeah lol, %s!
+What's so funny, %s...
+hihi
+haha
+hehe
+:)
+LMAO
+ROFL
+ROFLMAO
+
+@KEY "I THINK ", "I BELIEVE "
+don't think, %s..... DO ;-)
+And I think you should sit back down and play!
+Plz give me your ICQ Number %s
+I think you're retarded
+I believe you're retarded
+
+@KEY "WU-TANG", "METALLICA", "DREAM THEATER", "HIP-HOP", "MUSIC", "SLAYER"
+Umm...I don't care as long as it's not commercial 
+Trance beats make me dizzy when I'm drunk
+Busta Rhymes is the fastest rapper..and has great style too
+um...METALLICA RULLLLLLZZZZZZZZZZZZZ
+Dream Theater is the most perfect band !!
+just gimme one night with Kylie Minogue.....MUAHAHAHAHA
+
+@KEY "WELL-PAID", "MONEY", "CASH", "RICH"
+You make more money than I do!!
+Well-Paid......hahaha that must be a joke
+Where are you from %s ? cuz where I'm from no one has money
+Just change your producer and you'll have money %s!
+you can't be well paid %s....your movies doesn't sell hahahaha
+being rich is so cool...you can do anything ...or not do anything hehe
+
+@KEY "WIN", "WINNING", "WINNERS", "WINNER"
+Is winning all you ever think about %s?
+It's best to not think about the win....just have fun
+I am a Winner Type so you actually have no real chance...
+Speaking of win.....I'm going to Vegas, not de_vegas
+
+@KEY "SORRY", "EXCUSE"
+Yeah, but only non-famous people have to say sorry, or excuse me
+The excuse doesn't help me now, %s!
+THERE IS NO EXCUSE!!! yer not sorry!!!
+Dont worry about it...
+
+@KEY "WHAT", "WHY", "WHERE", "WHO", "WHEN", "HOW"
+You will never find out, %s!
+No idea, %s
+What is this, %s, 20 Questions ??
+Find out yourself, %s !
+
+@KEY "REAL"
+define real for me please
+nothing in this world is real
+dream on, real doesnt exist in an actors schedule
+real huh....get a real life, stop acting all the time
+
+@KEY "SCENE", "SCENES"
+oh YES... a LOVE scene!!!
+I have to shoot a scene tomorrow so i can play today
+What kind of scene??
+If its a love scene make sure you forget your parts after the kiss ! hehe
+
+@KEY "STUNTMEN"
+I never use stuntmen in my scenes
+I'm afraid of the things they make us do and need stuntmen too
+Stuntmen are crazy, who wants to jump off buildings for a living
+dont cry...they are trained professionals LOL
+
+@KEY "NUTS"
+yeah i got a pair a nuts %s
+
+@KEY "MOVIE", "MOVIES"
+Man, cant we talk about something besides our jobs??
+My movies have the best action scenes
+a movie is just a movie...but the Matrix is real!!
+what would i do if couldnt act.
+
+@KEY "ACT", "ACTING"
+you couldnt act your way out of a wet paper bag
+acting? none of us can really act...its the director making us look good
+acting is my life. my whole life is just an act. OMG IM SO DEPRESSED
+Act like a fag....itll look funny with that weapon in your hand!
+did anyone attend acting school?
+
+@KEY "COKE", "HASH", "DRUGS"
+damn....no wonder everyone things actors have drug problems....WE DO!
+drugs sex and movies....in that order !! hihi
+coke huh....coca cola drinkers party :)
+drugs help me deal with being so ...so famous and RICH! 
+
+[UNKNOWN]
+Bla bla bla...
+What did you say, %s?
+Concentrate on the game, %s!
+Chatting with you %s is so great! I always wanted to meet you
+These chat-messages are freaking me out! I feel like I know you all!
+Don't spam, %s!
+How do you all type so fast, I can't keep up!
+Yeah, %s. You're right!......as if
+No way, %s...this is insane
+Where are you from originaly, %s?
+I can't believe how you can play and win all the time, %f!
+YEAH RIGHT! HAHA SURE!!!
+I believe you!!!
+OK, uhuh LOL
+Why is everybody always saying the same things???
+Hey %s....oh nevermind!
+What are you talking about %s
+Who said that? I resemble that remark
+Oh, really? I'm so impressed...*snicker*
+Very funny, %s! you must be on drugs.
+%s !
+ZZZZZZZzzzzzzZZZZZZZZZZZZZZZzzzzzzzzzzzzZZZZZZZZ
+Wazzzzuuuuuuup? haha
+I thought all of you action heros would be good at this...guess not hehe 
+Have you got ICQ, %s?
+OMG you're weird in person! i'd rather watch your movies.
+I aint got the cash to buy me some more hash
+Roger That, Colonel, I'm on my way
+Huh? WTF, what was that all about ?
+Silly rabbit...um....i forgot the rest

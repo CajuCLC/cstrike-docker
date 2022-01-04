@@ -1,0 +1,534 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Config and console commands</title>
+<link rel="stylesheet" type="text/css" href="../index/index.css">
+
+<!-- ###START: MetaData### -->
+ <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=ISO-8859-1" />
+ <meta name="author" content="SpLoRyGoN & KWo" />
+ <meta http-equiv="ImageToolbar" content="no" />
+ <meta name="MSSmartTagsPreventParsing" content="true" />
+<!-- ###END: MetaData### -->
+
+</head>
+<body>
+<!-- ###START: Body### -->
+<table>
+<!-- ###START: Header Table### -->
+ <tbody><tr>
+  <td id="Banner"><img alt="PODBot MetaMod" src="../index/blank.png"></td>
+  <td>
+   <ul id="MainNav">
+    <li><a href="../index.html">Introduction</a></li>
+    <li><a href="./pbmm_install.html">Installation</a></li>
+    <li><a href="./pbmm_configuration.html">Settings and commands</a></li>
+    <li><a href="./pbmm.html">Usage</a></li>
+    <li><a href="./pbmm_wp_basic.html">Waypoints - Basic</a></li>
+    <li><a href="./pbmm_wp_commonerrors.html">Waypoints - Common errors</a></li>
+    <li><a href="./pbmm_wp_binding.html">Waypoints - Useful keys binding</a></li>
+   </ul>
+  </td>
+  <td>
+   <ul id="MainNav">
+    <li><a href="./pbmm_credits.html">Credits</a></li>
+    <li><a href="./pbmm_versionhistory.html">Version History</a></li>
+    <li><a href="./pbmm_linksfiles.html">Links</a></li>
+   </ul>
+  </td>
+ </tr>
+<!-- ###END: Header Table### -->
+</tbody></table>
+
+<table id="MainContentNavigationTable">
+<!-- ###START: MainContent Navigation Table### -->
+ <tr>
+  <td>
+   <table>
+    <tr>
+     <td>
+      <ul>
+<!-- ###START: MainContent Navigation### -->
+       <li><p class="style_white"><a href="#I">Settings in podbot.cfg file</a></p></li>
+       <li><p class="style_white"><a href="#II">Podbot control console commands</a></p></li>
+       <li><p class="style_white"><a href="#III">Botaim2 console/config settings</a></p></li>
+       <li><p class="style_white"><a href="#IV">Weapon/equipment restrictions settings</a></p></li>
+       <li><p class="style_white"><a href="#V">Waypoint console commands</a></p></li>
+       <li><p class="style_white"><a href="#VI">Auxiliary console commands</a></p></li>
+<!-- ###END: MainContent Navigation### -->
+      </ul>
+	  </td>
+    </tr>
+   </table>
+  </td>
+
+  <td>
+<!-- ###START: Page Title### -->
+   <span>Settings and commands</span>
+<!-- ###END: Page Title### -->
+  </td>
+
+ </tr>
+<!-- ###END: MainContent Navigation Table### -->
+</table>
+
+<table id="MainContent">
+<!-- ###START: MainContent Table### -->
+ <tr>
+  <td>
+   <table>
+    <tr>
+     <td>
+   <ul>
+<!-- ###START: MainContent### -->
+
+
+   <li><a name="I"></a>Settings in podbot.cfg file
+	<span>
+   <p><font class="style_pb_commands">pb_minbotskill</font> (value) - Sets the minimum Skill if Bots are created without
+	specifying the Skill. Correct values are 1-100. Default is 95. <p>
+
+	<p><font class="style_pb_commands">pb_maxbotskill</font> (value) - Sets the maximum Skill if Bots are created without
+	specifying the Skill. Must be bigger than minbotskill (or at least equal) of course ! Correct values are minbotskill-100. 
+	Default is 100.<p>
+
+	<p><font class="style_pb_commands">pb_minbots</font> (value) - configure the minimum number of bots that will run
+	on the server. Default is 0.</p>
+
+	<p><font class="style_pb_commands">pb_maxbots</font> (value) - configure the maximum number:<br>
+	a) of bots + humans (if pb_bot_quota_match is 0) <br>
+	b) of bots (if pb_bot_quota_match is grater than 0)<br>
+	that will be possible to run on the server (so it doesn't mean it will automatically add any bot to the server). Default is 16.</p>
+
+	<p>If You don't specify pb_minbots/pb_maxbots (You will comment them out in Your podbot.cfg) then the function 
+	auto/add kick bot (described a bit below) will not work (if pb_maxbots is not assigned in podbot.cfg, then the default 
+	is 0 for it). If You specify them - then they will support a minimum and maximum number of bots running on the server. 
+	Bots can be added to the server (by pb add, pb fillserver commands or by pb_bot_quota_match function) until the total number
+	of bots and humans (pb_bot_quota_match = 0) or bots (pb_bot_quota_match > 0) reaches the pb_maxbots value.
+	If pb_bot_quota_match = 0 - each time a new player joins the server, a bot will be kicked from the server unless there are only 
+	pb_minbots number of bots currently on the server;  after a player disconnects from the server, bot will
+	be automatically added back to the server until the total number of players (bots + humans) reaches pb_maxbots again.
+	You should make pb_maxbots be AT LEAST one less than the mp_maxplayers value (otherwise no one will be able
+	to join your server). Some more explanation to this function You can find <a href="./pbmm.html">here.</a>
+	That function auto add/kick doesn't work in the case if pb_bot_quota_match is defined as grater than 0 (in that case
+	number of bots follows the number of humans multiplied by pb_bot_quota_match (of course in the range between
+	pb_minbots/pb_maxbots). More info read below.</p>
+
+	<p><font class="style_pb_commands">pb_bot_quota_match</font> (value) - configure the number of bots that will match
+	humans on the server (number_of_bots = number_of_humans * pb_bot_quota_match). In this case number of bots will be limited
+	by pb_minbots and pb_maxbots settings. For that function pb_maxbots keeps the max limit of bots on the server (not max 
+	number of bots + humans like it's for auto add/kick bot function - when pb_bot_quota_match is 0).
+	The work of the function matching humans is stopped by usage some of these functions - pb fillserver or pb removebots. 
+	In both cases pb_bot_quota_match will be set to 0. If pb_bot_quota_match is grater than 0, You cannot use commands
+	pb add and pb remove (because of the reason the amount of bots must match humans...). Default is 0 (bots don't match humans).</p>
+
+	<p><font class="style_pb_commands">pb_bot_join_team</font> (string) - forces joining the bots to specified team (T or CT)
+	to overwrite the setting of the command pb add or pb fillserver. Useful if You want to keep always bots in one team against
+	humans in the other. Possible value of argument - "T", "CT", ANY". Default is "ANY" (bots aren't forced to join any
+	specific team.</p>
+
+	<p><font class="style_pb_commands">pb_skin</font> (value) - forces the bots to use the specified skin 
+	and to overwrite the skin setting of the command pb add or pb fillserver. 
+	Useful if You want to have always bots in one team with the same skin. Argument values: 1,2,3,4 - they are forced skins,
+	0,5 - default - no forcing</p>
+
+	<p><font class="style_pb_commands">pb_ffa</font> (1|0) - swiches to on the Free For All mode (bots will kill also their teamnates).
+	Default is 0 (off)</p>
+
+	<p><font class="style_pb_commands">pb_chat</font> (1|0) - Turns on/off Botchatting. Bots chat if they killed
+	someone, if the Bomb was planted or if they are dead and bored. Default is on (1).<p>
+	<P class="style_note">NOTE:</p>
+	<p>botchat.txt file must be in addons/podbot directory even if Botchat is turned off !</p>
+
+	<p><font class="style_pb_commands">pb_radio</font> (1|0) - Turns on/off radio usage. It affects also bots reaction to 
+	the radio command the human-players may issue. Default is on (1).</p>
+
+	<p><font class="style_pb_commands">pb_latencybot</font> [0|1|2] - Switches to on/off (1/0) showing on the scoreboard the string "BOT" 
+	as a ping or shows a fluctuating fake ping (from the range 30-50) for bots (2). 0 and 1 are valid only for the bots they are 
+	already created - it doesn't affect those in-game ones. Default is 2.</p>
+
+	<p><font class="style_pb_commands">pb_jasonmode</font> (1|0) - Turns on/off Jason Mode ! Meaning Bots don't buy
+	weapons and only use the knife for combat ! Greets to Auxois ! Use this for much fun with e.a. cs_estate 
+	or cs_office . Default is off (0). </p>
+	
+	<p><font class="style_pb_commands">pb_wptfolder</font> (folder) - Sets the default Folder for loading/saving Waypoint
+	Files. This folder HAS to be inside the POD-Bot Directory ! Don't put it into quotation marks and
+	don't use spaces or a trailing backslash ! Default folder - wptdefault </p>
+
+	<p><font class="style_pb_commands">pb_detailnames</font> (0|1|2|3) - Turns on/off the Skilldisplay behind names and the
+	personality ( [POD], [P*D], [P0D] ) before the name. 0 - no skill sufix and no personality prefix displayed; 1 - the skill
+	as sufix and the personality prefix added to the bot's name; 2 - only the personality prefix is added to the name;
+	3 - only the skill sufix is added to the new created bot. Default is prefix and sufix diplayed near the name of the bot added (1).</p>
+
+	<p><font class="style_pb_commands">pb_numfollowuser</font> (number) - Sets the maximum number of Bots in the team to
+	follow the same user (when Radio Command "Follow Me" is used). Default is 3.</p>
+
+	<p><font class="style_pb_commands">pb_maxweaponpickup</font> (number) - Sets the maximum number of weapons Bots are
+	allowed to pickup during a round. If You don't want to limit bots with pickuping weapons (for example while playing 
+	CSDM or fy_ maps) You can use "-1" value. Default is 10.</p>
+
+	<p><font class="style_pb_commands">pb_shootthruwalls</font> (1|0) - This cvar specifies if Bots are allowed to
+	shoot through Walls if they saw an enemy or if they heard someone on the other Side of a Wall.
+	Default is on (1).</p>
+
+	<p><font class="style_pb_commands">pb_usespeech</font> (1|0) - Turns on/off usage of HL Engine Speech Synthesis 
+	at the game start. Default is on (1).</p>
+
+	<p><font class="style_pb_commands">pb_spray</font> (1|0) - Set this to off to disallow Bot Logo Spraying. 
+	Default is on (1).</p>
+ 
+	<p><font class="style_pb_commands">pb_mapstartbotdelay</font> (value) - Delay (in seconds) of bots joining after new 
+	map start to prevent kick some human-players at map change. Default is 5.</p>
+
+	<p><font class="style_pb_commands">pb_firsthumanrestart</font> (1|0) - Turns on/off the function - when the first human 
+	joins the server and there are some bots already playing there - the round is restarted. Default is (0).</p>
+  
+	<p><font class="style_pb_commands">pb_maxcamptime</font> (value) - It says how many maximum seconds the bot may stay 
+	camping in one place before going somewhere else. Default is 30 (s)</p>
+
+	<p><font class="style_pb_commands">pb_autokill</font> (1|0) - Turns on/off auto killing bots if all human players
+	are dead already. Default is off (0).</p>
+
+	<p><font class="style_pb_commands">pb_autokilldelay</font> (value) - Delay (in seconds) autokilling bots if
+	autokill is enabled. Default is 45.</p><br>
+
+	<font class="style_note">NOTE: </font><br>
+	These 3 settings below seriously affects the Bots Perception.<br>
+	They specify the rate (in seconds) of updating some of the Bot Checks like:
+	some sound, some possibility of pickup any item or usage grenade by bots.
+	If you've got a slow computer you could try changing these to higher values to get some 
+	performance back.If you've got a fast computer you might try lowering them to get better even better playing 
+	results.<br>
+
+	<font class="style_pb_commands">pb_timer_sound</font> (value) - Default is 1.0 (in seconds).<br>
+	<font class="style_pb_commands">pb_timer_pickup</font> (value) - Default is 0.3 (in seconds).<br>
+	<font class="style_pb_commands">pb_timer_grenade</font> (value) - Default is 0.5 (in seconds).<br><br>
+
+
+	<p><font class="style_pb_commands">pb_welcomemsgs</font> (1|0) - Lets You to enable/disable some welcome messages, 
+	if You would like for example the people don't know there are some bots on the server. 
+	Default is on (1).</p>
+
+	<p><font class="style_pb_commands">pb_dangerfactor</font> (value) - The setting here specifies the danger 
+	factor with which the bots will weighten any waypoint where they have been killed in the past,
+	in order to avoid it later. The higher the value, the more the bot will care about these 
+	waypoints and pick other routes instead. Progression is logarithmic. Warning: higher values 
+	requires more CPU. Default is 2000.</p><br>
+
+	<p><font class="style_pb_commands">pb add</font> [skill [personality [team [model [name]]]]]</p>
+	<p>This command adds a Bot with parameters - skill You can write from 1 to 100; if You will write 101 it will mean 
+	random skill from pb_minbotskili to pb_maxbotskill specified above.<br>
+	Personality - 1 to 3 or 5 and these value mean:<br>
+	<ul>
+	<li>1 - Normal [POD]</li>
+	<li>2 - Aggresive [P*D]</li>
+	<li>3 - Defensive [P0D]</li>
+	<li>5 - Random personality from these 3 above</li>
+	</ul><br>
+	Team 1 is for Terrorists, 2 for Counter Terrorists and 5 to use auto-assign. This setting might be overwritten by
+	forcing bots to join always one team if pb_bot_join_team is equal to "T" or "CT".<br>
+	Model (class) is 1-4 or 5 (5 means random from 1 to 4).<br>
+	Name is of course the name for this Bot.<br>
+	Every command needs to be precedented by "pb" prefix (without quotes).<br>
+	If You want to use space in the name of Your bot, You have to use quotes 
+	(for example: pb add 100 2 1 4 "James Bond").<br>
+	You may not specify some argument without these before (for example - You may not specify bot's name 
+	without its skill nor personality nor team nor model - like this: <br>
+	pb add Roger<br>
+	That abobe is an invalid call of the function adding bot and then some bot with all random parameters 
+	(including also the name) will be added to the game.<br>
+	You don't need of course specify all parameters - but if You need to specify some of them exactly - all other 
+	You have to specify as random. In our example to add some bot with the name Roger You have to write the line:<br>
+	<br>
+	pb add 101 5 5 5 Roger<br>
+	<br>
+	and this call of add function is correctly.<br>
+	If You want to add some bot to the game with skill 100 to T team, the line should be like this:<br>
+	pb add 100 5 1<br>
+
+	In this case the parameters AFTER the latest one You need to specify - aren't important (You don't need write
+	anything more). The model will be selected automatically and the name will be choosen from botnames.txt file.<br>
+	<p>Some other examples:</p>
+	pb add -->skill gets random based on mix\max, all else random<br>
+	pb add 50 -->skill is 50 all else random<br>
+	pb add 100 1 2 1 "Mr Kabby" -->all have been set<br><br>
+	<p class="style_note">NOTE:</p>
+	You can use this command only if <font class="style_pb_commands">pb_bot_quota_match</font> is 0.<br><br>
+
+	<p><font class="style_pb_commands">pb fillserver</font> [skill [personality [team [model]]]]</p>
+	Meaning of the parameters is like for add command. This command lets You fill the server by bots
+	until reaching by podbots + human_players(or other bots):<br>
+	a) the pb_maxbots value if it is specified (different than 0)<br>
+	b) mp_maxplayers if pb_maxbots is not specified (or is equal to 0)<br><br>
+
+	If You want to fill Your server by bots with random skill (between pb_minbotskill and pb_maxbotskill), but as 
+	"aggresssive" (and You don't care about their models or team), write this line:<br>
+	pb fillserver 101 2<br>
+	If You want for example fill the server by bots with skill 100, random personality , random team and 
+	random model - write this line:<br>
+	pb fillserver 100 <br>
+	If You wish to fill the server by bots, but all bots to one team only - then write this:<br>
+	a) example for T team and skill 90, all else random:<br>
+	pb fillserver 90 5 1<br>
+	b) example for CT team and skill and personalities randomly, model 3:<br>
+	pb fillserver 101 5 2 3<br>
+	The rules are the same for parameters like for add command (except 'name' parameter - 
+	for fillserver this parameter doesn't exist).<br><br>
+	
+	<p class="style_note">NOTE:</p>
+	If You want to fill the server by bots to only one team, don't forget set-up game variables 
+	<font class="style_server_cvar">mp_autoteambalance</font> and <font class="style_server_cvar">mp_limitteams</font> to 0.<br>
+	If You are using <font class="style_pb_commands">pb fillserver</font> command, it changes 
+	<font class="style_pb_commands">pb_bot_quota_match</font> to 0 (if it was something else there).<br><br>
+
+	<font class="style_note">VERY IMPORTANT</font><br>
+	<p>Since version 3 of podbot the access to podbotmenu is available also on a dedicated server!!!</p><br> 
+
+	<p><font class="style_pb_commands">pb_passwordkey</font> (string) - passwordkey - needs set as setinfo on the client's PC 
+	to get the access to the main podbot menu. Default is "_pbadminpw"</p><br>
+
+	<p><font class="style_pb_commands">pb_password</font> (string) - sets the password to let admin control bots on the server throw
+	podbotmenu.<br>	
+	To get the access to podbotmenu You need to write in Your podbot.cfg (on the server) the line like this:<br>
+	pb_password "your_password"<br>
+	and also write in autoexec.cfg the setinfo line (at Your client PC in cstrike/czero directory) as:<br>
+	setinfo "_pbadminpw" "your_password"<br>
+	That setinfo line above can be also typed from the client's console during the game.<br>
+	In the above example You may need to write Your-own passwordkey instead default _pbadminpw - if You changed the default 
+	setting for it as pb_passwordkey.<br>
+	The string was called above as "your_password" it's just Your password You need to write in these both places - 
+	in podbot.cfg (near pb_password) on the server and in autoexec.cfg (as setinfo line) on the client's PC.</p><br>
+
+	<p><font class="style_pb_commands">pb_aim_type</font> (value) - sets the aim type of bots. Available aim type:<br>
+	1 = inhuman turns<br>
+	2 = constant angle velocity<br>
+	3 = botaim1<br>
+	4 = botaim2<br>
+	Default is 4 (Pierre-Marie Baty's botaim2 enabled).<br><br></p></span></li>
+ 
+	<li><a name="II"></a>Podbot control console commands
+	<span>
+	<p>You can change all parameters described above from console - if You wish to do this. 
+	<p>Except these commands described above there are also some other available commands You can 
+	write in console.<br></p>
+
+	<p><font class="style_pb_commands">pb menu</font> - this command brings up for You the menu to control bots. You can bind it
+	(like it's done in default podbot.cfg file existing in package for podbot V3).<br>
+	bind "=" "pb menu"<br></p>
+
+	<p><font class="style_pb_commands">pb help</font> - this command lists all available bot's console commands.
+	If You type pb help <command> it will show more precisly help for each command separately, i.e:<br>
+	pb help add - it will show all the info about pb add command.</p>
+
+	<p><font class="style_pb_commands">pb killbots</font> - this command kill all pod bots in the game.
+	Useful for testing if bots got stuck somewhere becasue of bad waypointing and You want simply 
+	finish the round.</p>
+
+	<p><font class="style_pb_commands">pb remove</font> (#bot_id | bot_name) - this command lets You kick 
+	the selected bot from the game. bot_id parameter is this what You can see when You type 
+	"status" in the console (the same like for standard kick command). bot_name - it's second method
+	to specify which bot has to be kicked out (it's like kick by the name).</p><br>
+	<p class="style_note">NOTE:</p>
+	<p>If Your bot has a space in its name (for example - James Bond) You need to use quotes 
+	to successfully usage of the remove command. Example:<br>
+	pb remove "[P*D]James Bond (100)"<br>
+	Look at this example with attention - if detailnames is on - You have to write also this personality
+	prefix and skill sufix - all must be in quotes - because all of this it's the bot's name in this
+	example.<br>
+	You can use this command only if <font class="style_pb_commands">pb_bot_quota_match</font> is 0.<br><br></p>
+	
+	<p><font class="style_pb_commands">pb removebots</font> - this command kicks bots from Your server until 
+	reaching pb_minbots. If pb_minbots is 0 then all bots will be kicked out by this command.</p><br>
+	<p class="style_note">NOTE:</p>
+	If You are using <font class="style_pb_commands">pb removebots</font> command, it changes 
+	<font class="style_pb_commands">pb_bot_quota_match</font> to 0 (if it was something else there).<br><br>
+
+	<p><font class="style_pb_commands">pb weaponmode</font> (value) - correct value are 1 to 7. This command lets
+	You select the weapon will be used by bots only (they will not buy another type).
+  	<span>
+    	1 - Knife only (JasonMode!)<br>
+  		2 - Pistols<br>
+  		3 - Shotguns<br>
+  		4 - Machine Guns<br>
+  		5 - Rifles<br>
+  		6 - Sniper Weapons<br>
+  		7 - All Weapons (Standard)<br>
+		</span>
+	</p><br>
+
+	<p><font class="style_pb_commands">pb_version</font> - (yes, with undescore line) this command returns the version 
+	number (as a string) of the POD's build</p></span></li>
+ 
+	<li><a name="III"></a>Botaim2 console/config settings
+   <span>
+	<p><font class="style_pb_commands">pb_aim_spring_stiffness_x</font> (value) - VERTICAL (up/down) spring stiffness 
+	of the aiming system. This value affects the quickness of the crosshair movement, as well as the frequency of
+	the resulting oscillations.(default: 13.0)</p>
+
+	<p><font class="style_pb_commands">pb_aim_spring_stiffness_y</font> (value) - HORIZONTAL (left/right) spring 
+	stiffness of the aiming system. This value affects the quickness of the crosshair movement, as well 
+	as the frequency of the resulting oscillations. (default: 13.0)</p>
+
+	<p><font class="style_pb_commands">pb_aim_damper_coefficient_x</font> (value) - VERTICAL (up/down) damping 
+	coefficient of the aiming system. This value also affects the quickness of the crosshair movement, 
+	and the amplitude of the resulting oscillations.(default: 0.22)</p>
+
+	<p><font class="style_pb_commands">pb_aim_damper_coefficient_y</font> (value) - HORIZONTAL (left/right) damping 
+	coefficient of the aiming system. This value also affects the quickness of the crosshair movement, 
+	and the amplitude of the resulting oscillations.(default: 0.22)</p>
+
+	<p><font class="style_pb_commands">pb_aim_deviation_y</font> (value) - VERTICAL (up/down) error margin of 
+	the aiming system. This value affects how far (in game length units) the bot will allow its crosshair 
+	to derivate from the ideal direction when not targeting any player in particular. (default: 2.0)</p>
+
+	<p><font class="style_pb_commands">pb_aim_deviation_y</font> (value) - HORIZONTAL (left/right) error margin of 
+	the aiming system. This value affects how far (in game length units) the bot will allow its crosshair 
+	to derivate from the ideal direction when not targeting any player in particular. (default: 1.0)</p>
+
+	<p><font class="style_pb_commands">pb_aim_influence_x_on_y</font> (value) - Perpendicular influence of the vertical
+	axis on a HORIZONTAL movement. This value affects how much (in fraction of 1) the bot will be disturbed when
+	moving its crosshair on an axis by the inherent movement on the other axis. (default: 0.25)</p>
+
+	<p><font class="style_pb_commands">pb_aim_influence_y_on_x</font> (value) - Perpendicular influence of the horizontal
+	axis on a VERTICAL movement. This value affects how much (in fraction of 1) the bot will be disturbed when 
+	moving its crosshair on an axis by the inherent movement on the other axis. (default: 0.17)</p>
+
+	<p><font class="style_pb_commands">pb_aim_offset_delay</font> (value) - Maximal value in seconds after which the 
+	aiming system will re-evaluate its ideal direction. This affects how often a bot will attempt to correct an
+	imprecise crosshair placement by moving the crosshair inside the error margin bounds defined by the 
+	botaim_deviation CVARs. (default: 1.2)</p>
+
+	<p><font class="style_pb_commands">pb_aim_notarget_slowdown_ratio</font> (value) - Fraction of the full speed the 
+	aiming system will adopt as speed when aiming at nothing in particular. This affects how slow the bot 
+	will move its crosshair when targeting nobody, relatively to its full speed capacity. (default: 0.5)</p>
+
+	<p><font class="style_pb_commands">pb_aim_target_anticipation_ratio</font> (value) - Fraction of the estimated
+	target's velocity the aiming system will rely on when aiming at a moving target. This affects how well the bot 
+	will be able to track moving targets on the fly, and whether it will have a tendancy to aim ahead of it or 
+	behind it. (default: 2.2)</p></span></li>
+
+	<li><a name="IV"></a>Weapon/equipment restrictions settings
+   <span>
+	<font class="style_note">Note:</font>
+	<p>This feature has been requested long time ago at BU forum by the people using AMX/AMXX/ClanMod
+	weapon restriction. The people got frustrated when admin restricted for the players for example awp usgae, but bots 
+	still could buy it. Since version V3 it's possible to follow weapon/equipment restrictions done by those fun mods.
+	There is a need to rewrite a bit restmenu.sma in AMX/AMXX to get cvar/cvars interface - to follow it in some another 
+	sma plugin to give the correct info to podbot mm binary. There is also a possibility to control manually weapons
+	availability/restriction. The interface lets You use 2 strings bitwise as "00100..." - 0 means the weapon is available, 
+	1 means the weapon is restricted. There are 2 cvars (as strings) defined for restrictions in podbot mm:</p><br>
+	<font class="style_pb_commands">pb_restrweapons</font> (default "00000000000000000000000000")<br>
+	and<br>
+	<font class="style_pb_commands">pb_restrequipammo</font> (default "000000000")<br>
+	The most left bit is numbered as 0, the next one is 1 etc. <br><br>
+	The meaning of bits of pb_restrweapons cvar:<br>
+	Pistols restriction<br>
+	0 - KNIFE<br>
+	1 - USP<br>
+	2 - GLOCK18<br>
+	3 - DEAGLE<br>
+	4 - P228<br>
+	5 - ELITE<br>
+	6 - FIVESEVEN<br>
+	Shotgun restrictions<br>
+	7 - M3<br>
+	8 - XM1014<br>
+	SMG restrictions<br>
+	9 - MP5NAVY<br>
+	10 - TMP<br>
+	11 - P90<br>
+	12 - MAC10<br>
+	13 - UMP45<br>
+	Rifles restrictions<br>
+	14 - AK47<br>
+	15 - SG552<br>
+	16 - M4A1<br>
+	17 - GALIL<br>
+	18 - FAMAS<br>
+	19 - AUG<br>
+	20 - SCOUT<br>
+	21 - AWP<br>
+	22 - G3SG1<br>
+	23 - SG550<br>
+	Machine Gun restriction<br>
+	24 - M249<br>
+	Shield restriction<br>
+	25 - SHIELD<br><br>
+	Exmple restrictions for shield, awp and XM1014:<br>
+	pb_restrweapons "00000000100000000000010001"<br><br>
+
+	The meaning of bits of pb_restrequipammo cvar:<br>
+	0 - vest<br>
+	1 - vest and helmet<br>
+	2 - flashbang<br>
+	3 - he grenade<br>
+	4 - smoke grenade<br>
+	5 - defuser<br>
+	6 - night vision googles<br>
+	7 - primary ammo<br>
+	8 - secondary ammo<br><br>
+	Exmple restrictions for flashbang, primary and secondary ammo:<br>
+	pb_restrequipammo "001000011"<br></span></li>
+
+	<li><a name="V"></a>Waypoint console commands
+   <span>
+	<font class="style_note">Note:</font>
+	<p>These commands below are valid only on listenserver.</p><br>
+
+	<p><font class="style_pb_commands">pb wp teleport </font> (value) - Teleports You to the waypoint number You write here as a value.</p>
+
+	<p><font class="style_pb_commands">pb wp teleport camp</font> - As above, but instead value You write "camp" - it teleports 
+	You to the next waypoint number with the camp flag. It's usefull to fix old pwf files with different format for camp waypoints.</p>
+
+	<p><font class="style_pb_commands">pb wp teleport use</font> - As above, but instead value You write "use" - it teleports 
+	You to the next waypoint number with the USE_BUTTON flag. It's usefull to fix old pwf files with sometimes useless USE_BUTTON flag, 
+	which may cause some strange bots behavior - they may need to "use" something which is unaccessible, but they will fail.</p>
+
+	<p><font class="style_pb_commands">pb wp teleport goal</font> - As above, but instead value You write "goal" - it teleports 
+	You to the next waypoint number with the goal flag. It's usefull to find all goal waypoints placed on the map.</p>
+	
+	
+	<p><font class="style_pb_commands">pb wp stats</font> - Shows the number of different waypoints You did 
+	already set.</p></span></li>
+
+	<li><a name="VI"></a>Auxiliary console commands
+   <span>
+
+	<p><font class="style_pb_commands">pb debuggoal</font> (value) - this command forces bots to go to 
+	the waypoint number specified here as a goal (target). Default is -1 (-1 means no extra goal waypoint specified
+	and bots aren't forced to go to any waypoint). More info You can find in Waypointing section of this doc.</p>
+
+	<p><font class="style_pb_commands">pb experience save</font> - Saves the experience and the visibility tables to the files (*.pxp and *.pvi) 
+  - if needed to do it manually.</p>
+
+	<p><font class="style_pb_commands">pb experience show</font> - Shows the data stored in the pxp file.</p>
+
+	<p><font class="style_pb_commands">pb experience test_a_T</font> index1 index2 byPathType - shows the path the Terrorist bot would like 
+		to choose from WP index1 to WP index2 according to kind of algorithm :<br>
+	
+	  	<span>byPathType = 0 - the shortest way according to distances between waypoints (used by aggressive bots),</span>
+	  	<span>byPathType = 1 - the shortest way according to distances between waypoints and to the collected experience (damages collected - 
+    	used by normal bots),</span>
+	  	<span>byPathType = 2 - the shortest way according to collected experience (no matter what is the distance between waypoints, but 
+			the safest way - used by the most scaried bots).</span>
+	</p>
+	<p><font class="style_pb_commands">pb experience test_a_CT</font>  index1 index2 byPathType - shows the path the Counter-Terrorist bot would 
+		like to choose from WP index1 to WP index2 according to the byPathType parameter explained above.</p>
+
+	<p><font class="style_pb_commands">pb experience test_a_CTH</font>  index1 index2 byPathType - shows the path the Counter-Terrorist bot 
+		(with following him a hostage/hostages) would like to choose from WP index1 to WP index2 according to the byPathType parameter explained above.
+   </p></span></li>
+
+<!-- ###END: MainContent### -->
+      </ul>
+     </td>
+    </tr>
+   </table>
+  </td>
+ </tr>
+<!-- ###END: MainContent Table### -->
+</table>
+<!-- ###END: Body### -->
+</body>
+</html>

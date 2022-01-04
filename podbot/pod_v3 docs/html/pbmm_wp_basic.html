@@ -1,0 +1,859 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Waypoints - Basic</title>
+<link rel="stylesheet" type="text/css" href="../index/index.css">
+<!-- ###START: MetaData### -->
+ <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=ISO-8859-1" />
+ <meta name="author" content=">BKA< TWrecks & KWo" />
+ <meta http-equiv="ImageToolbar" content="no" />
+ <meta name="MSSmartTagsPreventParsing" content="true" />
+<!-- ###END: MetaData### -->
+
+</head>
+<body>
+<!-- ###START: Body### -->
+<table>
+<!-- ###START: Header Table### -->
+ <tbody><tr>
+  <td id="Banner"><img alt="PODBot MetaMod" src="../index/blank.png"></td>
+  <td>
+   <ul id="MainNav">
+    <li><a href="../index.html">Introduction</a></li>
+    <li><a href="./pbmm_install.html">Installation</a></li>
+    <li><a href="./pbmm_configuration.html">Settings and commands</a></li>
+    <li><a href="./pbmm.html">Usage</a></li>
+    <li><a href="./pbmm_wp_basic.html">Waypoints - Basic</a></li>
+    <li><a href="./pbmm_wp_commonerrors.html">Waypoints - Common errors</a></li>
+    <li><a href="./pbmm_wp_binding.html">Waypoints - Useful keys binding</a></li>
+   </ul>
+  </td>
+  <td>
+   <ul id="MainNav">
+    <li><a href="./pbmm_credits.html">Credits</a></li>
+    <li><a href="./pbmm_versionhistory.html">Version History</a></li>
+    <li><a href="./pbmm_linksfiles.html">Links</a></li>
+   </ul>
+  </td>
+ </tr>
+<!-- ###END: Header Table### -->
+</tbody></table>
+
+<table id="MainContentNavigationTable">
+<!-- ###START: MainContent Navigation Table### -->
+ <tr>
+  <td>
+   <table>
+    <tr>
+     <td>
+      <ul>
+<!-- ###START: MainContent Navigation### -->
+       <li><p class="style_white"><a href="#I">Some notes for old PODBOT 2.5 waypointers</a></p></li>
+       <li><p class="style_white"><a href="#II">Waypoints, what are they ?</a></p></li>
+       <li><p class="style_white"><a href="#III">What do waypoints look like in the game ?</a></p></li>
+       <li><p class="style_white"><a href="#IV">How can I access the waypoint editor ?</a></p></li>
+       <li><p class="style_white"><a href="#V">Adding waypoints</a></p></li>
+       <li><p class="style_white"><a href="#VI">Types of Waypoints</a></p></li>
+       <li><p class="style_white"><a href="#VII">The Radius</a></p></li>
+       <li><p class="style_white"><a href="#VIII">Connecting Waypoints</a></p></li>
+       <li><p class="style_white"><a href="#IX">Adding / Removing connections manually and Special Cases</a></p></li>
+       <li><p class="style_white"><a href="#X">Waypoint Flags</a></p></li>
+       <li><p class="style_white"><a href="#XI">Waypoint Data Strored</a></p></li>
+       <li><p class="style_white"><a href="#XII">Waypoint Debugging</a></p></li>
+<!-- ###END: MainContent Navigation### -->
+      </ul>
+	  </td>
+    </tr>
+   </table>
+  </td>
+
+  <td>
+<!-- ###START: Page Title### -->
+   <span>Waypoints - Basic</span>
+<!-- ###END: Page Title### -->
+  </td>
+
+ </tr>
+<!-- ###END: MainContent Navigation Table### -->
+</table>
+
+<table id="MainContent">
+<!-- ###START: MainContent Table### --><!-- ###START: MainContent Table### -->
+ <tr>
+  <td>
+   <table>
+    <tr>
+     <td>
+      <ul>
+<!-- ###START: MainContent### -->
+
+      <li><a name="I"></a>Some notes for old PODBOT 2.5 waypointers
+		<span>
+      <p>If you are familiar with making waypoints for PODBot 2.5, you won't need to read the following two sections that are meant as
+		an introduction for people who are new to waypointing.</p>
+		<p>However, make sure you have a close look at the <font class="style_red_bold">new console commands</font> and
+		the <font class="style_red_bold">new waypoint menu</font> - there have been loads of changes there!
+		Most of the waypointing is done via the menu now, and almost all console commands have disappeared entirely. You will not be able
+		to use your old configs/binds with this editor (but You can find new binds examples in 
+      <a href="./pbmm_wp_binding.html">Waypoints - Useful keys binding</a> section). But you will love all the new features 
+      and possibilities!<br></p>
+
+		<p><font class="style_note">Note On Compatibility:</font><br>
+		PODBot MM can still interpret all PODBot waypoint files from earlier versions up to 2.5, but the code for camp waypoints 
+      has been corrected. If you use an older waypoint set with this dll, your bots will look at strange directions when camping. 
+      In order to have them look exactly where you want them to look, you must replace these old camp waypoints by new ones. 
+      There is a very useful console command <font class="style_red_bold">pb wp telport camp</font> which will teleport You to the next
+      camp waypoint from th ewaypoint list - so You won't need to walk on the whole map to find them.</p>
+
+		<p><font class="style_note">New Button Code:</font><br>
+		On maps with buttons, you may have to tweak the (formerly useless) button flags again.
+		You can now avoid bots ringing doorbells or doing other silly stuff with unimportant buttons (you just need to remove 
+      the button flag from the waypoint), but you can have them go through button-triggered doors without problems now!</p></span></li>
+
+	   <li><a name="II"></a>Waypoints, what are they ?
+      <span>
+		<p>Unlike humans, bots cannot see a map and analyze what they see. If you see a building with a door, you can walk straight 
+      to the door, open it and enter the building.<br>
+		Bots cannot do this without help! They can see and fight enemies or react if they are being attacked. These ways of behaviour work
+		without any external help. But in order to find their way around the map and to safely navigate through all ways and passages, 
+      they do need some help. They need something that tells them where they can go and where they can't. They need something that 
+      shows them where a ladder is located or where the mission goal (escape zone/hostages/bomb spot) is. This is done by means 
+      of waypoints. You can imagine waypoints a bit like those flags on a ski run. Each waypoint marks a point where bots can go. 
+      If two of them are connected with each other, a bot can go from one point to the other and back. So what you do when you waypoint 
+      a map is basically place a whole net of points in the map and connect them in a way that bots can proceed from one point 
+      to the other. All points must be placed in areas that are accessible for players, and if you want your bots to navigate smoothly 
+      and safely, you must also keep an eye on the connections. If connections go through walls or over a deep ravine, your bots will 
+      bump into walls or fall to their death.<br>
+		There are several waypoint types that can be used to indicate map goals, rescue zones, nice camp spots, ladders etc. There are 
+      different types of connections too, one-way or two-way connections and jump connections that will make a bot jump from point 
+      A to B instead of walking or running there. We will come back to this later.</p>
+		<p>Besides, you don't have to worry about every little detail. The editor that comes with this bot version will do lots 
+      of the work for you, and besides, it's graphical and easy to use (no programming/coding skills or anything required). You may 
+      very well discover that making waypoints can be fun, especially when you see bots roam through the entire map without 
+      problems - and <i> you</i> made it possible!<img src="../smileys/bu_smile.gif">.</p></span></li>
+
+	   <li><a name="III"></a>What do waypoints look like in the game ?
+      <span>
+		<p>When you are playing a normal game on a waypointed map, the waypoints will of course be invisible so that they don't 
+      distract or annoy you in any way.<br>
+		When waypointing is activated (see: How can I access the waypoint editor?, Below for instructions on how to do that), you will 
+      see waypoints as vertical bars about as high as a standing player. The colour of normal waypoints is green, but you may also 
+      see waypoints in white, purple, red, blue and cyan. These colours indicate special waypoints, some of which have already been 
+      mentioned in the last paragraph. If you see waypoints that are much smaller than the other ones, they are crouch waypoints. 
+      They will force bots to crouch when approaching them. Such waypoints are needed to lead bots through vents or any other 
+      low and narrow passages.<br>
+		Connections between waypoints are marked as horizontal lines leading from the centre of one waypoint to the other. They, too, exist
+		in different colours. You may see yellow, white, red and teal lines. Don't worry if all these different colours sound confusing right
+		now - it's actually very easy, but of course it helps a lot if you see some waypoints on the screen.<br>
+		Now you know what waypoints and connections are, what they are for and what they look like, you may want to enter the editing mode
+		and see for yourself.</p></span></li>
+
+	   <li><a name="IV"></a>How can I access the waypoint editor ?
+      <span>
+		<p>The waypoint editor is not a separate program, it is included in the bot dll (or .so, if you are using linux).To open it, create
+		a <font class="style_red_bold">LAN\Listen Server</font> game, select the map you want to waypoint and start the game as usual. As soon
+		as you are in the map, you can activate the editing mode from the console by typing <font class="style_red_bold">pb wpmenu</font> or
+		if you have bound a key for it, simply by pressing that key.</p></span></li>
+
+	   <li><a name="V"></a>Adding waypoints
+      <span>
+		<p>Adding a waypoint is really easy. Just walk to the position where you want a waypoint to be inserted, bring up your waypoint menu:</p>
+		<p align="center"><img src="../images/men1main.jpg" alt="The main WP menu" name="The main WP menu" width="140" height="340" border="0" ></p>
+		<p align="center" class="style_picture_description">This is the main Waypoint Menu.</p>
+
+		<p>To add a waypoint, simply select &quot;<font class="style_pb_commands">1. Add</font>.&quot; A new menu will appear,
+		the &quot;<font class="style_pb_commands">Add Waypoint</font>&quot; menu. All waypoint types described below can be
+		added by using this menu.</p>
+		<p align="center"><img src="../images/men2addw.jpg" alt="The add WP menu" name="The add WP menu" width="140" height="340" border="0" ></p>
+		<p align="center" class="style_picture_description">The &quot;Add Waypoint&quot; menu.</p>
+
+		<p>Once you have selected a waypoint type from the &quot;<font class="style_pb_commands">Add Waypoint</font>&quot; menu, you will 
+      hear a sound, and the selected waypoint will appear in the map, at the exact position where you stood when you pressed the key.<br><br>
+ 		<font class="style_note">NOTE:</font><br>
+ 		If you are standing while selecting a waypoint, a standing waypoint will be inserted. All bots will run or walk towards this 
+      waypoint normally.<br>
+ 		If you want bots to crouch when approaching a particular position, crouch down when inserting the waypoint. You will notice that 
+      the waypoint you just added is only about half as high as normally. As you inserted it when you were crouched down, it 
+      automatically carries a &quot;<font class="style_orange">Crouch</font>&quot; flag (see: Types Of Waypoints). Bots will now crouch
+      automatically when trying to reach this waypoint.</p>
+		<p>Now that you know the basic method used to add a waypoint, let's have a closer look at the waypoint types that exist.</p></span</li>
+
+	   <li><a name="VI"></a>Types of Waypoints
+      <span>
+		 <span><font class="style_paragraphes">Normal waypoints</font><br><br>
+       <span>
+		<p><font class="style_green">Normal</font> waypoints are the points you need in order to make bots walk through the map. They are used
+		for navigation only and will not trigger any particular behaviour. You can add a <font class="style_green">Normal</font> waypoint
+		by selecting &quot;<font class="style_pb_commands">1. Normal</font>&quot; from 
+      the &quot;<font class="style_pb_commands">Add waypoint</font>&quot; menu. <font class="style_green">The colour of Normal waypoints 
+      is green</font>, as you can see in the picture below.</p>
+		<p align="center"><img src="../images/wp01norm.jpg" alt="Normal waypoints" name="Normal waypoints" width="480" height="360" border="0" ></p>
+		<p align="center" class="style_picture_description">A Crouched Normal waypoint (left) and a Normal waypoint (right)
+      </p><br></span></span>
+
+		 <span><font class="style_paragraphes">Terrorist Important waypoints</font><br><br>
+       <span>
+		<p>This type of waypoints can be navigated just as a <font class="style_green">Normal</font> waypoint by all bots, but it has 
+      one additional function. It marks strategically important points for a Terrorist team. Adding a <font class="style_red">Terrorist 
+      Important</font> point in a room will tell Terrorist bots to go to the room and check it frequently. You can add this type 
+      of waypoint by selecting &quot;<font class="style_pb_commands">2. T Important</font>&quot; from 
+      the &quot;<font class="style_pb_commands">Add Waypoint</font>&quot; menu.
+		<font class="style_red">The colour of Terrorist Important waypoints is red</font>, as you can see in the picture below.</p>
+		<p align="center"><img src="../images/wp02terr.jpg" alt="T-important waypoints" name="T-important waypoints" width="480" height="360" border="0" ></p>
+		<p align="center" class="style_picture_description">A Crouched Terrorist Important waypoint (left) and a Normal Terrorist 
+      Important (right)</p><br><br>
+
+		<font class="style_note">IMPORTANT:</font><br>
+		<p>The use of <font class="style_red">Terrorist Important</font> points depends on the map type!<br>
+		Wherever the Terrorist team is the &quot;defending&quot; team (i.e. on As_ Cs_ type maps), <font class="style_red">Terrorist 
+      Important</font> points should be placed at key positions around the hostage area or VIP escape zone. For example, if the hostages 
+      are inside a building, <font class="style_red">Terrorist Important</font> points should be added behind each entrance to 
+      the building. Doing so will make the Terrorists check all entrances frequently and guard them. Do not place 
+      <font class="style_red">Terrorist Important</font> points far away on the other side of the map. After all, you don't want 
+      the Terrorists to abandon the hostages and rush planlessly through the map, now, do you? With the VIP escape zone, the same 
+      strategy applies, Make Terrorists guard the key routes to the escape zone by using
+		<font class="style_red">Terrorist Important</font> waypoints.<br>
+		You <font class="style_red_bold">DON'T</font> need to place <font class="style_red">Terrorist Important</font> points directly 
+      at the hostages.
+		Terrorists will check on hostages anyway.<br>
+		On maps where the Terrorist team is &quot;offensive&quot; (i.e. De_ and Es_ type maps), 
+      <font class="style_red">Terrorist Important</font> waypoints should not be overused. The &quot;offensive&quot; team will try 
+      to reach the map goal waypoint anyway. The only useful function you can use important waypoints for is to make particular routes
+      more attractive for the bots. For example, if there is a longer and more complicated, but safer and more surprising route 
+      to the map goal, bots may tend to underuse it a little. In such cases, placing one or two
+		<font class="style_red">Terrorist Important</font> waypoints along this route can help. </p><br></span></span>
+
+		<span><font class="style_paragraphes">Counter-Terrorist Important waypoints</font><br><br>
+      <span>
+		<p>The function of this waypoint type is exactly the same as the <font class="style_red">Terrorist Important</font> waypoint 
+      described above.The only difference is that a <font class="style_blue">Counter-Terrorists Important</font> waypoint obviously 
+      marks strategically important places for the <font class="style_blue">Counter-Terrorist (CT)</font> team. You can add this 
+      type of waypoint by selecting &quot;<font class="style_pb_commands">3. CT Importanat</font>&quot; from 
+      the &quot;<font class="style_pb_commands">Add Waypoint</font>&quot; menu. <font class="style_blue">The colour of Counter-Terrorist
+      Important waypoints is blue</font>, as you can see in the picture below.</p>
+		<p align="center"><img src="../images/wp03cntr.jpg" alt="CT-important waypoints" name="CT-important waypoints" width="480" height="360" border="0" ></p>
+		<p align="center" class="style_picture_description">Two Counter-Terrorists important waypoints, normal (right) and crouched (left)
+      </p><br><br>
+		<font class="style_note">IMPORTANT:</font><br>
+		<p>As with the other team specific waypoints, <font class="style_blue">Counter-Terrorist Important</font> waypoints should also be placed
+		according to the map type. On maps where the Counter-Terrorist team is forced to move out and reach a certain goal - either hostages
+		to rescue or a VIP escape zone to reach safely. <font class="style_blue">Counter-Terrorist Important</font> points can be useful to make
+		a particular route more attractive. You DON'T need to place <font class="style_blue">Counter-Terrorist Important</font> points near
+		a map goal (hostages on CS_ maps, VIP escape zone(s) on As_ maps), Counter-Terrorist bots will go there anyway. It's the most important
+		point for them, and adding several other important waypoints right next to it doesn't yield any benefit.<br>
+		On maps where the Counter-Terrosist team is in a defensive role (i.e. on De_ maps and Es_ maps), place
+		<font class="style_blue">Counter-Terrorist Important</font> points at key positions around the bomb/escape zone(s) in order to make
+		Counter-Terrorist bots defend all possible routes to the Terrorists map goal.</p><br></span></span>
+
+		<span><font class="style_paragraphes">Ladder waypoints</font><br><br>
+      <span>
+		<p><font class="style_pink">Ladder</font> waypoints are only used for waypointing ladders, as you possibly guessed. To enable your bots
+		to use a ladder, simply walk up to the ladder until you get &quot;stuck&quot; on it (you will see your crosshair grow wider once you are
+		on the ladder). Now place one <font class="style_pink">Ladder</font> waypoint at the bottom of the ladder. Then climb up the ladder
+		until you are almost completely over the edge. Place a second waypoint here and make sure that the two ladder waypoints are connected,
+		(This should have happened automatically if the <font class="style_pink">Ladder</font> waypoints aren't too far away from each other,
+		if not you can create a connection manually), That's all! You can add this type of waypoint by selecting 
+      &quot;<font class="style_pb_commands">4. Ladder</font> &quot; from the &quot;<font class="style_pb_commands">Add Waypoint</font>&quot;
+      menu. <font class="style_pink">The colour of Ladder waypoints is pink</font>, as you can see in the picture below.</p>
+		<p align="center"><img src="../images/wp04lddr.jpg" alt="Ladder waypoints" name="Ladder waypoints" width="480" height="360" border="0" ></p>
+		<p align="center" class="style_picture_description">A waypointed Ladder, one Ladder waypoint at the bottom, the other near the top</p><br>
+		<font class="style_note">Some general hints and notes concerning ladder waypoints:</font><br>
+      <p>
+		<ul>
+			<li>Waypoint ladders AFTER you waypointed the areas above and below them! If you waypoint ladders first, all waypoints in reach of
+			a ladder waypoint will be connected with it and have their radii reduced to zero automatically!</li>
+			<li>It doesn't matter whether you place the top or the bottom <font class="style_pink">Ladder</font> waypoint first.</li>
+			<li>If the ladder is very long, you can place additional <font class="style_pink">Ladder</font> waypoints between the bottom 
+         and the top end.</li>
+			<li>The bottom waypoint will automatically get connected with the nearest waypoint, independent of current AutoPath Max Distance
+         settings.</li>
+			<li>The top waypoint will usually get a connection towards it automatically, but you will have to add a connection leading 
+         away from it manually.</li>
+			<li><font class="style_pink">Ladder</font> waypoints will always have a radius of zero, and this shouldn't be changed!</li>
+		</ul></p><br></span></span>
+
+		<span><font class="style_paragraphes">Rescue waypoints</font><br><br>
+      <span>
+		<p><font class="style_white">Rescue</font> waypoints are only needed on Cs_ type maps (hostage rescue scenarios). They mark the zone
+      where the Counter-Terrosist team must bring the hostages, the rescue zone. Place one of these waypoint inside each rescue zone 
+      there is. If there is only one, you only need one <font class="style_white">Rescue</font> waypoint. Placing more points in one rescue
+      zone is unnecessary bulk and will rather cause problems than improve anything.<br>
+		A Counter-Terrorist bot that has succeeded in &quot;activating&quot; the hostages will determine the position of the nearest rescue 
+      point and lead the hostages there. When the bot has reached the rescue point, it will check if the hostages are really rescued 
+      and after max time about 5 seconds turn back to return to combat. Badly placed rescue points may lead to bots turning around before 
+      the hostages have really reached the rescue zone. As a consequence, the hostages will be left standing a few inches away from 
+      the rescue zone while the bot considers its mission as completed and turns back to fight, ignoring the deserted hostages. 
+      That's why you are advised to place a rescue waypoint well inside a rescue zone, not at its edges!<br>
+		In the editor, rescue points will be displayed in bright white (see below). Their radius is set to zero by default and shouldn't 
+      be changed. All bots can use this waypoint type for <font class="style_green">Normal</font> navigation as well. You can add this 
+      type of waypoint by selecting &quot;<font class="style_pb_commands">5. Rescue</font> &quot; from the 
+      &quot;<font class="style_pb_commands">Add Waypoint</font>&quot; menu. <font class="style_white">The colour of Rescue waypoints 
+      is white</font>, as you can see in the picture below.</p>
+		<p align="center"><img src="../images/wp05resc.jpg" alt="A rescue point" name="Rescue point" width="480" height="360" border="0" ></p>
+		<p align="center" class="style_picture_description">A Rescue point. You can also make this point Crouched, of course.
+      </p><br></span></span>
+
+		<span><font class="style_paragraphes">Camp waypoints</font><br><br>
+      <span>
+		<p>As the name suggests, <font class="style_cyan">Camp</font> waypoints are used to mark good sniper spots. They can be navigated 
+      by all bots. However, whether a bot may camp there or not is determined by the flag you can add to the camp waypoint. You can 
+      make <font class="style_cyan">Camp</font> waypoints team specific or leave them &quot;open&quot; to any team. 
+      <font class="style_cyan">The colour of Normal Camp waypoints is cyan.</font> Terrorist specific camp waypoints have a reddish hue,
+      Counter-Terrorist specific ones are a bit blueish, as you can see in the pictures below.</p>
+		<p align="center"><img src="../images/wp06cmpn.jpg" alt="Two normal camp waypoints" name="Normal camp points" width="480" height="360" border="0" ></p>
+		<p align="center" class="style_picture_description">Two Normal Camp waypoints, Standing (left) and Crouched (right).</p>
+		<p align="center"><img src="../images/wp07cmps.jpg" alt="Team-specific camp waypoints" name="Team-specific camp points" width="480" height="360" border="0" ></p>
+		<p align="center" class="style_picture_description">Team specific Camp waypoints:<br>
+ 		Two Terrorists Specific points to the left and Two Counter-Terrorists Specific points to the right.</p>
+
+		<p>Although there are two entries in the &quot;<font class="style_pb_commands">Add Waypoint</font>&quot; menu 
+      (&quot;<font class="style_pb_commands">Camp start</font>&quot; and &quot;<font class="style_pb_commands">Camp end</font>&quot;), 
+      the <font class="style_cyan">Camp</font> waypoint is in fact only one point. However, it carries two &quot;markers&quot; that 
+      tell a camping bot where to look while camping. When you are camping yourself, you will monitor a certain area. If you wanted to 
+      define this area, you could describe it as an angle. This angle would be specified by two lines going out from your position: One 
+      that marks the left edge and another one for the right edge. The monitored area would be between these two lines. The mentioned 
+      &quot;markers&quot; fulfill exactly this function. They are displayed as more or less horizontal beams going out from the top of 
+      a <font class="style_cyan">Camp</font> waypoint. <font class="style_yellow">The Camp start marker is yellow</font>, 
+      <font class="style_orange">the Camp end marker orange</font>, as you can see in the picture below.</p>
+		<p align="center"><img src="../images/wp08cmpr.jpg" alt="A camp waypoint with camp start and camp end markers" name="A camp waypoint with
+		camp start and camp end markers" width="480" height="360" border="0" ></p>
+		<p align="center" class="style_picture_description">A Crouched Normal Camp waypoint with Camp start (right, yellow) and Camp end 
+      (left, orange) markers.</p>
+		<p>When a bot approaches the depicted <font class="style_cyan">Camp</font> waypoint, it will turn to face the direction of 
+      the <font class="style_yellow">Camp start</font> marker (the yellow beam to the left) first. Then it will scan the area 
+      between this marker and the <font class="style_orange">Camp end</font> marker (orange beam to the right) by changing every few seconds
+      the direction it is facing from one to the other. An enemy moving outside the two markers may escape the bot's attention, unless 
+      it hears the enemy coming. In the piture above, both markers are pointing to the same height. However, you can also specify different
+      heights for each marker. This is very useful for making bots monitor a ramp, a slope, a stairway or other uneven surfaces.<br>
+		So far, so good. But how to set a working camp waypoint? Follow these steps:</p>
+		<ul>
+			<li>Go to the exact position where you want bots to camp (of course, a dark corner or similar locations are best suited 
+         for camping, but whom do I tell this? <img src="../smileys/bu_eek.gif">)</li>
+			<li>If you want bots to stand while they are camping, remain standing upright. If you want them to crouch while camping 
+         (more precise aiming!), crouch yourself while adding the point</li>
+			<li>Point your crosshair at the exact direction and height where you want your bots to start looking.</li>
+			<li>Bring up the &quot;<font class="style_pb_commands">Add Waypoint</font>&quot; menu and select &quot;<font class="style_pb_commands">
+				6. Camp start</font>&quot;. The <font class="style_cyan">Camp</font> waypoint itself will now be placed at your current position,
+         and you will see the two marker beams going out from it. The <font class="style_yellow">Camp start</font> marker will already be
+         pointed at the direction you specified, the <font class="style_orange">Camp end</font> marker will still need some adjustment.</li>
+			<li>Now point your crosshair at the exact direction and height where you want your bots to end their monitoring.</li>
+			<li>Once again, open the &quot;<font class="style_pb_commands">Add Waypoint</font>&quot; menu, but now select &quot;<font class=
+				"style_pb_commands">7. Camp end</font>&quot;. You will see that the <font class="style_orange">Camp end</font> marker will now 
+         be pointed at the direction you specified.</li>
+		</ul>
+
+		<p>That's it! Unless you want to make your <font class="style_cyan">Camp</font> waypoint team specific or add another flag (see: 
+      Waypoint Flags section), you are done! In fact, it sounds much more complicated than it actually is.</p><br><br>
+
+		<font class="style_note">Some quick notes and hints about Camp waypoints:</font><br>
+		<ul>
+			<li>You can alter <font class="style_yellow">Camp start</font> and <font class="style_orange">Camp end</font> markers as often 
+         as you want. As soon as you are near an existing <font class="style_cyan">Camp</font> waypoint (i.e. as soon as its waypoint 
+         stats are shown in the upper left corner of your HUD), Bring up the &quot;<font class="style_pb_commands">Add Waypoint</font>&quot;
+         menu and selecting &quot;<font class="style_pb_commands">6. Camp start</font>&quot; or 
+         &quot;<font class="style_pb_commands">7. Camp end</font>&quot; will <font class="style_red_bold">NOT</font> add a new waypoint.
+         Instead, it will readjust the <font class="style_yellow">Camp start</font> and/or <font class="style_orange">Camp end</font> 
+         marker(s) of the nearby <font class="style_cyan">Camp</font> waypoint to the new direction you specified.</li>
+			<li>Thus, if you want to place two <font class="style_cyan">Camp</font> waypoints closely together, make sure that the waypoint stats of
+			the first one have disappeared from your HUD before you set the second one. If the stats of the first waypoint are still visible,
+			you will accidentally modify the <font class="style_yellow">Camp start</font> and <font class="style_orange">Camp end</font> 
+         markers of that waypoint instead of inserting a new point.</li>
+			<li>Don't place <font class="style_cyan">Camp</font> waypoints in strategically irrelevant areas, or you will see bots having 
+         a situation totally unimportant areas while their team mates are under heavy attack.</li>
+			<li>Provide the &quot;defending&quot; team with some nice sniper spots near the map goal! In general, if you make team-specific
+				<font class="style_cyan">Camp</font> waypoints, make more for the defending team than for the attacking team.</li>
+		</ul><br></span></span>
+
+		<span><font class="style_paragraphes">Map Goal waypoints</font><br><br>
+      <span>
+		<p>This waypoint type obviously indicates the <font class="style_magenta">Map Goal</font>.</p>
+		<p>On an As_ map, the <font class="style_magenta">Map Goal</font> waypoint tells the bots where the VIP escape zone is. Make sure 
+      the escape zone symbol is visible on your HUD when you place a map goal waypoint there. Otherwise the VIP may end up reaching 
+      the point and running away again just like you would do with <font class="style_white">Rescue</font> waypoints.<br>
+ 		On a Cs_ map, the <font class="style_magenta">Map Goal</font> waypoint marks the position of the hostages. It is 
+      <font class="style_red_bold">NOT</font> necessary to place one <font class="style_magenta">Map Goal</font> waypoint per hostage. 
+      Unless the hostages are standing really far away from each other, one point per hostage group will perfectly do.<br>
+ 		On a De_ map, the <font class="style_magenta">Map Goal</font> waypoint marks the bomb spots. It must be placed somewhere inside 
+      the bomb zone, i.e. the bomb icon must be blinking on your HUD when you place such a waypoint. In contrast to Cs_ maps, on De_ maps 
+      it makes sense to set various goal waypoints in one bomb zone. This will enable bots to choose from several spots to plant the bomb
+      and make them less predictable.<br><br>
+      <font class="style_note">NOTE:</font><br>
+ 		Bots will always crouch down while planting the bomb. While it is perfectly possible to make the 
+      <font class="style_magenta">Map Goal</font> waypoint crouched, but this is not necessary if you want to make sure that your bots 
+      crouch to plant the bomb, they will do so anyway.<br>
+ 		Finally, on Es_ maps, the <font class="style_magenta">Map Goal</font> waypoint marks the escape zone for the Terrorists. You can 
+      follow the same rules as for As_ maps.<br>
+ 		Now you may wonder how to determine the exact function of a the <font class="style_magenta">Map Goal</font> waypoint. Don't worry, 
+      this is entirely map specific, you don't have to do anything about it. All bots of both participating teams will automatically 
+      know what the the <font class="style_magenta">Map Goal</font> is, they only need the point to guide them there. You can add this 
+      type of waypoint by selecting &quot;<font class="style_pb_commands">8. Goal</font>&quot; from the 
+      &quot;<font class="style_pb_commands">Add Waypoint</font>&quot; menu. <font class="style_magenta">The colour of Goal waypoints 
+      is purple</font>, as you can see in the picture below.</p>
+		<p align="center"><img src="../images/wp09goal.jpg" alt="A map goal point, here at a bomb zone" name="Map goal waypoint" width="480" height="360" border="0" ></p>
+		<p align="center" class="style_picture_description">The purple waypoint on the marked spot is the Map Goal, in this case 
+      a bomb spot.</p><br></span></span>
+
+		<span><font class="style_paragraphes">Jump Connections</font><br><br>
+      <span>
+		<p><font class="style_red">Jump</font> is not actually a waypoint but a connection between waypoints. (see: Waypoint Connections)</p>
+      </span></span><br>
+
+     <p>So now we've seen what type of waypoints the bots use, we can see how we can string these waypoints together to make a gaint 
+      web to cover the map with <img src="../smileys/bu_smile.gif"></p></span></li>
+
+	  <li><a name="VII"></a>The Radius
+     <span>
+	  <p>The <font class="style_blue">Radius</font> of a waypoint is indicated by means of horizontal blue beams that go out in all 
+     directions from the position of a waypoint. Viewed from above, the beams form a pattern that is like the spokes of a bycyle wheel 
+     or the like the petals of a flower. The photo below was taken from above, we are looking down onto a waypoint, and you can see 
+     <font class="style_blue">the colour of a Radius is Blue</font>, as you can see in the picture below.</font></p>
+	  <p align="center"><img src="../images/wp10rads.jpg" alt="A waypoint and its radius indicators viewed from above" name="Waypoint radius" width="480" height="360" border="0" ></p>
+	  <p align="center" class="style_picture_description">A Normal waypoint and its Radius indicators viewed from above.</p>
+	  <p>These <font class="style_blue">Radius</font> indicators are a great means to see how big the radius of a waypoint actually is, it ends
+     exactly where the beams end.<br>
+	  What does the <font class="style_blue">Radius</font> actually do? It tells the bots how exactly they must navigate around the waypoint
+	  in question. If a bot walks past a row of waypoints with big radii, it will know that super-exact navigation is not required. If the radii
+	  are small, the bot will stick strictly to the waypoints.<br>
+	  Thus, in open areas big radii help to make bot navigation natural - you wouldn't want to see a bot run across a wide courtyard as if it was
+	  following an incredibly thin, straight line painted onto the ground, now, would you? It looks much more natural if the bot takes advantage
+	  of the space he has around him.<br>
+	  However, in narrow corridors and doorways or on bridges, the situation is different, too big radii would make bots too careless, they would
+	  bump into walls or even fall off a bridge because they think they can walk anywhere inside that big radius!<br>
+	  That's why choosing appropriate waypoint radii is so important. As a general rule, keep the radii big in open areas and make them small
+	  in narrow passages. Read the following section to learn how:</p><br>
+
+	  <span><font class="style_paragraphes">Setting or Changing the Radius:</font><br><br>
+     <span>
+	  <p>The good news first: You don't have to set every single <font class="style_blue">Radius</font> manually, the editor will do much of
+	  the work for you! It will automatically calculate the <font class="style_blue">Radius</font> of a waypoint depending on the area around it.
+	  If the editor detects higher (~more than knee-high) obstacles like walls nearby, it will automatically adjust the <font class=
+	  "style_blue">Radius</font> to reach up to the wall, not further. However, the maximum <font class="style_blue">Radius</font> is limited to
+	  96 units. This means that even on a totally open plain, where the nearest obstacle is hundreds of distance units away, the
+	  <font class="style_blue">Radius</font> will not exceed 96.<br><br>
+
+	  Now you might wonder &quot;Well, if the editor does all this for me, why would I change radii by hand?&quot; The answer is simple,the editor
+	  helps, but it isn't perfect, it cannot detect all kinds of obstacles (I can't go too much into detail here because all this is pretty much
+	  map-related). Anyway, you will see places where the radius cuts into an obstacle - it could be a very thin pillar, a fence, or even
+	  a solid-looking car that's parked in the streets... as I said, it depends on how the mapper built these elements.<br>
+	  Another problem is not with walls, but with holes and cliffs, If there is no high obstacle, the editor will regard an area as clear and set
+	  a big radius, it doesn't care if right next to the waypoint there's a yawning abyss where bots will fall to death!<br>
+	  So these are areas where you will have to keep a watchful eye on your radii and if necessary, change them by hand. In narrow corridors
+	  and especially around narrow doorways, you will see that even a small radius calculated by the editor doesn't make the bots navigate
+     precisely enough. In such places, I strongly recommend lowering the radius to zero.<br>
+	  In order to change the radius of a waypoint, bring up the main menu and select 
+     &quot;<font class="style_pb_commands">3. Set Radius</font>&quot;. The following menu will appear:</p>
+	  <p align="center"><img src="../images/men3wprd.jpg" alt="The radius menu" name="The radius menu" width="160" height="340" border="0" ></p>
+	  <p align="center" class="style_picture_description">The Radius menu with all options between 0 and 112.</p>
+	  <p>Simply select an option by pressing the corresponding key, and the radius of the currently active waypoint will be changed to 
+     the selected value. You will quickly get a feeling for these numbers if you play around with them a bit.</p><br></span></span>
+
+	  <span><font class="style_paragraphes">Waypoints with fixed radii</font><br><br>
+	  <p><font class="style_note">Note:</font><br>
+	  Some waypoint types will always have, and require, a radius of zero. The radii of thes waypoint types 
+     <font class="style_red_bold">should NOT be changed</font>! The types with fixed radii are: <font class="style_pink">Ladder</font>, 
+     <font class="style_white">Rescue</font>, <font class="style_cyan">Camp</font> (no matter if team specific or not) and 
+     <font class="style_magenta">Map Goal</font>.</p></span>
+     </span></li>
+
+	  <li><a name="VIII"></a>Connecting Waypoints
+     <span>
+	  <p>Waypoints alone aren't sufficient to make bots move the way you want. They must be connected with other waypoints in order to let 
+     bots reach their goal. By default, connections up to a certain distance will be made automatically.<br>
+	  You can select the automatic connection distance (AutoPath Max Distance, APMD) by bringing up the main menu and selecting 
+     &quot;<font class="style_pb_commands">9. Options</font>&quot;.</p>
+	  <p align="center"><img src="../images/men7awpop.jpg" alt="The options menu - page 1" name="The options menu - page 1" border="0" ></p>
+	  <p align="center" class="style_picture_description">The Waypoint Options menu - page 1.</p>
+
+	  <p>Now select the entry &quot;<font class="style_pb_commands">6. AutoPath Max Distance</font>&quot;. The following sub-menu will appear:</p>
+	  <p align="center"><img src="../images/men8apmd.jpg" alt="The apmd menu" name="The apmd menu" width="200" height="260" border="0" ></p>
+	  <p align="center" class="style_picture_description">The APMD (AutoPath Max Distance) menu.</p>
+	  <p>Select the desired distance from this menu. After selecting a distance, connections up to that distance will be drawn automatically, 
+     of course, you can also add and remove connections manually.
+	  However, this needs a little bit more explanation, and it's better to explain if you know the different connection types.<br>
+	  So let's first have a look at these - afterwards you can read how to add and remove such connections by hand.</p><br>
+
+	  <span><font class="style_paragraphes">Two-way (bidirectional) connections</font><br><br>
+     <span>
+	  <p>The vast majority of all connections in a waypoint set will be <font class="style_yellow">bidirectional</font>. Obviously, these
+     connections enable bots to walk both from point A to point B and back from point B to point A. <font class="style_yellow">The colour 
+     of bidirectional paths is yellow</font>, as you can see in the picture below.</p>
+	  <p align="center"><img src="../images/con1_2w.jpg" alt="A two-way connection" name="A two-way connection" width="480" height="360" border="0" ></p>
+	  <p align="center" class="style_picture_description">A 2-Way connection between the two depicted waypoints.</p><br></span></span>
+
+	  <span><font class="style_paragraphes">One-way connections</font><br><br>
+     <span>
+	  <p><font class="style_white">One-way connections</font> enable bots to walk from point A to point B, but not vice versa. They can be useful
+	  to make bots drop down a wall or a high crate, but prevent them from attempting to get up. Of course, there may be more places at which a
+	  <font class="style_white">1-way connection</font> can make sense, but that depends on the map.<br>
+	  In game, <font class="style_white">1-way connections</font> will be visible from 2 waypoints, their start and their end waypoint. In order
+	  to show you the direction of <font class="style_white">1-way connection</font>, it will be shown in different colours depending on from which
+	  perspective you view it. Let's say you have a <font class="style_white">1-way connection</font> from point 1 to point 2. In this case, 
+     when you are standing at point 1, you will see <font class="style_white">the outgoing 1-way connection displayed in white</font> as you 
+     can see in the picture below.</p>
+	  <p align="center"><img src="../images/con2_1wo.jpg" alt="An outgoing one-way connection" name="Outgoing 1-way connection" width="480" height="360" border="0" ></p>
+	  <p align="center" class="style_picture_description">An Outgoing 1-Way connection,<br>
+ 	  (A connection that leads FROM where i am standing TO the point in the background, but not back from it).</p>
+	  <p>The picture below shows the same two waypoints and the same connection, but this time I took the screenshot while I was standing near
+	  the second waypoint.<font class="style_sea">The incoming 1-way connection displayed in teal</font> as you can see in the picture below.</p>
+	  <p align="center"><img src="../images/con3_1wi.jpg" alt="An incoming one-way connection" name="Incoming 1-way connection" width="480" height="360" border="0" ></p>
+
+	  <p align="center" class="style_picture_description">An Incoming 1-Way connection<br>
+ 	  (A connection that leads FROM the point in the background TO the point where i'm standing).</p>
+	  <p>The fact that <font class="style_white">1-way connection</font> are shown from both involved points is a great feature. It makes 
+     spotting errors very easy and saves you the trouble of running around to check if there is a connection TO the point where you are 
+     standing.</p><br></span></span>
+
+	  <span><font class="style_paragraphes">Jump connections</font><br><br>
+     <span>
+	  <p><font class="style_red">Jump</font> connections are a bit special as they cannot be drawn like any other connection. But that's not all,
+	  apart from that, <font class="style_red">Jump</font> connections can also be 
+     <font class="style_red_bold">one-way or two-way connections</font>.
+	  To make matters even more complex, their 2-way version can come in two flavours: A &quot;pure&quot; two-way jump connection,
+	  i.e. a <font class="style_red">Jump</font> connection from A to B and another <font class="style_red">Jump</font> connection back from B
+	  to A or a &quot;mixed&quot; two way connection, with a <font class="style_red">Jump</font> connection leading from A to B and a regular
+     one-way connection back from B to A. The latter version will be very rare, though. Now once again, this sounds more complicted than it
+     actually is.<br>
+	  <font class="style_red">The Jump connection horizontal line displayed in red(Outgoing Jump connection)</font>, viewed from the waypoints
+     where the bots will start their jump can be seen in the picture below.</p>
+	  <p align="center"><img src="../images/con4_jo.jpg" alt="Outgoing jump connection" name="Outgoing jump connection" width="480" height="360" border="0" ></p>
+	  <p align="center" class="style_picture_description">An Outgoing Jump connection, it will make bots jump to the waypoint in 
+     the background.</p>
+	  <p>Here is the same connection viewed from the waypoint where bots will land after their jump. As you can see, it is shown as a 
+     <font class="style_sea">incoming 1-way connection (displayed in teal)</font>. From this side, you cannot tell whether this incoming
+     connection is a <font class="style_red">Jump</font> connection or a <font class="style_white">1-way outgoing connection</font>. Given 
+     the fact that there's a gap where bots can fall down, it had better be a 
+     <font class="style_red">Jump</font> connection... <img src="../smileys/bu_wink.gif"></p>
+	  <p align="center"><img src="../images/con5_ji.jpg" alt="Incoming jump connection" name="Incoming jump connection" width="480" height="360" border="0" ></p>
+
+	  <p align="center" class="style_picture_description">An Incoming Jump connection, bots start their jump at the waypoint in the background
+	  and land here - hopefully.</p>
+	  <p>Now look at the pprevious screenshot, I could add a regular <font class="style_white">1-way connection</font> back to the waypoint in
+	  the background. (I know it wouldn't make sense at this spot, but let's just pretend there were no gap between the waypoints.)<br>
+ 	  After making this connection, the connection line would turn into a <font class="style_yellow">Two-way connection</font> when viewed from
+ 	  the position shown in the screenshot. It will show you that there's a way to get TO the waypoint in the background and back FROM it.
+ 	  At the same time, you will know that bots will walk back to the waypoint in the background. Why?<br>
+	  Because a &quot;pure&quot; <font class="style_red">2-way Jump connection shows as a red line</font> from both sides. If i added a jump back
+	  from the point where I took the screenshot to the point in the background, the connection would show as a red line, no matter from which of
+	  the two waypoints I look at it. This will tell you that bots will jump between the two waypoints, no matter in which direction they are
+	  following the connection.</p><br></span></span>
+     </span></li>
+
+	  <li><a name="IX"></a>Adding / Removing connections manually and Special Cases
+     <span>
+	  <p>Now you know the most important things about connections in general and the different types of connections. You also know how to adjust
+	  automatic connection lengths and how to add a jump connection by hand. But how do you add or remove a connection by hand?<br>
+	  In older PODBot versions, you could add and remove connections by means of console commands. You will be glad to hear that PODBot MM uses
+	  a much more comfortable method to accomplish this. You simply aim at the desired waypoint and select the action to perform from the
+	  on-screen menu!</p>
+
+	  <p>Here's how it works (Look at the screenshot below), let's pretend we wanted to delete the connection from the waypoint where we're
+	  standing to the left waypoint near the wall, aim at the waypoint with your crosshair. As soon as the waypoint is selected, it will become
+	  bigger, and a little blue cross will appear on top of it.</p><br><br>
+
+	  <p><font class="style_note">NOTE 1:</font><br>
+	  This only works if you are standing near a waypoint and aiming at another one! If you are standing in a waypointless area, you won't be 
+     able to use this function because it needs two selected waypoints (The one where you are standing and the one you are aiming at).<br><br>
+	  <font class="style_note">NOTE 2:</font><br>
+	  You can override whatever APMD value with manual connections, but there's a limit of 500 units.</p>
+	  <p align="center"><img src="../images/con6aim1.jpg" alt="Aiming at waypoints" name="Aiming at waypoints" width="480" height="360" border="0" ></p>
+
+	  <p align="center" class="style_picture_description">The left waypoint is selected, although the crosshair isn't exactly on it.<br>
+	  <font class="style_note">Note how big is its width in comparison to the other, unselected waypoint! Besides, you can see the blue cross on top.</font></p>
+	  <p>You will see that the crosshair doesn't have to be exactly on the waypoint, it's usually enough if you aim somewhere near the point.
+	  Sometimes you will even have to aim a little bit away from the waypoint in order to activate it. Simply move your crosshair around 
+     the waypoint until you see that it gets bigger and has the blue cross on top of it. Leave the crosshair where it is and perform whatever
+     action you want to perform.</p>
+	  <p>If you have problems activating a waypoint, you can also try changing your position a bit, Walk a step forward or to the side, aim at
+	  the desired waypoint from a slightly different angle. You will get a feeling for it quickly!<br>
+	  The following picture demonstrates some of the peculiarities of this aiming system, especially over longer distances. The crosshair is
+     actually nearer to the right camp waypoint in the background,
+	  but nonetheless, the left one is selected!</p>
+	  <p align="center"><img src="../images/con7aim2.jpg" alt="Aiming over long distances 1" name="Aiming over long distances 1" width="480" height="360" border="0" ></p>
+
+	  <p align="center" class="style_picture_description">Despite the crosshair being nearer to the right waypoint, the left one is 
+     selected!</p>
+
+	  <p>In the screenshot below, I stood at the exact same position and aimed until I had the right waypoint activated. As you can see that
+	  the crosshair is off to the right quite a bit. But you can also see how well the activated waypoint is visible even from such a large
+     distance. Normally it would be even slightly thinner than the left waypoint, as it is a little further away. But here it is nice 
+     and fat, easy to tell apart from unselected waypoints.</p>
+	  <p align="center"><img src="../images/con8aim3.jpg" alt="Aiming over long distances 2" name="Aiming over long distances 2" width="480" height="360" border="0" ></p>
+
+	  <p align="center" class="style_picture_description">Now aiming at the right waypoint, the crosshair is a bit off, but the waypoint 
+     is selected.</p>
+
+	  <p>Now you know how to activate a waypoint by aiming at it. In order to add a connection now, bring up the main menu and select
+	  &quot;<font class="style_pb_commands">6. Add Path</font>&quot;. The following sub-menu will appear:</p>
+	  <p align="center"><img src="../images/men6addp.jpg" alt="Add Path menu" name="Add Path menu" width="200" height="200" border="0" ></p>
+
+	  <p align="center" class="style_picture_description">The &quot;Add Path&quot; menu where you can select which type of connection to add.</p>
+	  <p>Well, this is almost self-explanatory, Select the connection type you want to add, and it will be drawn. You have read about the available
+	  connection types above, so this should be no problem.<br>
+	  &quot;<font class="style_white">Outgoing path</font>&quot; means a <font class="style_white">1-way connection</font> going from your current
+	  position to the waypoint you're aiming at.<br>
+	  &quot;<font class="style_cyan">Incoming path</font>&quot; means the opposite, a <font class="style_sea">1-way connection</font> coming
+     towards
+	  your position from the waypoint you're aiming at.<br>
+	  &quot;<font class="style_yellow">Bi-directional (Both ways)</font>&quot; means obivously a 
+     <font class="style_yellow">Two-way connection</font><br>
+     <font class="style_note">Note:</font> Jump connections can only be drawn by performing the jump, that's why this connection type is not 
+     available in this menu.</p>
+
+	  <p>Removing connection manually is even easier, but works slightly different because you don't have to choose what to remove. Just aim at
+	  a waypoint and select &quot;<font class="style_pb_commands">6. Delete Path</font>&quot; from the waypointing menu.<br>
+	  If there is a 1-way connection (<font class="style_sea">Incoming</font> or <font class="style_white">Outgoing</font>) between the waypoint
+	  where you are standing and the waypoint you are aiming at, it will be deleted.<br>
+	  If there is a <font class="style_yellow">2-way connection</font> between the two waypoints, selecting &quot;<font class="style_pb_commands">
+	  6. Delete Path</font>&quot; will first delete the connection that leads from your position to the other waypoint. Thus, a <font class=
+	  "style_sea">1-way connection</font> from the waypoint you are aiming at back to your own position will remain. Simply hit &quot;<font class=
+	  "style_pb_commands">6. Delete Path</font>&quot; again, and it will disappear.</p><br>
+
+	  <font class="style_paragraphes">Special cases: Adding connections with the waypoint cache function</font><br><br>
+     <span>
+	  <p>In some cases, especially with <font class="style_pink">Ladder</font> waypoints, you may run into serious problems to aim at a waypoint.
+	  Let's say you want to connect two <font class="style_pink">Ladder</font> waypoints. You're standing at the lower end of the ladder, but you
+	  just can't get the upper ladder waypoint activated. In such a case, simply bring up the waypointing menu and select
+	  &quot;<font class="style_pb_commands">9. Options</font>&quot;.</p>
+	  <p align="center"><img src="../images/men7awpop.jpg" alt="The options menu - page 1" name="The options menu page 1" width="200" height="260" border="0" ></p>
+
+	  <p align="center" class="style_picture_description">The Waypoint Options menu - page 1.</p>
+	  <p>Select &quot;<font class="style_pb_commands">7. Cache this Waypoint</font>&quot;. You will see a message on your HUD: &quot;Waypoint #node
+	  has been put into memory&quot;, where &quot;node&quot; is the number of the waypoint you're standing at.<br><br>
+	  <font class="style_note">Note:</font><br>
+	  As soon as a waypoint has been put into the cache, all manual connection adding/removing actions will affect the cached waypoint, no matter
+	  how far you are away! So be careful with this function. If you put a waypoint into the cache, then walk to the other side of the map and
+	  manually add a connection somewhere, the connection will lead to the cached waypoint, even if this means going through the entire map and
+     thick walls!</p>
+
+	  <p>But back to the example: You are still standing at the lower ladder waypoint and have just cached it. Now you can climb up to 
+     the upper ladder waypoint and add a <font class="style_yellow">2-way connection</font>. This new 
+     <font class="style_yellow">2-way connection</font> will automatically be made between your current position (the upper ladder waypoint) 
+     and the cached waypoint (in this case, the lower ladder waypoint).<br>
+	  In order to clear the cache, simply walk to any point in the map where there is no waypoint nearby. Then, select &quot;<font class=
+	  "style_pb_commands">7. Cache this Waypoint</font>&quot; again. You will see a HUD message: &quot;Cache cleared! (no waypoint nearby)&quot;.
+	  Now the cache is empty, and you can continue working just like before.<br><br>
+		You can also move some cached waypoint to the position You are standing at. Just from the same Options menu (page 1) You need to select 8 
+		- Move cached waypoint here.<br><br>
+	  <font class="style_note">HINT:</font><br>
+	  As it was mentioned, this function can cause errors if you don't pay attention to what you are doing. Therefore, I recommend clearing 
+     the cache immediately as soon as you don't need it anymore.</p><br></span></li>
+     </span></li>
+
+	  <li><a name="X"></a>Waypoint Flags
+     <span>
+	  <p>Waypoint flags are anything that makes a waypoint &quot;behave&quot; in a special way and serve for more (or different) things than mere
+	  navigation purposes.<br>
+ 	  Flags can be divided into two categories, and if you wanted to invent some nice names for these categories, you could call them exclusive
+ 	  and cumulative flags.<br>
+ 	  What does that mean?</p>
+	  <p>Well, exclusive flags are flags that exclude each other - a waypoint carries EITHER one flag OR another, but never two at the same time.
+	  Such a flag will change the type of a waypoint. For example, if you have a <font class="style_green">Normal</font> waypoint and add
+	  a &quot;<font class="style_pb_commands">6. Rescue</font>&quot; flag to it, the waypoint will turn into a <font class="style_white">Rescue</font>
+     waypoint, with all its functions. It cannot be a <font class="style_green">Normal</font> waypoint AND a 
+     <font class="style_white">Rescue</font> waypoint at the same time.<br>
+	  The following flags are exclusive: <font class="style_magenta">Map Goal</font>, <font class="style_pink">Ladder</font>, <font class=
+	  "style_white">Rescue</font>, <font class="style_cyan">Camp</font> and Team Specific (<font class="style_blue">CT</font> or <font class=
+	  "style_red">T</font>)*. Adding one of these flags to any waypoint will turn it into the selected waypoint type.<br><br>
+	  <font class="style_note">Note:</font><br>
+	  Team Specific is really a special case, because with <font class="style_cyan">Camp</font> waypoints, it's cumulative - but with all others,
+	  it's exclusive.</p>
+	  <p>Cumulative flags are flags that don't exclude each other, i.e. a waypoint can carry one of these flags AND a another one at the same 
+     time. For example, a waypoint can be Team Specific (<font class="style_blue">CT</font> or <font class="style_red">T</font>) AND carry a
+	  <font class="style_green">Button</font> flag at the same time. It can mark a strategically important position for one of the teams
+	  and at the same time tell all bots to push a nearby button.<br>
+	  The following flags are cumulative: <font class="style_green">Button</font>, Lift, <font class="style_orange">Crouch</font> and
+	  <font class="style_red">No Hostage</font> and Team Specific (<font class="style_blue">CT</font> or <font class="style_red">T</font>)
+	  *.Adding one of these flags to any waypoint will also mark it into the selected waypoint type including what type it was before.<br><br>
+	  <font class="style_note">Note:</font><br>
+	  Team Specific is only cumulative when applied to <font class="style_cyan">Camp</font> waypoints.</p>
+
+	  <p>Bring up the main menu and select &quot;<font class="style_pb_commands">4. Set Flags</font> &quot;. 
+     The following sub-menu will appear:</p>
+	  <p align="center"><img src="../images/men4wpfl.jpg" alt="The waypoint flags menu" name="The waypoint flags menu" width="160" height="340" border="0" ></p>
+
+	  <p align="center" class="style_picture_description">The Waypoint Flags menu.</p>
+	  <p>The following list will show the effects of each flag in detail:</p><br>
+
+	  <span><font class="style_paragraphes">Use Button (cumulative)</font><br><br>
+     <span>
+	  <p>This flag will tell bots that they need to push a nearby button every time they come past the flagged waypoint. You can add this flag to
+	  any waypoint type. This flag is not necessary for button-triggered doors, because bots that are about to go through a closed button-triggered
+	  door will &quot;see&quot; that their path is blocked and automatically look for the button that opens the door.
+	  However, there might be situations where the bots can't detect an obstacle in their path but still need to push a button in order to reach
+     their goal. Imagine a deadly laser beam that can be temporally deactivated with a button, for example. Bots won't be able to detect the
+     laser beam as an obstacle and thus ignore the button and die. But if you add a button flag to the waypoint next to the deactivator button,
+     all bots will be forced to push the button before they continue.<font class="style_green">The Use Button is shown as a little green cross
+     near the top of a waypoint</font> as you can see in the picture below.</p>
+	  <p align="center"><img src="../images/fl2buttn.jpg" alt="A button flag on a normal waypoint" name="A button flag" width="480" height="360" border="0" ></p>
+	  <p align="center" class="style_picture_description">This Normal waypoint is marked with a Button Flag.</p><br></span></span>
+
+	  <span><font class="style_paragraphes">Lift (cumulative)</font><br><br>
+     <span>
+	  <p>You won't be too surprised to read that a Lift flag is used to enable bots to use lifts. Lift flags must be applied to the waypoint
+     inside an elevator shaft. Imagine a normal elevator that can move between ground level and 1st floor. You will have one waypoint inside
+     the elevator cabin at ground level, and another one you added inside the elevator cabin when you were at the 1st floor. Both waypoints
+     will be connected to each other. If there were no connection, bots wouldn't know that one possible path to get from one storey to the
+     other leads through the elevator. Now the problem is that bots are supposed to hit the button, walk into the elevator, stand still until
+     they have reached the other storey and walk out of the elevator. This is where the Lift flags are needed: They tell your bots to hold
+     their position until the elevator has reached the other storey.<br>
+	  Lift flags are visualized like use_button flag, but instead green color You can see the same in pink color.</p>
+	  <p align="center"><img src="../images/fl3lift.jpg" alt="A lift flag on a normal waypoint" name="A lift flag" width="480" height="360" border="0" ></p>
+	  <p align="center" class="style_picture_description">This Normal waypoint is marked with a Lift Flag.</p><br></span></span>
+
+	  <span><font class="style_paragraphes">Crouch (cumulative)</font><br><br>
+     <span>
+	  <p>Adding this flag to a waypoint will not change the waypoint type (e.g. <font class="style_green">Normal</font>, <font class=
+	  "style_magenta">Goal</font>, <font class="style_pink">Ladder</font> etc.), but it will make the selected waypoint a Crouched waypoint.
+	  You will see the effect when you look at the waypoint to which you applied the flag. I.e. It will be smaller, just as if you had made it a
+	  Crouched waypoint in the first place.<br>
+	  However, it's recommended placing Crouched waypoints the normal way instead of adding a Crouch flag to standing waypoints. It's taking two
+	  steps where only one step is necessary, and besides, if you add the Crouch flag to a standing waypoint, the waypoint will float in the air
+	  several inches above the ground.</p><br></span></span>
+
+	  <span><font class="style_paragraphes">Map Goal (exclusive)</font><br><br>
+     <span>
+	  <p>This flag will turn any waypoint into a <font class="style_magenta">Map Goal</font> waypoint. It can be quite useful if you waypointed
+	  the area around the map goal with <font class="style_green">Normal</font> waypoints and then realized that you would rather have
+	  a <font class="style_magenta">Map Goal</font> waypoint in place of one of the <font class="style_green">Normal</font> waypoints. Instead of
+	  deleting the <font class="style_green">Normal</font> waypoint and inserting a <font class="style_magenta">Map Goal</font> waypoint, you
+	  can just use this flag.</p><br></span></span>
+
+	  <span><font class="style_paragraphes">Ladder (exclusive)</font><br><br>
+     <span>
+	  <p>A <font class="style_pink">Ladder</font> flag will obviously turn the waypoint it's applied to into a 
+     <font class="style_pink">Ladder</font> waypoint. If you accidentally added a <font class="style_green">Normal</font> waypoint where 
+     there should be a <font class="style_pink">Ladder</font> waypoint (for example when jumping to a ladder), this flag can come 
+     in handy.</p><br></span></span>
+
+	  <span><font class="style_paragraphes">Rescue (exclusive)</font><br><br>
+     <span>
+	  <p>Forgot to add a <font class="style_white">Rescue</font> waypoint in the rescue zone? There are already so many waypoint around that you
+	  don't want to add yet another one? Well, this flag will turn any waypoint into a <font class="style_white">Rescue</font> waypoint. 
+     Also handy when your <font class="style_white">Rescue</font> waypoint isn't far enough in the rescue zone that bot's only rescue half 
+     the hostages and run back to the enemies with the hostages tagging along. Just make your previous <font class="style_white">Rescue</font>
+     waypoint into a <font class="style_green">Normal</font> and change another <font class="style_green">Normal</font> deeper in the zone to
+	  a <font class="style_white">Rescue</font>.</p><br></span></span>
+
+	  <span><font class="style_paragraphes">Camp (exclusive)</font><br><br>
+     <span>
+	  <p>This flag will turn any waypoint into a <font class="style_cyan">Camp</font> waypoint. Right after adding the flag, however, this 
+     freshly made <font class="style_cyan">Camp</font> waypoint will not have its <font class="style_yellow">Camp start</font> and 
+     <font class="style_orange">Camp end</font> markers correctly set. You must do so manually by selecting 
+     &quot;<font class="style_pb_commands">6. Camp start</font>&quot; and
+	  &quot;<font class="style_pb_commands">7. Camp end</font>&quot; from the &quot;<font class="style_pb_commands">1. Add</font>&quot; menu, 
+     just as you'd do with any <font class="style_cyan">Camp</font> waypoint.</p><br></span></span>
+
+	  <span><font class="style_paragraphes">No Hostage (cumulative)</font><br><br>
+     <span>
+	  <p>This flag is only needed on CS-maps, but there it's absolutely <font class="style_red_bold">important</font>! It will block a waypoint
+	  for a <font class="style_blue">CT</font> bot that's leading hostages towards the rescue zone. By using this flag you can prevent bots from
+	  choosing paths where the hostages cannot follow them (up a ladder or through a narrow vent, for example). The &quot;<font class=
+	  "style_pb_commands">8. No Hostage</font>&quot; flag must be applied to the first waypoint that should 
+     <font class="style_red_bold">NOT</font> be reached with hostages. In order to make it easier for you to keep an overview over which 
+     point are blocked and which aren't, 
+     <font class="style_red">the No Hostage is shown as a little red cross near the top of a waypoint</font> as you can see in 
+    the picture below.</p>
+	  <p align="center"><img src="../images/fl1nohos.jpg" alt="A no hostage flag on a normal waypoint" name="A no hostage flag" width="480" height="360" border="0" ></p>
+	  <p align="center" class="style_picture_description">This Normal waypoint carries a No Hostage Flag. Counter-Terrorists bots with 
+     hostages won't be able to use it.</p><br></span></span>
+
+	  <span><font class="style_paragraphes">Team Specific (cumulative with <font class="style_cyan">Camp</font> waypoints, else exclusive)
+     </font><br><br>
+     <span>
+	  <p>Upon selecting this flag, you will be prompted with a sub-menu where you can choose for which of the two teams the waypoint will 
+     be specific.</p>
+	  <p align="center"><img src="../images/men5tmsp.jpg" alt="Sub-menu for team-specific flag" name="Sub-meu for team-specific flag" width="200" height="200" border="0" ></p>
+	  <p align="center" class="style_picture_description">This menu will appear when you select the flag &quot;Team Specific&quot;.</p>
+	  <p>When applied to <font class="style_green">Normal</font>, <font class="style_pink">Ladder</font>, <font class="style_white">Rescue</font>
+	  or <font class="style_magenta">Map Goal</font> waypoints, this flag will turn the waypoint into a Team Specific one. A 
+     <font class="style_blue">Counter-Terrorist Important</font> waypoint if you selected 
+     &quot;<font class="style_pb_commands">2. Counter-Terrorists</font>&quot; and a <font class="style_red">Terrorist Important</font> 
+     one if you selected &quot;<font class="style_pb_commands">1. Terrorists</font>&quot;.</p>
+	  <p>With <font class="style_blue">CT</font> and <font class="style_red">T</font> Important points, you can use this flag to change the team
+	  the waypoint is associated with. For example, you can use it to turn a <font class="style_blue">CT</font> Important waypoint into 
+     a <font class="style_red">T</font> Important one. If you select the third option, 
+     &quot;<font class="style_pb_commands">3. Both Teams</font>&quot;, you can turn any <font class="style_blue">CT</font> or 
+     <font class="style_red">T</font> Important waypoint into a <font class="style_green">Normal</font> waypoint.</p>
+	  <p>With <font class="style_cyan">Camp</font> waypoints, however, this flag works a bit differently. You can add it to any 
+     <font class="style_cyan">Camp</font> waypoint to turn it into a Team Specific Camp waypoint. Only bots of the associated team will be
+     allowed to camp there. Of course, you can also change a Team Specific Camp waypoint back to a normal <font class="style_cyan">Camp</font>
+     waypoint by selecting the third option&quot;<font class="style_pb_commands">3. Both Teams</font>&quot;.</p>
+	  <p>&nbsp;</p><br></span></span>
+     </span></li>
+
+	  <li><a name="XI"></a>Waypoint Data Strored
+     <span>
+
+	  <p>The Waypoint Editor shows some useful for waypointers and bot coders information about the data which is stored in pwf (main waypoint file) 
+     and pxp (experience data file). As You could already see at examples above it shows at the top the full information about the current waypoint 
+     (You are in its radius right now) and a bit below the basic information (index number, radius and origin) about the cached waypoint 
+     (if You stored some waypoint in the cache - to use it later to add/delete some paths to it) and at the bottom is the basic information 
+     (also index number, radius and origin) about the waypoint You are just facing at. Of course - if You didn't cache any waypoint or You are 
+     currently facing no waypoint at all, there will be only the data displayed of the waypoint You are in its radius right that moment. <br>
+     Experience data shows some additional information about the waypoint (if it's already collected). DWP (the most Danger Waypoint) for CWP
+     (Current Waypoint) / EXP (collected expierience damage value for the current Waypoint). If DWP is -1 that means there is no any danger waypoint 
+     for the current waypoint and there is no any data collected for it (basically that means the bot was never attacked in that place). 
+     If there is something different than -1, then You can also expect the graphical representation of showing the danger direction for 
+     the bot - it's a line (red for Ts and/or blue for CTs) leading from the current waypoint to the most danger waypoint for it 
+     (separatelly for each team).<br>
+     HDWP (the waypoint number with the Highest Damage value collected) / HD (highest damage value collected for the most Highest Damage Waypoint) 
+      - basically it means the most danger waypoint number with its damage value collected. That data is collected separatelly for each team, so
+     that's why You have two lines of that data (one for CTs and one for Ts).<br>
+     Once a while the experience data is recalculated to take away the half of each of values (if the overflow for some of them is about 
+     to happen).<br><br>
+     Here is an example of the data You can see.<br>
+	  <p align="center"><img src="../images/wpstats.jpg" alt="Waypoint data stored" name="Waypoint data stored" border="0" height="360" width="480"></p>
+	  <p class="style_picture_description" align="center">Showing the data of current, cached and faced waypoint</p>
+    <font class="style_note">Note how it's shown the direction to the most danger waypoint for the current waypoint.</font></p>
+     <p></p></span></li><br><br>
+
+	  <li><a name="XII"></a>Waypoint Debugging
+     <span>
+     <span><font class="style_paragraphes">pb debuggoal</font><br><br>
+     <span>
+
+	  <p>Waypoint debugging is a way to send the bots to specific waypoints to see how well they will navigate to them. To debug your 
+     waypoints add one bot to you map when you are waypointing. You then issue this command in the console to direct the bot to navigate 
+     to the specified waypoint.<br>
+	  pb debuggoal waypoint#<br><br>
+
+     Here is an example of using this command. "<font class="style_pb_commands">pb debuggoal 66</font>"
+	  <p align="center"><img src="../images/wpdebuggoal1.jpg" alt="Normal waypoints" name="Normal waypoints" border="0" height="360" width="480"></p>
+	  <p class="style_picture_description" align="center">Setting the debuggoal waypoint to waypoint 66</p>
+     <p></p>
+	  <p align="center"><img src="../images/wpdebuggoal2.jpg" alt="Normal waypoints" name="Normal waypoints" border="0" height="360" width="480"></p>
+	  <p class="style_picture_description" align="center">Bot navigating to waypoint 66</p>
+  
+	   This command is also on the waypoint Options menu - page 2.
+	  <p align="center"><img src="../images/men7bwpop.jpg" alt="The options menu - page 2" name="The options menu - page 2" border="0" ></p>
+	  <p align="center" class="style_picture_description">The Waypoint Options menu - page 2.</p>
+		 That makes it easier to set the debug waypoint. Instead of going to the console and typing "<font class="style_pb_commands">pb debuggoal 66</font> 
+		 to direct the bot to go to waypoint 66 you can bind a key like 
+     this:<br><br>
+     bind "i" "pb wpmenu;menuselect 9;menuselect 9;menuselect 1"<br><br>
+
+     An then all you have to do is point to the waypoint you want the bot to navigate to and press the key in your bind. Key "i" for this 
+     example.<br><br>
+
+     To cancel the debuggoal waypoint select the  waypointing options menu 9 page 2 "<font class="style_pb_commands">Debuggoal off</font>"
+     </span></span></span></li><br><br>
+
+	  <span><p>So there you go, that covers everything you need to know about waypoints, paths connections, radii, waypoint flags, in order 
+     to waypoint a map and some nice little tips and tricks you can use. But there's one more thing you need to read before you start 
+     making a name for yourself in the world of waypointing, the next part contains some breifing on the common errors new waypointers make 
+     as well as some more tips and tricks to help you become a pro waypointer faster, like using bindings instead of menu's.</p>
+	  <p>So click on <a href="./pbmm_wp_commonerrors.html">'Waypoints - Common errors'</a> and get into it! </p><span>
+
+<!-- ###END: MainContent### -->
+      </ul>
+     </td>
+    </tr>
+   </table>
+  </td>
+ </tr>
+<!-- ###END: MainContent Table### -->
+</table>
+<!-- ###END: Body### -->
+</body>
+</html>

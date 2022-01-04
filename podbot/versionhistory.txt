@@ -1,0 +1,1225 @@
+V1.0 First Public Release 27/10/2000
+
+
+V1.1
+
++ Fixed Player Speeds with Weapons
++ Fixed VIP Speed
++ Changed Damage Detection Code
++ Fixed Weapon Kickback
++ Extended Waypoint Menu System
++ Implemented hearing Footsteps
++ Modified Sniper Combat behaviour
++ More weapon fixes
++ Bots above skill 70 sneak when Enemy near suspected
+
+
+V1.2
+
++ Fully compatible to CS 1.0
++ Recoded all Reaction Routines
++ Burst Fire implemented
++ Smarter Grenade Use/Throwing
++ Bots try to hide
+
+
+V1.4
+
++ FIXED: Bunny Hopping of Snipers
++ FIXED: Crash when adding Bots
++ FIXED: BotChat Freeze on Win2K (Couldn't test this!)
++ FIXED: Humanlike Combat Turning Speed
++ FIXED: Several Bugs in Waypoint Editor
++ FIXED: Living Bots talking to the Dead
++ FIXED: Only Host can issue commands
++ FIXED: Freezetime (first Round) Bug
++ FIXED: Knife being used when Enemy out of range
++ FIXED: Bot Chat Spamming
++ FIXED: Bug in detecting Hostages
++ Rewrote/optimized the Hearing Code
++ Bots now hear Shots and Button Usage within their range
++ Bots randomly use secondary knife mode
++ Changed Waypoint Movement
++ Changes in Basic Movement
++ Changed Waypoint Format
++ Added some stuff to the waypoint editor
++ Added Camp Flags to the Editor
++ Bots above Skill 60 try to stay more covered when moving
++ Improved Ladder climbing up
++ Added Bot User Menu
++ Tweaked Reaction Time again
++ Improved Enemy Detection Handling
++ Bots use Zoom Mode when sniping most of the time
++ Bots Hiding Behaviour improved
++ Added a bunch of new commands to the Config File
++ Added Randomness to Reaction Times
++ Bots are able to swim now
++ Updated/Replaced all Waypoint Files
+
+
+V1.4c
+
++ FIXED: Bots don't going mad anymore when flashbanged
++ FIXED: Hearing Bug when hiding
++ FIXED: Fixed some Issues with Weapon Kickback
++ FIXED: Bots keep ducking when seeing an enemy
++ Added Minimum Turn Amount
++ Added Noclip Option for Waypoint Editing
++ Added Terrorist Bots use Hostages under certain conditions
++ Implemented Proper Sniper Zooming
++ Increased number of "special" waypoints from 32 to 64
++ Added some more dedicated Server Commands
++ Added option to turn on old (1.2) combat behaviour
++ Added botskill.cfg to tweak all skills to your needs
+
+
+V1.4x
+
++ FIXED: Dedicated Server commands not working after "newmap"
++ FIXED: Bots not shooting when enemy elevation </> than 45 degree
++ FIXED: Bots responding too fast to Radio Commands
++ Added fillserver command to DS commands
++ Recoded the Radio Capturing/Usage (faster & more reliable)
++ Bots react on many radio commands
++ Added much better Player Avoidance Code
++ Bots don't pause until they've seen an enemy
++ Updated FAQ & Readme (make sure to read them!)
++ Added the previously missing de_foption wpt file
++ Added some more localized Botchat translations
++ New podbot.cfg command "botsfollowuser"
+
+
+V2.0
+
++ FIXED: Bots trying to pickup things already picked up before
++ FIXED: Ignoring of the MAXFOLLOW Variable
++ FIXED: Radio Commands not working in dedicated Server Mode
++ FIXED: Crash when deleting Waypoint Nr. 0
++ FIXED: Waypoints & Path Connections not displayed after
+         Map Change
++ FIXED: Dedicated Server Commands not working after Mapchange
++ FIXED: Previously broken Covered Movement
++ FIXED: Previously broken hearing of Shoot & Usage Noises
++ FIXED: Freezetime 100% working
++ FIXED: Correct Movement Speeds also in zoomed Mode
++ FIXED: Weapon Buying in AS Maps
++ FIXED: Low/High Angles Aiming Bug
++ FIXED: Included up/down looking at campwaypoints, which was
+         present since V1.0 but overseen
++ FIXED: Better Detection of Killer Entity
++ FIXED: Diving Problems when swimming
++ FIXED: Stupid Angle Bug which messed up movement sometimes
++ FIXED: Bots try to avoid shooting TeamMates (doesn't apply for
+         bad Grenading)
++ FIXED: Bots can't be added if Waypoints not initialised
++ Redid all the find routines
++ Better Edge Avoidance
++ Added Bots picking up weapons on the ground (adjustable
+  through BotWeapons.cfg)
++ Buying can be customised & personalized in BotWeapons.cfg
++ Added some Teamchat Messages (Bots using Hostages etc.)
++ Optimized Waypoint Selection Code (much faster!)
++ Made Waypoint Selection more Team and Map dependant
++ Bots use SmokeGrenades and are primitively affected
++ Redid the whole Movement Code. Bots are now able to move
+  backwards/sidewards while moving to a goal and still check
+  for obstacles in their way
++ Smarter Combat Strafing/Jumping
++ Bots now have a small Task-driven Memory
++ Bots buy all Items (except senseless Nightvision Goggles)
++ Better enemy detection (more CPU consuming)
++ Added 3 basic Bot Personalities with adjustable Weapon
+  Preferences
++ Bots above Skill 80 try to shoot seen/heard Enemies through
++ Obstacles if possible and enabled in Config
++ Counter Bots share a global memory of visited Bombspots
++ Bots on same Team share Enemy Knowledge if they see each
+  other
++ Bots collect Map Experience about Danger Spots (can be
+  turned off)
++ Bots primitively use Buttons of all types (except cameras)
++ Changed Inner Workings of Decision Logic
++ Hearing Sensibility now affected by Movement Speed & own Noises
++ Bots shoot back (randomly) at teammates who tried shooting them
++ Added some Performance Settings to podbot.cfg
++ Added some more useful console commands for configuring
+  and helping when waypointing/debugging
++ Again better Player Avoidance & Unstuck Code
++ Using the original HL Engine Speech Synthesis to
+  speak to the Host
++ Added custom Compress/Decompress Routines for those otherwise
+  much too big Experience Files
++ Better blinded (Flashbang) Bevahiour
++ Bots don't loose their leader when seeing Enemies
++ Improved ladder climbing
++ Bots shoot at dying enemies (Time based on Agression) if they
+  don't have a new opponent
++ CT Bots communicate about visited Bombspots. Humans can use
++ "Sector clear" to tell them about a visited Bombspot too.
++ Bots pickup things like Bomb or Weapons while following User
++ Some improvements & fixes to the waypoint editor
++ Added Bot Model Selection
++ Added preemptive Firing (based on Agression & skill) to
+  Fleeing/Hunting States
++ Bots can be allowed to vote against disruptive Players
++ Bots can be ordered (by the host) to vote for a map
++ Bots Emotions/Desires are also affected by number
+  of teammates near and current weapon
++ Some additional Fun-Modes included
++ Bot Agressions are affected by Roundtime & Team Goals
++ Waypoint Type Selection now bound to Personality +
+  Agression/Fear + Team
++ Failed/Succesful Plans are remembered for each Team and
+  stored in the experience files (if not turned off by User)
++ Bots mostly try to get away from Grenades thrown at them
++ Bots spray Logos (can be customized & turned off)
++ Bots now use the correct PVS & PAS
+
+
+V2.5
+
++ FIXED: Ignoring of the BotSpray Variable
++ FIXED: Wrong Gravity after turning off Fun-Modes
++ FIXED: Having 2 skills when minbotskill = maxbotskill
++ FIXED: Getting the Enemy instantly when being shot
++ FIXED: Nasty Bug in the firing Routine which messed up
+  Reaction Times & kept Bots from shooting sometimes
++ FIXED: Resetting time to reach when being stuck causing Bots
+  remaining stuck & doing unnecessary jumps
++ FIXED: CT Bomb Spot Selection when using Experience Files
++ FIXED: Bugs & Problems with linked Lists, causing Memory Leaks
+  and random crashes
++ FIXED: Bots tracking Enemies through Obstacles when camping/hiding
++ FIXED: All Turns/Movements Frame Independant
++ FIXED: Bugs in weapon buying on AS Maps
++ FIXED: First Bot on dedicated Server not moving properly
++ FIXED: Team mismatch when collecting experience
++ FIXED: Para/SG550 buying Bug when weapon restriction on
++ FIXED: Not dropping primary weapon for new one on the ground in
+  extreme situations
++ Optimized Player Avoidance a bit
++ Major Rewrite of the debugging core
++ Complete rewritten Burst Firing, now includes non-automatic weapons
+  and distance to target
++ Extended Hearing code to include Sounds like Opening Doors, Ladders
+  and a lot more (thanks killaruna!)
++ Added some more dynamic Symbols to the Chatsystem and a 'Name Humanizer'
++ Extended Chatsystem to have Bots Reply to user customizeable
+  Keywords + Bots chat with each other when spectating
+  (heavily inspired by ParaBot from killaruna again!)
++ Smarter Grenade Usage. Bots try to surprise enemies and cancel
+  grenading if they think it won't succeed
++ Movement now pretty much point precise
++ Changed Bot DS CVAR and some other stuff to be more compatible to
+  Botmaster5000
++ Ladder climbing should now handle even difficult stuff
++ Added Bot Weapon Mode Menu
++ Removed Bugs in the Aiming Code
++ Added "waypoint teleport"
++ Redid Bot Task/Schedule System resulting in more careful Bots etc.
++ All Radios Commands from 1.4x work again like "GetInPosition..."
++ Bots defend the planted Bomb and the guy who's defusing
++ CT Bots "hear" the planted Bomb
++ Increased Shooting Precision when using zoomed Sniper Weapon
++ Each Team selects a Leader Bot which issues some basic Radio Orders
+
+
+V2.6
+
++ FIXED: DS SERVER CVAR
++ FIXED: Borg Mode and added extra Borg Cam
++ FIXED: Misc Bugs when attacking
++ FIXED: Bots switching to next Weapon when only Ammo in current Clip
++ FIXED: Duck/Jumping Bug
++ FIXED: About 3 MB of Memory/Resource Leaks :)
++ Rewrote func type handling, especially buttons
++ Aiming now affected by Enemy Velocity & Bot Turns
++ Bots continue their Tasks if no direct Path to Enemy
++ CT Bots low on health (or 50% Probability) guard a dropped C4
++ Rewrote Startup Routines which previously caused the stupid jumping
++ Smarter Grenade Usage
++ Correct FOV for each Weapon & Sniping Mode
++ New Zoom Switching allows better sniping weapon usage
++ Changes in the Behaviour Code - Bots try to go for Cover faster
++ Misc changes to the statistics system - depending on Emotions
+  Bots may camp instead of moving to dangerous positions
++ Bots don't move in Intermission
++ Bots leave their camping/hiding position if they get hurt by
+  unusual damage like drowning or gas
+
+
+v2.6 metamod Release 1
+
++ Ported to Metamod by Pierre-Marie Baty
++ Put all this mess into shape at last (indenting, alignment, comments)
++ Fixed an impressive number of bugs
++ Added support for CS 1.6 (shield code thanks to Wei Mingzhi). Be sure 
+  to use the new bot_weapons.cfg file else the bot will crash.
++ Fixed all v2.6 bugs (bomb planting, etc) the way it's meant to be fixed 
+  - directly at the spot. No ugly hacks, no "patching".
++ Before I forget: ported to Linux, too
++ Forced the bots to always use the A* pathfinder. It should affect greatly
+  the team tactics if used with mature .pxp files.
++ Fixed waypoint 0 with 65535 danger in default experience table
++ Fixed waypoint editor not working anymore
++ Added Austin's super-kickass waypoint editor that he wrote with SoUlFaThEr 
+  for the now defunct PoXBot. At least this code won't be lost for everyone.
++ Fixed new experience database bug related to incorrect memset usage
++ Got rid of the ugly CVAR parsing for server commands. Using a real dedicated
+  server command handler now. No quotes needed anymore in server commands.
++ Fixed brainless CT bots taking the hostages through impossible routes
++ CT bots now pick up abandoned defuse kits (got the idea while reading
+  Wei Mingzhi's 	YaPB code - worth a look, he ported all the POD-Bot 
+  code to C++)
++ Fixed incorrect danger estimation of waypoint #0 to 65535 the way it's meant 
+  to be fixed (diff. between signed int and unsigned short ?? ;-))
++ Fixed bots not coming back after a map change
++ Fixed 2 possible crash bugs thanks to Wei Mingzhi again
++ Fixed incorrect usage of abs() where it should be fabs()
++ Fixed another weapon selection bug
++ Fixed imprecise navigation of waypoints on top of certain ladders
++ I advise you to delete all your previous .pxp files UNLESS they've been used 
+  with POD-Bot 2.5 ONLY (and not the buggy 2.6).
++ The overall performance has been restored to what it used to be with 2.5
++ Rewrote the messy CS buy routines in a clean way at last
++ Fixed Count Floyd's experimental A* pathfinder. He was using no heuristic!!!
++ Fixed bots too shy, was linked to the absence of heuristic function. I wrote 
+  a square distance heuristic (no sqrt involved. Fast and efficient)
++ Because of an important change in the way the pathfinder behaves, you should 
+  delete all your .pxp files again, or use untouched .pxp files 
+  from PB 2.5
++ Fixed bots don't buy in CS 1.6 after the first round.
++ Fixed BotSpawnInit() calls zapping the bot's brains several times in a row
++ Fixed bots trying to pick up a new weapon without discarding the shield
++ Fixed VERY COMMON crash bugs in bot chat functions (ThreatTab index > 31)
++ Fixed yet another whole shitload of crash bugs on bad entities (w/ FNullEnt)
++ Got rid of the unused MOTD message catching
++ Bots now know when icons are blinking on their HUD: bomb, defuser, buy zone
++ Delayed bots buying so that they don't buy all in the same frame (lag issue)
++ Fixed bots having trouble at doors. Bot navigate doors perfectly now.
++ Bots pay much more attention to the mission goals now. They don't mess around
+  anymore doing idle stuff, they deploy and go to the goal.
++ Fixed bots getting stuck on ladders where a func_breakable would block them
++ Now using ServerActivate() instead of StartFrame() to catch map changes
++ The A* pathfinder should be faster now
++ Took the buying code out of the message queue. WTF was it doing there ???
++ Rewrote team/class selection function: 3 times shorter, twice as efficient.
++ Now the bot is pretty much more stable.
++ Fixed metamod not reloading plugin after map change issue
++ Fixed failing assert() on Linux systems
++ Fixed a good heap of Linux bugs thanks to the feedback from Bots United
++ Fixed WPTDEFAULT directory case issue (now the default waypoint folder is 
+  "wptdefault" in lowercase)
++ Added version stamp to the Win32 DLL this way Austin will be happy
++ Miscellaneous minor fixes
++ Another pathname fix for linux. All paths and filenames are now in LOWER CASE
+  (that is, no more "BotNames", no more "PODBot", etc.)
++ Fixed skill not displaying after the bot names when DetailNames is turned on.
++ Took the radio code out of the message queue for simplification
++ Fixed bots gazing at the sky or the floor (or generally anywhere but where 
+  they should have looked at instead) when camping on non-camp waypoints (well, 
+  they MIGHT still face walls but then it'll be that they've HEARD something)
++ Fixed bots moving their gun erratically when camping
++ Repaired bits of the camping code that was for ages broken in POD-bot (here's
+  another example of confusion between angles and vectors...)
++ Fixed a stupid bug in my OWN code that was making the bots use the radio less
++ Removed failing assert() for angle overflow at the end of BotThink(). It was 
+  mysteriously failing only on Linux, and the angle was clamped just before.
++ Now building the Linux binary with the NDEBUG option. It should fix all the 
+  assert() issues on Linux but it still won't tell me why these asserts fail!
++ Fixed usage of a dozen useless variables for showing the waypoint creator 
+  at round start where one single variable would have fit for the job
++ Cleaned up the code again some more
++ Rewritten the bot chat code in a much cleaner way (bots use the "say" and 
+  "say_team" client commands like humans now).
++ IMPORTANT: added a new knowledge file type for POD-bot: .pvi files. The .pvi
+  files will store the bot's waypoint visibility table on disk instead 
+  of recalculating it each time a new map starts. These files will be stored 
+  in the waypoints folder along with the .pwf and .pxp files. Like the .pxp 
+  files, these .pvi files are deletable (in which case they will be 
+  re-created).
++ Fixed visibility table failing to reload on some level change situations
++ Moved all the global variables declarations to bot_globals.h and all 
+  the definitions to bot_globals.cpp; only header to include now is 
+  bot_globals.h
++ Simplified the waypoint editor code part in waypoint.cpp
++ Pathwaypoints are not added anymore if they go through func_illusionaries
++ Simplified some of the utility functions in util.cpp
++ Fixed quite a few potential crash bugs again. Should be rock stable now.
++ Changed the waypoint copyright message back to what it used to be in PB 2.5
++ Fixed bug where bots would clutter together while navigating on ladders
++ Re-arranged some global variables and rewrote parts of bot.cpp for better 
+  ANSI C compatibility
++ Fixed very nasty crash bug in IsGroupOfEnemies function
++ Fixed EXTREMELY NASTY crash bug in BotFindItem(), here's what happens when 
+  a coder declares variables everywhere but on top of the functions !!!
++ Fixed shitloads of crash causes in the waypoint editor. Now when you edit 
+  waypoints, all the bots are frozen. And once you save and exit editing mode, 
+  the map restarts in order to recalculate the visibility table.
++ Made the spawn points display a translucent player model in WP editing mode. 
+  May help waypointers when they want to put one waypoint at each spawn point.
++ Fixed buying code that was stuffed up in CS 1.5 because of the bots not being
+  able to use the same buy shortcuts as real clients.
++ Miscellaneous (very) little fixes in Austin's waypoint editor.
++ Waypoint editor: now displaying INCOMING path connections in brown (according
+  to an idea from SoUlFaThEr)
++ Fixed bots taking the hostages only to the last rescue waypoint placed (first 
+  waypoint in the linked list). Now the bots take them to the closest one.
++ Added "autopath on/off" command to toggle automatic pathwaypoint creation.
++ Added "autopath setradius N" command to enlarge/shrink the automatic 
+  pathwaypoint placement radius.
++ Tweaked the A* pathfinder so that the bots pay more attention to dangerous 
+  routes and choose different paths as often as they can
++ Added a console command/podbot.ini file option to tweak the bot's pathfinder:
+  "danger_factor" (an explanation is provided in the podbot.cfg file)
++ Removed obsolete "newmap" command.
++ Denied creation of pathwaypoints from any waypoint to itself.
++ VIP bot will now have a "coward" personality by default (no more VIP rushing
+  with that ridiculous pistol straight in front of hordes of AK47-armed Ts).
++ Fixed a bug where checking for waypoints validity after modifying them would 
+  unfreeze the bots while still in waypoint editing mode.
++ CT bots now react immediately when they receive the "bomb planted" message
++ CT bots don't decide to camp anymore once the bomb has been planted
++ Fixed bug where bots would not pick up the C4 anymore when they see it
++ Terrorist bots now go and pick up a dropped bomb as soon as they receive 
+  the dropped bomb message and they see the blinking point on their radar 
+  (unless they've been scared off, or another good reason though).
++ Terrorist bots now reevaluate their goal immediately as soon as they receive 
+  the message "someone picked up the bomb".
++ Rewritten player collision code, bots should avoid each other a little better
++ Tweaked some timers so that bots should camp a bit less now.
++ Fixed bug where bots would not alternate their camp directions.
++ Fixed a bug where CT bots could not be added (choosing auto team instead).
++ Waypointers can now type "ap" instead of "autopath".
++ Fixed strafe key bug (thanks Whistler)
++ Fixed potential crash bug by ThreatTab array overflow (thanks Whistler)
++ Bots should not be trying to toss grenades over the walls in de_dust 
+  or through the ceilings like in de_nuke anymore.
++ Finally FI-XED wicked bug of bots not able to see through certain types 
+  of glass !!!
++ Bots should approach crouched waypoints correctly now (ducking)
++ Bots now estimate crouched waypoints using a slower travel speed while 
+  pathfinding (should help them not believe crouched routes are the fastest)
++ Fixed bug where bots would spin around with the head upside down (!!!)
++ Made the waypoint index display cleaner in waypoint editing mode. It doesn't 
+  flood the console anymore and it's visible in CS 1.5 and 1.6 identically.
++ Fixed "wp teleport" function in the waypoint editor so that players can't 
+  be stuck into the ground anymore when teleporting from one waypoint 
+  to another.
++ Fixed incorrect recording of "campstart" and "campangle" angles when adding 
+  a waypoint. These values are meant to be ANGLES, NOT vector locations.
++ Added SoUlFaThEr's waypoints for all the default CS maps.
++ Fixed thoroughly all the camping direction code to use ANGLES instead 
+  of vectors (campStart and campEnd). ***OLDER WAYPOINTS NEED TO BE 
+  RE-CHECKED***
++ Merged Austin's new menu in the WP editor to set the autopath max distance.
++ Fixed crouching wpt getting taller when getting close (to please sPlOrYgOn)
++ Rewrote FL_NOHOSTAGE waypoint handling in a clean way.
++ Merged ThreatTab and Clients array together (they describe the same thing)
++ Cleaned the message queue stuff and insertion/retrieval code
++ IMPORTANT: moved the root directory from "podbot" to "addons/podbot"
++ Fixed another crash bug in StartFrame()
++ Rewritten parts of the ladder handling code in a more efficient way
++ Fixed bug where bots would always hold the "strafe left" key pressed
++ Fixed bug where deleting the last waypoint would crash the waypoint editor
++ Waypoints with the FL_NOHOSTAGE flag show up graphically in the editor when 
+  you issue the "waypoint nohostage" or "wp nohostage" command.
++ Displayed all waypoint flags graphically live in the waypoint editor
++ Removed obsolete "waypoint showflags" command.
++ Fixed bots getting stuck trying to look into external camera screens
++ Tweaked some graphics in the waypoint editor
++ Bots now draw the knife to reach high places at jump wpts when necessary
++ Bot's aim don't wiggle anymore now when looking at waypoints with a radius
++ Added recognition of armoury_entities for maps like fy_iceworld
++ Added ability to create/remove multiple pathwaypoints simultaneously
++ Enforced checking for unique bot names during bot creation to avoid doubles
++ Fixed YET ANOTHER crash bug in StartFrame() in the config file parsing code
++ Rewritten completely the config file parsing code: was too messy
++ Rewritten completely the bot spawning code into something readable
++ Rewritten the usage of min_bot and max_bot so that these variables work
++ All the bugfixes submitted by the people on the Bots United forum have been 
+  incorporated/committed into the bot code.
++ Completely rewritten the menu display code to make it readable and easily 
+  understandable by any third-party source code hackers.
++ Added the ability to point the gun at a waypoint and create/delete incoming 
+  and outcoming paths to this waypoint by a single keypress in editing mode
++ Fixed creation of pathwaypoints to the same waypoint bug when jumping
++ Added yes/no confirmation questions to important editing events in 
+  the waypoint editor such as save nocheck, or waypoint/pathwaypoint deletion
++ Teleporting player automatically to the faulty waypoint when doing a check 
+  on the waypoints and the check fails
++ Rewritten the editor's waypoint beam display code to be more reactive 
+  to player movement (now updates every 1/10th second)
++ Added the ability to remember a waypoint and use it later for pathwaypoint 
+  creation/deletion. Helps a lot for lifts.
++ Added basic code for elevator/lift usage (see demos on the BU filebase)
++ Added the ability to toggle on/off individually each single waypoint flag
++ Bots don't press buttons randomly now but only where a button flag is set
++ Bots navigate button-controlled doors perfectly, even in groups.
++ Rewritten waypoint stats command to make it display much more information 
+  about the waypoints, now displaying each waypoint flag.
++ Rewritten large parts of the memory allocation code. Static memory is used 
+  more often and the slow-motion bug has vanished in the process (the problem 
+  was that all the bot memory was not correctly freed/was freed twice).
++ Fixed bug where bots would reload way too often, such as after 2 shots.
++ All of the bot config files are now re-read at each start of a new map, 
+  so you don't need to restart your server if you make changes in the bot 
+  config.
++ The danger directions that the bots learn for each waypoint are now shown 
+  using a large red line when waypoints are on (but not when editing them)
++ Bots climbing ladders aim correctly at the top or the bottom of the ladder
++ Bots can now shoot at enemies while navigating ladders. Watch out.
++ Bots navigate elevators quite well, but not easily in groups. The code 
+  is here just to show that lifts can work. Feel free to make it work better :)
++ Rewritten parts of the BotDoWaypointNav() and BotHeadTowardWaypoint() 
+  funcs so as to integrate the new door code, the button code, ladder and lift 
+  code.
++ Bots now draw out the knife when necessary when they do a long jump
++ Simplified a lot of things in the config file parsing code and the chat code 
+  to use static arrays instead of dynamically-allocated linked lists whose main 
+  purpose seemed to be only to clutter up the code. It's just readable now.
++ Added a "peace mode" feature where bots ignore their enemies. Useful when 
+  testing paths with debuggoal in waypoint editing mode.
++ You'll simply love that waypoint editor, lads.
+
+
+v2.6 metamod Release 2
+
++ Changed the way all the addbot commands work. Instead of actually adding 
+  a bot it'll add it to a bot creation queue.
++ Made APMD apply to adding pathes
++ maxbot/minbot now "works"
++ Made the AIM_OFFSET_X/Y/Z actually do something..
++ Made them reaim at enemy every 0.05 second (at least I think its in seconds)
++ Fixed timer_pickup to recieve the correct value
++ Menu to choose which team to kick a bot from
++ Fixed "Unnamed" bots.
++ Changed them from making their enemy's position their destination.. (Stopped 
+  them from idioticly running up to an enemy.. No one actually wants to reach 
+  the enemy's location while they're shooting at them...) (commented out 
+  in the first few lines of BotDoAttackMovement)
++ Initialize msec values in ServerActivate (Supposed to fix slow-mo)
++ Added ability to choose which team to kick a bot from
++ Fixed them from having an extra new line at end of their chatting.
++ Fixed their weapons menu and hopefully all that was messed up with 
+  the weapons due to the port to 1.6 (they were buying "restricted" weapons 
+  because the configurations and everything was wrong)
++ Fixed NUM_FOR_EDICT error (hopefully... made it check if edict is null 
+  before running ENTINDEX)
++ Botskill.cfg is now fully interpreted and I've tweaked all the settings in it
++ Changed Their turn speeds to be more realistic...
++ Made Zooming affect their Turn Speeds
++ Put most of the ClientCommands into Podbot_ServerCommands
++ Added Personality argument for addbot. 
+  ("pb addbot [skill [personality [team [model [name]]]]]")
++ Added Skill, Personality, and Model for fill server 
+  ("pb fillserver [skill [personality [team [model]]]]")
++ Added Menus to include the 2 above changes and also added a random for 
+  skill level.
+
+
+V 3.0 metamod Build 15
+
++ Changed: all settings in podbot.cfg are cvars since now.
++ Changed: addbot is replace by add command (the syntax is the same).
++ Added: access to podbot menu when the game is created on dedicated server.
++ Changed: Bots detect friend/enemy according to the TeamInfo messages instead
+  checking the model (it should work correctly with such mods as SuperHero, 
+  ChickenMod etc). 
+  Thanks to T(+)rget (AMX), Bailopan (AMX MOD X) and THE_STORM.
++ Added: support for compatibility with weapon restriction management done 
+  by fan mods (as AMX, AMX X, AdminMod, ClanMod) - if weapon is restricted for 
+  human-players - bots will not buy that item neither :)
++ FIXED: bug in auto add / kick bot function (when there were some players 
+  on the server before adding bots - first bot got kicked instantly after 
+  adding it).
++ FIXED: Bots are spawned with cleared correctly every data (before they were 
+  cleared only at round start, but to support CSDM they have to be cleared 
+  at every respawn).
++ FIXED: Now bots don't throw nades in jason mode.
++ Changed: the task system - the tasks aren't still placed on the task's stack 
+  over and over again - instead this only one task of each kind may be placed 
+  on the tasks' stack (and priorities are tested by a separate function).
++ FIXED: Bots don't look at the wall all the time (if last enemy is far away 
+  - they forget it much more now - so they don't look at the wall in the last 
+  enemy direction.
++ Changed: Bots look around more often now.
++ FIXED: Bots don't spray anymore since spraying is disabled.
++ FIXED: Bots unzoom (while using weapon with zoom) if they don't look far away
+  or they look at the wall near of them.
++ Changed: Bots should jump a bit less if they "think" they stuck.
++ FIXED: Bots should hear everything around good again.
++ FIXED: Crash with server commands (thanks to KRoT@L - AMX).
++ Changed: the work of add bot and kick bot menu (after adding one or kicking 
+  one You can still continue adding / kicking bots without necessity to re-open
+  the main podbot menu).
++ Changed: After blinding bots don't shoot everytime at last enemy position 
+  (it's randomized now).
++ Changed: the usage of nades by bots - bots are trying to throw flashbangs 
+  into corridors; whole nades should be thrown more precise now.
++ Changed: Better team playing (they use "follow me" function and they follow 
+  all condition included in path they walk (according to flags in waypoints 
+  they pass - for example jumps).
++ Changed: Bots don't buy primary weapons on aim_xxx, awp_xxx maps.
++ Changed: the skills of bots are now much different - there is realy apparent 
+  difference between bot with skill (100) and bot (80).
++ Changed a bit the usage of statistic/experience (to better usage by A* 
+  function).
++ FIXED: bots don't reply on chats.
++ FIXED: Bot stayed as spectators instead joining the team after 08.2005 Steam 
+  update.
++ FIXED crash on de_chateau (related to breakables)
++ FIXED: Bots not switching to pistols when enemy is close and they use 
+  a sniper rifle.
++ FIXED: Bots not buying ammo if they have a gun already
++ Bots now pick up pistols!
++ Bots will now stop before shooting (makes them easy targets but at least they
+  can hit their target now)
++ NEW pb command "pb_version" will return the current version - can be used 
+  on servers with HTML - to see how many servers is playing podbot mm.
++ Bots are a bit harder...
++ Bots can now shoot HUGE HUGE HUGE breakables... (a bit overexaggerated)
++ Changed "remove" syntax... (pb remove [#PLAYERID || "BOTNAME"])
++ Changed KickBot Menu
++ Bots can climb ladders a bit better...
++ FIXED jason mode
++ Added variable to delay bots' re-join on the new map start (mapstartbotdelay)
++ Lift code rewritten - watch 2 new demos in filebase.
++ Added autokill function (cvars pb_autokill 1|0 and pb_autokilldelay time_sec)
+  - it will kill bots (if pb_autokill is set to 1) automatically if there are 
+  some human players on the server, but all of them got already killed. But if 
+  the bomb is planted and there is no more alive human-players - the auto kill 
+  doesn't kill bots in this situation.
++ Optimized code to have lower CPU usage.
++ FIXED - bots shouldn't steal anymore Your hostages You are trying to rescue 
+  (after pressing "use" button).
++ Bots don't try to go to the rescue point if they don't have already a hostage
+  (hostage got killed or some human-player stoled it).
++ Added - bots wait until the hostages they follow it are rescued (they reach 
+  the rescue point) - it means if You place in a wrong place a WP with Rescue 
+  flag (not in the Rescue Zone) - the bot will wait there forever - because 
+  they will be never rescued (thanks to Ancient showing the bug).
++ FIXED burst mode in low distances to enemies.
++ FIXED the problem with weapon_strip entity (thanks to strelomet).
++ Changed and improved nades throwing - bots should aim better the position 
+  they want to throw the nade (the old calculation of the place the bot should 
+  look at during nade throwing was a bit strange).
++ Added - to unstuck code "go back" function has been added (to existing jump, 
+  strafe, duck).
++ Changed unstuck behavior - improved strafe and go back method in unstuck 
+  code. They should try to omit/obey the obstacle (or a bit go back and try 
+  again) instead jumping only.
++ Changed the code for players colision detection (they should less jump now 
+  and more often use strafe and go back).
++ FIXED - bots don't throw nades now in "ignore enemies" mode.
++ Added 2 new commands (exactly old command with new arguments) for 
+  waypointers:
+  pb wp teleport use - teleports the waypointer to the next waypoint with 
+     the flag USE_BUTTON
+  pb wp teleport camp - teleports the waypointer to the next waypoint with 
+     the flag CAMP
+  These commands are usefull if You are trying to fix old PB2.5 waypoint with 
+  old method of camp usage (with pb mm the old camp waypoint is causing to look
+  the bot in some strange direction) and also with USE_BUTTON (old PB2.5 was 
+  placing that flag on every WP existing near some func_button - it may cause
+  sometimes stupid behavior of pb mm bots if they have nothing to "use", but 
+  there is placed that flag).
+  The old "pb wp teleport wp_nr" is still working like before.
++ FIXED pb_debuggoal - it should work now everytime (before I noticed few 
+  situations they didn't want to go to the WP I was requesting them to go).
++ Changed the execution of the task FOLLOW_USER - bots should follow the user 
+  this way - they should take some random WP near their user (but connected to 
+  the closest one to the user). If they are somewhere near their user, they 
+  should look at him (except if there is some enemy nearby) and they should 
+  better unstuck if they are close to them-selves (to make a room to go).
++ Changed - if the bot cannot reach its waypoint in some certain time 
+  it should've reach it (or bot was doing some unwaypointed movement), during 
+  finding the WP near by it checks also the previous WPs and the current WP 
+  (for some reason before it wasn't so) and it checks if the new WP isn't in 
+  some danger (to fall down) area.
++ Smarter Button flag/Door Button code.
++ Changed Button code - if there is a USE_BUTTON flag - they randomly decide 
+  to push or not the button (after first time noticing the WP with that flag; 
+  next vistit this WP -> new decision about pushing).
++ FIXED button code - bots shouldn't stay anymore near some button and look 
+  infinitely at it.
++ Changed - bots will hunt enemies more often now - normal and agressive ones 
+  - if there is the number of alive players in one team more or equal than 
+  (2 * alive players) of the other team - they will try to hunt them (for 
+  example 2CT alive and 4T alive (or more) - these normal and agressive T bots
+  will start to hunt CTs :) ) - of course it depands of the current level 
+  of bots fear/agression.
++ Config file podbot.cfg is no longer reloaded on the new map start
++ All config commands are possible to change during the game from console
+  by typing "pb command_name [arguments]"
++ All config commands need everywhere the prefix "pb" (on listenserver, on DS 
+  and in podbot cfg).
++ FIXED bug apearing on linux servers (auto teleporting bots to (0,0,0) ).
++ FIXED bots changing personality to normal after a change of map.
++ FIXED min_bots and max_bots not working correctly.
++ FIXED TKing bots due to new player models in CZERO.
++ Made the bot's turning more realistic (thanks to Pierre-Marie Baty 
+  and Aspirin for botaim and botaim2 plugins).
++ Made them buy grenades more (thanks to bluebyte)
++ FIXED NUM_FOR_EDICT error.
++ FIXED crash on cs_bigbrother_beta1 (related to grenade throwing).
++ FIXED typo in botweapons.cfg
++ FIXED Waypoint Cache not showing right number.
++ FIXED weapon buying screw up when changing weapon modes on a assasination 
+  map.
++ Bots will now shoot through teammates if mp_friendlyfire is off.
++ Bots reload more now thanks again to bluebyte :)
++ Bots can now spray logos again.. thanks to g4s for pointing this out.
++ Bots switch to pistols when primary is a sniper rifle.
++ FIXED a crash that would occur when there were experience files for the map
+  and you happen to have waypoints on and you walked to waypoint #0 without 
+  changing any waypoint data.
++ Automatic Ladder connections now made within Auto-Path Max Distance.
++ New Waypoint Colors..
++ Waypoint that is being pointed at is now ENLARGED and has a little blue thing
+  on top of it.
++ Play in cs:cz without the need to modify the source!
++ Improved bots shooting breakables.
++ FIXED bots not taking out the bomb and trying to plant.
+
+
+V 3.0 metamod Build 16b
+
++ Changed - Bots shouldn't make bots-towers on ladders anymore (they test all 
+  the ladder right now - not only if the current WP is used by another bot 
+  - like it was before).
++ Changed - the creation of the visibility table doesn't lag the server 
+  anymore.
++ FIXED - the WP editor - now You should more easy and more precisly point 
+  the WP You want to manually make the path connection.
++ Fixed problem with hostages (bots ignored them a lot instead pickuping them).
++ Changed the behavior of finding goals (it was too much randomized - almost 
+  not related to the current bot "feeling" - now the weight between random and 
+  "feel" choice of the goal is changed more to the "feel" - twice more than 
+  random). So now they should focus more on the "mission".
++ FIXED another problem with hostages (few times pickuped by a bot the same 
+  hostage).
++ FIXED (my) mistake in the waypoint editor - now when You point some waypoint 
+  - the manual path connection will be done with that pointing WP. If You have 
+  some trouble with pointing a WP - just try to point the middle of its height.
++ Added 2 new cvars requested by Austin: pb_bot_quota_match 
+  and pb_bot_join_team. 
++ Added - You can set the debuggoal index from the WP menu from "Options". 
+  On the same page You can switch it off.
++ Added the new cvar pb_ffa which swiches to on the Free For All mode (bots 
+  will kill also their teamnates). 
++ FIXED problem with throw flashbang at round start at cs_militia.
++ Approved a bit unstuck code at round start (still not perfect yet.
++ FIXED - they should look at the wall less (again).
++ Changed - bots should be harder now (requested by a lot of people).
++ FIXED usage of time frame interval value in the code (to predict the position
+  of the enemy in the next frame or so).
++ FIXED and re-written bots hearing stuff (bot are affected by their 
+  own-sounds, are affected also by sound of teamnates and also the distance 
+  from the source of issued sound to the bot has the influence for this what 
+  the bot can hear.
++ BOTS will shoot more often through the wall (because of the fix above).
++ FIXED - for pb_bot_quota_match parameter the spectators or team unnasigned 
+  human-players aren't counted.
++ FIXED problem with breakables the bot is trying to pass because 
+  the waypointer made the connection through it.
++ Changed - The values of cvars are taken as pointer members now 
+  (the addresses-pointers are cached at the initialisation of the vars, then 
+  - instead using CVAR_GET_FLOAT (which is taking too much time) there are used
+  the values addressed by these pointers to the cvars (main idea taken from 
+  AMX MOD X - thanks to BAILOPAN)
++ Changed - Bot should look at the head of the pickuping hostage instead 
+  of his stomach...
++ Changed aiming system to make bots harder again
++ FIXED bug with shoving/pushing hostages intead pickup/use them by bots
++ Changed the system of finding bombs by CTs (before they were trying to go 
+  to the closests goal WP, then they were choosing randomly another one; 
+  currently if they chose some goal WP and they are near it and they cannot 
+  hear the bomb, they check some farer away goal WPs - to prevent visit for 
+  example 5 goal WPs at the same bomb site if they cannot hear the bomb 
+  at that bomb site).
++ Changed - Bots should camp a bit more often instead rush all the time 
+  (again).
++ FIXED - Bots aim better the moving target.
+
+
+V 3.0 metamod Build 16c
+
++ Changed - Bots should aim better farer away targets.
++ Changed - Bots should better recognize if they can or they cannot hurt 
+  their friends while shooting.
++ Changed - Bots should use the knife more often in shorter distances.
++ Changed - Bots should better try to find the bomb to defuse it (CTs).
++ FIXED problem with the lift on as_highrise (the lift with the door) - such 
+  lift needs also the special waypointing - example in the BU filebase.
++ Added the new cvar pb_skin which forces the usage by bots the specyfied skin 
+  (1..4 - forced skin; 0,5 - no forcing) regardless of "pbb add" 
+  or "pb fillserver" parameters.
++ Added support for pickuping weapons created by CSDM 2.x (by BAILOPAN) 
+  in item mode.
+
+
+V 3.0 metamod Build 16f
+
++ Bots should pickup also "worse" weapons (better/worse - according 
+  to the weapon's priorities in botweapons.cfg) if the current "better" weapon 
+  is out of bullets.
++ Added support for pickuping ammo, nades, armor, medkit in item mode of CSDM 
+  (or on maps fy_xxx)
++ FIXED bug with bots not being able to pickup even "better" secondary weapon.
++ Changed - the entity player_weaponstrip will get as v.target 
+  and as v.targetname the value "fake" only if v.target is empty string.
++ They should think a bit less before shooting (which should make them 
+  a bit harder again, I hope).
++ Added the possibility to unlimit pickuping weapons by bots 
+  - pb_maxweaponpickup = -1
++ Added the code if the bot cannot pickup something (for some reason) during 
+  4 seconds - he will mark that entity as ignored (to stop task pickup item).
+
+
+V 3.0 metamod Build 17
+
++ The bots shouldn't think now too much before shooting.
++ The algorithm to check if the bot can hurt a friend while shooting should 
+  work a bit better.
+
+
+V 3.0 metamod Build 18
+
++ Changed - in fireing weapons - they should have really little pauses between 
+  shooting. It makes them harder again. 
++ Added the possibility to switch on/off radio command usage and reaction 
+  on them (as a side-effect). You can change this setting by pb_radio 0/1.
++ Changed - bots should camp more often if they have some sniper weapon, 
+  they shouldn't if they don't have any rifle or any sniper weapon (except 
+  they defend for example the planted or dropped bomb or so).
++ FIXED bug with bots not changing the camping direction every few seconds.
++ FIXED bug with bots unable to unstuck for long period time (unstuck code 
+  works much better again).
++ Changed - bots should find better the planted bomb according to this what 
+  they actually can hear (if in some area the bot cannot hear the bomb 
+  - he marks all goal waypoints in that area as "visited" without necessity 
+  checking them separately - i wasn't implemented correctly in V3B16a).
++ Changed - bots are more forced to rescue hostages after pickuping them 
+  (it happened a lot of times the bot got a hostages, then he was walking 
+  around the map instead to go to the rescue point).
+
+
+V 3.0 metamod Build 18b
+
++ FIXED bug with bots not planting the bomb (while debugging I saw the bot 
+  "thinks" it has mp5navy instead C4 instead in its hands, but it even haven't
+  had mp5navy at all).
++ FIXED bug with pb_minbots not working correctly since pb_bot_quota_match 
+  has been implemented.
++ Added - the bots hould run better on higher fps PC (some addition to msec 
+  code calculation).
++ FIXED - the bots should react on a sound better again (I've noticed a lot 
+  of times I was fireing at them and they weren't reacting at all like without 
+  hearing me).
++ Added/fixed - the bots should switch to better weapon after hearing the enemy
+  nearby (except they are planting/defusing the bomb). Because of that they may
+  use nades less often.
++ FIXED - when the bot shoot at the enemy behind the wall, he shouldn't hit him
+  the same way as he could hit him while seeing him (for example by one shot 
+  into the head). It should be more randomly now.
+
+
+V 3.0 metamod Build 18c
+
++ Optimized a bit the code to reduce CPU usage
++ Changed - visibility table is now saved at round end (the first round end 
+  after is calculated - instead at map change)
+
+
+V 3.0 metamod Build 19d
+
++ FIXED - the bots shouldn't shoot at the exact position of the enemy behind 
+  the wall anymore.
++ Changed minimum delays of some weapons (to get them more accurate for longer
+  distances).
++ Changed - blinding bots by AMX/AMX X ATAC plugins should affect them better.
++ Changed - the bots should better escape from bombzone (CTs - if they don't 
+  have any chance to defuse - too small amount of time; T - about 20sec 
+  to explosion; psycho T's don't care)
++ Added - the bots should use the shield much better than before (attackers 
+  don't try to loose the whole ammo, defenders - they are trying to cover by 
+  it better and shoot with a pistol so often as possible).
++ Optimized the usage of CS messages by using static instead dynamic variables
+  (should reduce again the CPU usage).
++ Changed - the bots should use the shield much better than before.
++ FIXED targeting VIP's first by Ts on as_xx maps.
++ Changed - for linux i386 (32 bit) compiled with gcc4.1 (the new crosstool - 
+  big thanks to ghost_of_evilspy) - the old library libstdc++5 will not be 
+  necessary anymore to load the binary file (podbot_mm_i386.so).
++ Changed - if bots get stuck on ladders with teamnates they should try to go
+  to some previous waypoint (near the ladder).
++ FIXED some litte problem with breakables (the bots failed to break 
+  a breakable if the path between 2 waypoint across a breakable was longer 
+  than 128 units - very rearely bug).
++ Added the new function to the Waypoint Editor - pb wp clean (as the console 
+  command only).
+  This function cleans up some stupid and unnecessary connections. If there is 
+  no argument, it takes as the argument the nearest waypoint and it checks its 
+  paths (for example if there are 3 connections - 1 to a farer away WP between 
+  2 placed nearby or so). You can also put as an argument the WP index number 
+  You want to clean. You can also put the string "all" (without qutes as 
+  an argument - pb wp clean all) - it will cleanup all unnecessary connections 
+  from the map. I'm using this function to remove bad connections created 
+  by some beginner Waypointers (also created by me few years ago).
+  Note - sometimes after using this function with argument "all" You can also 
+  loose about 1-2% of the connections they were expected (as done correctly), 
+  but because of the big advantage in cleaning up the map from bad connections 
+  it's really recomended if You want to re-waypoint some map waypointed some 
+  time ago by some poor waypointer. It reduces the time to make waypoints from 
+  scratch. If You have the map covered correctly by waypoints You need only add
+  few waypoints like jumps, camps, Team specific, goals, rescue etc and more 
+  than likely You can finish waypointing the map in an hour. If this function 
+  will delete some paths they were expected - the WP editor will tell You 
+  if there is any broken connection while saving pwf - so You don't need to be 
+  afraid of using this new function.
++ Added facing filtering and fixing shaking the bot all the time.
++ FIXED problem with bot towers on ladders (the bot goes away from the ladder 
+  and it waits a bit if a teamnate is already using the ladder).
++ Changed WaypointNodeReachable function for adding waypoints and selecting 
+  a better alternatives if the waypoint is in use by someone else.
++ Improved omitting the obstacles with strafing (unstuck code).
++ Improved detection if the bot can move forward/back (unstuck).
++ FIXED small problems with collecting experience data.
++ FIXED problem with looking at the strange direction while camping.
++ FIXED small problem with reloading the weapon.
++ Changed - the function WaypointAdd is rewritten a bit to prevent making 
+  stupid connections, too, so You can now use more effectively the function 
+  AutoWaypointing. All advanced waypointers normally haven't been using it 
+  - because of a lot of stupid connection the function WaypointAdd was creating
+  (it needed manually clean up all those stupid connections - it was taking too
+  much time), but since now You can use it (AutoWaypointing) much frequently 
+  to make waypoints for Your favourite maps more effectivelly.
++ Improved aiming at waypoints more accurate now (Waypoint Editor).
++ Changed the info shown for waypoint editor (it shows more info now).
++ Changed the refresh of drawing waypoints (every 0.1 sec separatelly for each 
+  waypoint).
++ Changed a bit aiming the target by bots (taken some idea from YapB).
++ Added some commands concerning to experience data:
+  pb experience show - shows the data stored in the pxp file
+  pb experience test_a_T ind1 ind2 byPathType - shows the path the Terrorist 
+  bot would like to choose from WP ind1 to WP ind2 according to kind 
+  of algorithm:
+    byPathType = 0 - the shortest way according to distances between waypoints 
+	                 (used by aggressive bots),
+	byPathType = 1 - the shortest way according to distances between waypoints 
+	                 and to the collected experience (damages collected - used 
+					 by normal bots),
+	byPathType = 2 - the shortest way according to collected experience (no 
+	                 matter what is the distance between waypoints - used by 
+                     the most scaried bots).
+  pb experience test_a_CT ind1 ind2 byPathType - shows the path 
+  the Counter-Terrorist bot would like to choose from WP ind1 to WP ind2 
+  according to explained above byPathType parameter.
+  pb experience test_a_CTH ind1 ind2 byPathType - shows the path 
+  the Counter-Terrorist bot (with following him a hostage/hostages) 
+  would like to choose from WP ind1 to WP ind2 according to explained above 
+  byPathType parameter.
++ FIXED some minor bugs with ducking bots.
++ Changed - if the bot is forced to camping at non-camp Waypoint - it is trying
+  now to use now the danger direction for that Waypoint instead just pickuping 
+  the random visible WP to camp in that direction.
++ Changed - the bots are sometimes also ducking while shooting from other than 
+  awp weapon (similar to YapB)
++ Optimized again engine messages usage (thanks ghost_of_evilspy and his 
+  jk_botti)
++ Changed the way of checking if custom body parts (arms, legs, feet) are 
+  visible for the bot (to stop random part checks - another cause of shaking 
+  bots).
++ FIXED bug with jumping bots after camping and after reaching the destination 
+  waypoint during the normal navigation movement.
++ Changed the way of calculating the vertical position of landing of 
+  the grenade (if the enemy is above or under the bot).
+
+V 3.0 metamod Build 20a
+
++ Added the invisibility check, so if the player is invisible, the bot cannot 
+  see him (at least until invisible player is starting to shoot at him - then 
+  - he can see the fire from his gun, so he is trying to answer with fireing 
+  at that direction).
++ Added affecting bots by darkness (thanks to PMB and his RACC code) - same 
+  like above - if in the dark room the enemy is starting to fire at the bot, 
+  so he can see the fire from the enemy\\\'s gun - then the bot is fireing 
+  at that direction, too.
++ Expressed the meaning of pb_detailnames cvar (0 - no skill and no [POD] 
+  prefix, 1 - skill as sufix and [POD], [P*D] and [P0D] prefixes added to 
+  the name; 2 - only the prefix is added to the name (no skill as the sufix
+  added); 3 - only the skill sufix is added (no [POD] tags added).
++ Added pb_maxcamptime cvar (default 30) - the maximum time You allow the bot
+  camping in one place - after that time it has to go to another place.
++ FIXED problem with reloading the weapon at the round start.
++ Added - if the bot has less money than 900, sometimes they will try to save 
+  the money by not buying any new weapon.
++ Changed - reverted back - the bot is taking care about the closest sound 
+  instead of the most loud one. The sound is also affecting the bot at least 
+  1 second again (to prevent changing aim direction too often when hearing 
+  something).
++ FIXED - if there is no enemy nearby and the bot is going to pass the door, 
+  the bot is facing the door to open them in the right direction.
++ FIXED - when the bot is turned into the chicken (ChickenMod), it is now able
+  to pickup hostages and defuse the bomb.
++ Added more code for Ts to better choose the bombzone (if too many enemies 
+  near the closests bomb-spot, the bot is trying to go to another one).
++ Changed - if the bot has more money and already has a primary weapon, he is 
+  buying now a better primary weapon. The bot is not droping the higher price
+  weapon at the new round start to buy the cheaper one - but in his opinion 
+  - better one.
++ Changed - for linux i386.so version - statically linked with libstdcc++6.so 
+  - big thanks to THE_STORM for figuring it out.
++ Changed - if the bot is chickened, it is not buying any primary nor secondary
+  weapon anymore (the new coming ChickenMod is forcing the player to drop 
+  the gun, so no reason to lose money by the bot).
++ Changed the code for CTs to better find the planted bomb. 
++ Added - since the bots are affected by darkness, they have to use 
+  flashligths. Thanks THE_STORM and Immortal_BLG for tips.
++ Added more info for wrong waypoints connection "Waypoint problem. No path 
+  found" message should also say between which nodes the path is missing).
++ FIXED the bug with radio commands the bots were saying to nobody (if none 
+  of teamnates was yet alive).
++ FIXED the bug with pb_mapstartbotdelay (thanks to Orangutanz to point it out)
+  and pb_wptfolder cvars not loaded for the first map.
++ Added the new cvar pb_latencybot [0|1] which lets You show one the scoreboard
+  the string [BOT] instead nothing. 
+  Note - it works only when the bot is adding/creating, so changing the cvar 
+  later doesn't affect any bot already in-game.
++ Changed a bit behavior of using flashlights (no longer used while attacking 
+  or they can hear the enemy nearby - so they aren't easy target anymore).
++ Addded - Bots are buying and using nightgoogles on dark maps.
++ Changed - the bots are no longer trying to use any weapon except knife if 
+  they are zombies.
++ Changed - the bots are trying to hunt/attack the enemies and jump more often 
+  if they are chickens/zombies.
++ FIXED problem with TeamInfo messages, so the bots should know better who is 
+  a friend and who is an enemy now.
++ FIXED problem with bots jumping while shooting from the sniper weapon.
++ Changed some code with pickup/defuse/attack priorities.
++ Changed - the bots as chicken and zombies are hunting their enemies yet more
+  aggressive.
++ FIXED - Bot better uses the zoom (instead zooming in/out all the time) 
+  of sniper and assault weapons.
++ FIXED - When the bomb is planted the bots wanted to go to the target using 
+  the shortest path (so all of them could get easy get killed by waiting Ts). 
+  Now they are getting the path according to the "danger" data experience.
++ FIXED - Bots were trying to get the same waypoint to camping while defending 
+  some position (for example the planted bomb).
++ Changed - the bots are trying to hit the enemy behind the obstacle more often
+  now (if he could be seen or heard before).
++ Changed - the bots are not trying to spray so much the ammo for the enemy 
+  behind the wall (just a little bit and with some interval time (15sec) it may
+  happen again).
++ Changed - Filtering the aiming position to don't switch too often 
+  the position the bot should look at.
++ FIXED - The bot is switching now to the secondary weapon for short distances 
+  to the enemy, when is using the sniper weapon.
++ Changed - The nade throwing - the bot checks where the enemy is looking at 
+  (if visible) to prevent to be an easy target (or throws it at near expected 
+  enemy's position - if the enemy is behind some obstacle).
++ Changed - Some functions more frequently called are using static variables 
+  now, so it should be better optimized in execution now.
++ FIXED problem with bots looking very often at the ceilling.
++ Changed - Forcing CT bots stop camping and trying to defuse the bomb if 
+  the defuser got killed.
++ Changed a bit method of checking if the entity to pickup (i.e. bomb) 
+  is visble.
++ FIXED - bots unable to find the bomb partially visible (by Ts and CTs).
++ Changed a bit blinded behaviour of the bot.
++ FIXED bots trying to avoid an approching grenade didn't check if they may 
+  fall down while moving back.
++ FIXED bots reloading the weapon didn't check if they may fall down while 
+  moving back.
++ FIXED - the bot should answer positive for the command "Follow me" only 
+  in the case it is really going to follow its "user".
++ Changed a bit the check for throwing grenade direction - it should prevent 
+  to throw the nade in weird directions (at least 50% reduced).
++ FIXED - CT bots are finding better the bomb to defuse it if they are nearby.
++ FIXED - bots weren't avoiding the nades throwing in their direction.
++ FIXED - better affecting bots by smoke grenades and flashbangs.
++ Changed - the bots should better aim the new WP while walking (so they should
+  faster change the direction to go - better following waypoints).
++ FIXED - "Taking fire, need assistance" command was issued even if the enemy 
+  wasn't fireing at the bot.
++ FIXED - the bots shaking and spinning effect (reduced 99%).
++ FIXED - the bots strafing while doing attack movement.
++ FIXED the calculation of the path's length according to the "danger" data 
+  experience.
++ FIXED the problem with spinning bot while throwing nades.
+
+V 3.0 metamod Build 21
+
++ FIXED - problem with CT bots not defusing the bomb sometimes (no anyone 
+  nearby and they didn't defuse).
++ FIXED - problem with usage of buttons triggering double door (consisting 
+  left and right part like on cs_chemical).
++ Changed - aiming for moving targets.
++ Optimized the code for lookup enemies - it should reduce the CPU usage about 
+  30%.
++ Changed - optimized the code for unstuck bots (especially when the bot 
+  is stuck with other bots/players).
++ Changed - finding \\\"BestWaypoint\\\" for navigation (if the new WP in path
+  is used by another bot/player, the bot will take another WP connected with 
+  the previous and next WP only if the next is visible from the prevoius one 
+  - that check was prevoiously missing).
++ Reverted back - the check if the heard/last enemy is far away behind any 
+  obstacle (to prevent look the bots at the wall).
++ Added - if the bot follows waypoints while walking according to the path 
+  and it has to change the direction more than 60 degrees (if it would 
+  continue exactly the same direction - the angle would be 0 degrees) and 
+  waypoints radius is smaller than 17 then the bot slows down for 0.5 sec 
+  and then it continues normal walking. That should prevent the situation 
+  when - i.e. - the bot changes the direction 90 degrees and it hits the wall 
+  instead the door.
++ FIXED - problem with bots looking wrong direction at walking (in most cases 
+  they should look forward, but it may happen they are also looking at danger 
+  position - which isn't forward). That should reduce their looking 
+  at the wall.
++ FIXED - problem with not updating the global experience if the overflow 
+  of experience data was about to happen.
++ Reverted back some function in sound slimulation (the sample of the sound 
+  is now also taken in account for 1.2 sec instead of 1 sec; 
+  the new sample is taken into account if the new sample's volume is higher 
+  than the old one).
++ Added - "pb help" function (i.e. You can write in the console "pb help add" 
+  to see more info about "pb add" command. That function was missing since 
+  the time SpLoRyGoN was coding podbot mm; he haven't had time to do it, 
+  but he really wanted it.
++ FIXED - the code for cleaning unnecessary connections - it should take care 
+  more about any waypoint with JUMP flag, so You shouldn't need to repeat Your
+  jumps to save them again because the code was cleaning some jumps 
+  connections, too.
++ Changed - the functionality of pb_latencybot cvar. Now when You set it to 2,
+  it starts to show virtual random ping for bots (it gets random from 30-50 
+  range value).
++ Added new function when the bot is falling down at least half a second, 
+  it should press "use" button (to support parachute AMX/AMXX plugins). 
+  It works only if sv_parachute cvar exists and it is set to 1.
++ Added - when the first player joins a Ts or CTs team on the server and there
+  are bots only, the round is restarted in 1 second.
++ Removed the check for dead players if the user is with NOCLIP movement flag.
++ FIXED - the problem with radio commands - when the cvar pb_radio is 0, bots 
+  should still react on radio messages (they just don't answer by radio).
++ FIXED - the problem with hostages staying above a bot (i.e. on a box), 
+  the hostage wasn't "used" by a bot. That should also help with defusing 
+  a bomb on a box.
++ FIXED - the problem with fast direction change when the bot is moving and 
+  no enemy around (they should rotate now more smoothly).
++ FIXED - the problem with chat messages not filling the string with a name 
+  of the player the message is related to.
++ FIXED - the problem with chat messages parsing players names with a space 
+  (i.e. if the player had a name "James Bond" in the message string it was 
+  only "James").
++ Changed the delay time bots would answer to chat messages (that should 
+  prevent bots to overflood the chat area).
++ Changed the chat usage - the bots should chat less often (they shouldn't 
+  spam the chat area).
++ FIXED - "shoot at death time" is working now as it should (when the bot kills
+  an enemy, he is still trying to shoot at the same direction for a random 
+  period - 0.3sec, 1.0sec).
++ FIXED - the problem with bots neverending trying to break some unbreakable 
+  obstacle (after short time that unbreakable obstacle gets ignored by 
+  a bot now).
++ FIXED other things concerning to shaking bots.
++ Changed time of displaying the message about PWF creator (12 seconds after 
+  the new round is started after the player joined the server.
++ Changed time of displaying the welcome message (15 seconds after the new 
+  round is started after the player joined the server.
++ Changed time of displaying the message about PWF creator (15 seconds after 
+  the player joined the server and the round is started).
++ FIXED the problem with bots switching the weapon to the knife in the middle 
+  of reloading the weapon.
++ FIXED the problem with bots sometimes not hearing the enemy even if he was 
+  really close to them.
++ FIXED the problem with bots not trying to seek the cover while reloading 
+  the weapon.
++ Changed the selection of task ENEMYHUNT and SEEKCOVER.
++ FIXED bug with pushing away bots on the edge of the roof - they shouldn't 
+  fall down now.
++ FIXED bug with pushing away bots in smaller areas.
++ Cleaned the code (exactly some functions are splitted to let the coder 
+  easier find a specific code).
++ FIXED bug with bots throwing nades in some random places.
++ FIXED bug with bots looking at the wall for longer time.
++ FIXED the problem with bots not trying to switch to secondary weapon in short
+  distances (if they are using snipers i.e.).
++ FIXED the bug with bots not shooting to enemies farer away than 4096 units.
++ Reduced again bots shaking problem.
++ FIXED the bug with bots not overjumping obstacles while they are stuck.
++ FIXED the bug with bots jumping after spawning.
++ Changed - bots shouldn't camp if they have a shotgun or m241.
++ Added 1 new command (exactly old command with new argument) for 
+  waypointers:
+  pb wp teleport goal - teleports the waypointer to the next waypoint with 
+     the flag GOAL.
++ Changed the default value of pb_dangerfactor from 800 to 2000 (it may
+  affect the server performance on an older PC).
++ Changed - bots are buying weapons on an aim_xxx and awp_xxx maps 
+  if info_map_parameters allows that.
+
+V 3.0 metamod Build 22
+
++Added the code to prevent bots looking up or down for no reason.
++Added the new cvar - pb_firsthumanrestart (0 stops the function added in V3B21
+  - when the first human joins the server and there are some bots already 
+  playing there - the round is restarted). Now this function is off by default. 
+  You can switch it to on by changing the value from 0 to 1.
++Added code to let the bot reload the weapon at round end (if the bot doesn't 
+  see any enemy that time).
++FIXED - the vip bot shouldn't hunt the enemy anymore.
++FIXED max clip for tmp (now is 30 like it should be).
++Added code to prevent bots loose too much ammo while shooting at the wall (they 
+  should fire at the wall less now).
++Changed - when the bomb is planted, CTs shouldn't be so much scarried now (so 
+  they shouldn't overuse the task seekcover) - thus they are more hurry in 
+  defusing the bomb.
++Added more info to the log file about saving (or not) pxp and pvi files.
++Added - bots are buying also the secondary weapon now (especially when they 
+  have a sniper or a shield).
++FIXED bots are hunting the teamnate when he was attacking him - now the TA 
+  revenge takes only 1.5 sec after TA (the bot gives some damage only instead 
+  fire until kill the team attacker).
++FIXED team specific waypoint are now really team specific (before it was fixed
+  for offensive and deffensive goals, now bots should really take care about 
+  their team specific waypoints).
++FIXED planting and defusing the bomb problem (bots sometimes were stopping 
+  to plant / defuse the bomb when they have seen an enemy, but they didn't 
+  switch to better weapon to fire at the enemy).
++FIXED infinitely switching the weapon between the sniper and the pistol.
++FIXED chicken and zombie bots camping (now they will no longer camp - except 
+  they need to hide because of low health).
++FIXED invisibility not working for an invisible player using a knife.
++FIXED problem reported by mhanor (bots with the skill lower than 100 shouldn't
+  infinitively get their crosshair to the hell when the enemy is no longer 
+  visible). That should help a bit also with bots looking up and shooting into 
+  the sky. 
++FIXED another bug with bots looking at the sky for no reason.
++FIXED problem with a bot shaking when its enemy is hiding behind an obstacle.
++FIXED problem with bot getting stuck with each other (because of wrong 
+  initialisation of model (thanks to IMMORTAL_BLG).
++FIXED bug with executing task spraying logo while debuggoal index has been set
+  to something different than -1 (bots should get that WP as its goal 
+  - spraying logo task wasn't working in that case).
++FIXED problem with breakable - bots sometimes didn't break the breakable 
+  obstacle in its path (the code to unstuck was starting too early in some 
+  cases - before checking if there is a breakable blocking the way of the bot).
++FIXED bug with bots spraying ammo too much at the wall/obstacle (now they do 
+  it much less).
++FIXED bug with bots looking at the sky while planting the bomb.
++FIXED bug concerning to bots buying nightgogles if it's unnessesary.
++IMPROVED bots aiming at moving targets.
++FIXED bug with bots not switching to the "normal" weapon while planting 
+  the bomb when they can see the enemy (to do - exclude the situation if 
+  the best bot's weapon is a knife - i.e. if the clip of primary or secondary 
+  weapon is empty - switching to the knife while planting the bomb helps 
+  nothing).
++FIXED bug with bots looking sometimes in stupid directions (i.e. at the wall 
+  instead at any open surface) while camping after planting the bomb or camping
+  at other WP without a camp flag. Now they should choose a better camping 
+  direction in such situations.
++FIXED bug with "meta unload" function (thanks to IMMORTAL_BLG).
++FIXED problem with not working darkness checking by bots on linux servers
+  (thanks to IMMORTAL_BLG). Now - because of the new code - bots are using 
+  flashlights (and also nvg) also on linux servers.

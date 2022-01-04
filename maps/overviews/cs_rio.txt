@@ -1,0 +1,14 @@
+// overview description file for cs_rio.bsp
+
+global 
+{
+	ZOOM	2.25
+	ORIGIN	-480	608	320
+	ROTATED	0
+}
+
+layer 
+{
+	IMAGE	"overviews/cs_rio.bmp"
+	HEIGHT	0
+}

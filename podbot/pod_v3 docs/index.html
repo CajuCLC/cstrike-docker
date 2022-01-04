@@ -1,0 +1,171 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Introduction</title>
+<link rel="stylesheet" type="text/css" href="index/index.css">
+<!-- ###START: MetaData### -->
+ <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=ISO-8859-1" />
+ <meta name="author" content="SpLoRyGoN & KWo" />
+ <meta http-equiv="ImageToolbar" content="no" />
+ <meta name="MSSmartTagsPreventParsing" content="true" />
+<!-- ###END: MetaData### -->
+
+</head>
+<body>
+<!-- ###START: Body### -->
+<table>
+<!-- ###START: Header Table### -->
+ <tbody><tr>
+  <td id="Banner"><img alt="PODBot MetaMod" src="index/blank.png"></td>
+  <td>
+   <ul id="MainNav">
+    <li><a href="index.html">Introduction</a></li>
+    <li><a href="html/pbmm_install.html">Installation</a></li>
+    <li><a href="html/pbmm_configuration.html">Settings and commands</a></li>
+    <li><a href="html/pbmm.html">Usage</a></li>
+    <li><a href="html/pbmm_wp_basic.html">Waypoints - Basic</a></li>
+    <li><a href="html/pbmm_wp_commonerrors.html">Waypoints - Common errors</a></li>
+    <li><a href="html/pbmm_wp_binding.html">Waypoints - Useful keys binding</a></li>
+   </ul>
+  </td>
+  <td>
+   <ul id="MainNav">
+    <li><a href="html/pbmm_credits.html">Credits</a></li>
+    <li><a href="html/pbmm_versionhistory.html">Version History</a></li>
+    <li><a href="html/pbmm_linksfiles.html">Links</a></li>
+   </ul>
+  </td>
+ </tr>
+<!-- ###END: Header Table### -->
+</tbody></table>
+
+<table id="MainContentNavigationTable">
+<!-- ###START: MainContent Navigation Table### -->
+ <tr>
+  <td>
+   <table>
+    <tr>
+     <td>
+      <ul>
+<!-- ###START: MainContent Navigation### -->
+       <li><p class="style_white"><a href="#I">What is PODBot MM?</a></p></li>
+       <li><p class="style_white"><a href="#II">Why is it called PODBot MM?</a></p></li>
+       <li><p class="style_white"><a href="#III">What are Bots able to do during the game?</a></p></li>
+       <li><p class="style_white"><a href="#IV">What Mods are supported?</a></p></li>
+       <li><p class="style_white"><a href="#V">PODBot MM and CounterStrike: Internet vs LAN</a></p></li>
+       <li><p class="style_white"><a href="#VI">Why does PODBot MM need waypoints?</a></p></li>
+       <li><p class="style_white"><a href="#VII">What types of map are supported?</a></p></li>
+       <li><p class="style_white"><a href="#VIII">What are requirements to play with PODBot mm?</a></p></li>
+       <li><p class="style_white"><a href="#IX">Disclaimer</a></p></li>
+       <li><p class="style_white"><a href="#X">Copyrights</a></p></li>
+    
+<!-- ###END: MainContent Navigation### -->
+      </ul>
+	  </td>
+    </tr>
+   </table>
+  </td>
+
+  <td>
+<!-- ###START: Page Title### -->
+   <span>Introduction</span>
+<!-- ###END: Page Title### -->
+  </td>
+
+ </tr>
+<!-- ###END: MainContent Navigation Table### -->
+</table>
+
+<table id="MainContent">
+<!-- ###START: MainContent Table### -->
+ <tr>
+  <td>
+   <table>
+    <tr>
+     <td>
+   <ul>
+<!-- ###START: MainContent### -->
+    <li><a name="I"></a>What is PODBot MM?
+     <span>PODBot MetaMod is an open source (<a href="http://www.gnu.org/">GPL</a>) <a href="http://www.metamod.org/">metamod</a> plugin that 
+   	adds computer players (bots) to a popular game called <a href="http://www.counter-strike.net/">Counter-Strike</a>.</span>
+    </li>
+
+	 <li><a name="II"></a>Why is it called PODBot MM?
+	  <span>POD is an abbreviation for &quot;<font class="style_red_bold">Ping of Death</font>&quot;. It's called that way because 
+      it was derived from the &quot;<font class="style_red_bold">High Ping Bastard Bot</font>&quot; Botman was doing. And if you look 
+      at the Bots Ping they always have a Ping of 5 and the very first generation of Bots did Headshots all the time! 
+      <img src="smileys/bu_tongue.gif"><br>
+		The sufix mm to PODBot name has been added since it has been converted from standalone dll to metamod one and it started 
+      to use all benefities (and also all limitations) metamods gives.</span>
+    </li>
+
+	 <li><a name="III"></a>What are Bots able to do during the game?
+	  <span>The Bots will automatically know the goals of the map. Counter-Terrorists will go for hostages or defuse the bomb, 
+      Terrorists will plant the bomb. VIP Bots will try to reach the Rescue Points. The goal selection is done dynamically 
+      and will be affected by several factors like Personality, Health, Team-mates near &amp; Items the Bot is carrying. 
+      The Bots will also try to support team-mates and take cover when they think it's needed. 
+		They can use some buttons like for light-switches and for some doors triggered by the button. It's possible usage 
+      of lifts by bots (but it's not recommended - because of the possiblity getting stuck by them in some ways normally 
+      not used by human-players).</span>
+    </li>
+
+	 <li><a name="IV"></a>What Mods are supported?
+	  <span>PODBot MM supports Steam CounterStrike 1.6 and CZERO. Non-Steam CS 1.6 is NOT supported. Podbot mm should also work 
+	  with CS 1.5, but some functions might be unavailable (like i.e. fluctuating ping). CS below 1.5 version wasn't 
+      tested with podbot mm.</span>
+    </li>
+
+	 <li><a name="V"></a>PODBot MM and CounterStrike: Internet vs LAN
+	  <span>You can join a network game over the Internet or on a LAN without the necessity to uninstall the Bot. You cannot 
+      spawn bots when connected to an Internet server unless it is your server that's hosted, but you can spawn bots on a LAN 
+      if you are running the server (Listenserver).</span>
+    </li>
+
+	 <li><a name="VI"></a>Why does PODBot MM need waypoints?
+	  <span>Is there a Bot who is doing great without any kind of navigational help like waypoints, wayzones or pre-defined areas?
+ 		It's almost sure you won't find any. The reason for this again is simple. It would just take too much CPU Power to realtime
+      calculate all Geometry inside a map (and it will make too much lags). Imagine a Bot either shooting some dozens of TraceLines 
+      (like sonar by submarine) through the part of the map he's seeing or sorting all entity coordinates he encounters. 
+      Doesn't matter what he actually does, it was just way too slow for the state of CPU technology, when PODBot was created by CF. 
+      You would end up with a Bot which is either pretty good/humanlike at movement but stupid as hell, vice versa or both. <br>
+		Don't think somebody tells this to discourage Bot authors attempting this. Just try!</span>
+    </li>
+
+	 <li><a name="VII"></a> What types of map are supported?
+	  <span># Escape(Es), Knife Arena(Ka), Death Match(Dm), Fantasy(Fy), Grenade War(He), Prepared Assault (Pa), Assasination\Vip (As),
+		Sniper Wars(Awp), Hostage Rescue(Cs), Bomb Defuse\Plant(De), Hostage Rescue\BombPlant\Defuse (CsDe)</span>
+    </li>
+
+	 <li><a name="VIII"></a>  What are requirements to play with PODBot mm?
+	  <span>The Bot currently works with Counter-Strike 1.5 (with some small limitations described above), Steam 1.6 and CZERO (with both 
+	    Retail and Mod versions)<br>
+		If you're not using the CounterStrike Retail Version, Half-Life version  1.1.0.0 or higher is required to use this bot. 
+		If you haven't updated yet your Half-Life version to 1.1.0.0 (or higher) you will need to do so before using it.
+		For Counter-Ctrike 1.6 or CZERO You need steam latest version installed correctly.</span>
+    </li>
+
+	 <li><a name="IX"></a>Disclaimer
+	  <span>Software under this agreement is under no kind of warranty. Software under this agreement is provided as is, and isn't guaranteed 
+	   in any way by the Bot author/deveolopers. Use this software at your own risk!</span>
+    </li>
+
+	 <li><a name="X"></a>Copyrights
+	  <span>This bot is copyright Markus "Count Floyd" Klinge and no one else. He stopped working on it and released his source to the public 
+		so don't annoy him with help requests. Post your requests in the Bots United forums instead or use one of the other POD-bot clones
+		featured at Bots United ( IvPBot,  E[POD]Bot, YaPB...).<br>
+		Podbot mm forum is <a href="http://forums.bots-united.com/forumdisplay.php?s=&daysprune=&f=47">here.</a><br>
+		All bots forums You can find <a href="http://forums.bots-united.com">here.</a></span>
+    </li>
+<!-- ###END: MainContent### -->
+      </ul>
+     </td>
+    </tr>
+   </table>
+  </td>
+ </tr>
+<!-- ###END: MainContent Table### -->
+</table>
+<!-- ###END: Body### -->
+</body>
+</html>
