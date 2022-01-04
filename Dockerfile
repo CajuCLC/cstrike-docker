@@ -19,7 +19,7 @@ WORKDIR ${CSTRIKE}
 ADD files/steam_appid.txt steam_appid.txt
 
 # Add maps
-ADD maps/* cstrike/
+ADD maps/ cstrike/
 ADD files/mapcycle.txt cstrike/mapcycle.txt
 
 # Add default config
