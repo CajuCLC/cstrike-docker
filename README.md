@@ -48,6 +48,38 @@ I wrote an article how to run this image on TrueNAS Scale. You can find the arti
 SteamCMD is responsible to install Counter-Strike and/or other games.
 There is a current bug that prevents the installation of Counter-Strike 1.6 in a single command. You can read more [here](https://developer.valvesoftware.com/wiki/SteamCMD#Downloading_an_app).
 
+# Podbot Menu
+If you want to be able to use the Podbot admin menu, you need to configure your Counter-Strike client (the one you play the game) with password. First make sure you add the file `podbot/podbot.cfg` as a mount to your container. This is the folder in the container:
+```
+/home/steam/cstrike/cstrike/addons/podbot/podbot.cfg
+```
+Search for `pb_passwordkey`, that's the name we will need. In my case: `pb_passwordkey "_pbadminpw"`.\
+Now I need the password, it's the next configuration. Here is mine: `pb_password "your_password"` (make sure you change your password).\
+We have to configure the password on the client (game) now. Open `cstrike` folder inside Steam installation. In my case I use a separate disk for all my games and this is where Counter-Strike is installed:
+```
+E:\Games\Steam\steamapps\common\Half-Life\cstrike
+```
+
+I manually created a file called `autoexec.cfg`. If you already this file, you just need to edit. Add the line:
+```
+setinfo _pbadminpw "your_password"
+```
+Again, make sure you use some safe password. Now open the game and create a bind:
+```
+bind "=" "pb menu"
+```
+This way every time you press `=` it will open the Podbot menu and you can add, remove, kill bots and much more.
+# AMX Mod Menu
+If you need to have access to AMX Mod Menu. Then mount file `users.ini` to this location:
+```
+/home/steam/cstrike/cstrike/addons/amxmodx/configs/users.ini
+```
+Here is an example of the file: https://github.com/alliedmodders/amxmodx/blob/master/configs/users.ini
+You need to add your `user/IP/steam_id` to the list. Then inside the `autoexec.cfg` file we just created/edited you can add:
+```
+setinfo _pw "mypassword"
+```
+We get the `_pw` configuration from `amx_password_field "_pw"`, which comes from this file: https://github.com/alliedmodders/amxmodx/blob/master/configs/amxx.cfg#L14
 ### Steam Application IDs
 You can find the list of IDs [here](https://developer.valvesoftware.com/wiki/Steam_Application_IDs).
 * 10 - Counter-Strike
