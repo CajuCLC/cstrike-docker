@@ -1,0 +1,17 @@
+version: '3'
+services:
+  cstrike:
+    container_name: cstrike-server
+    image: cajuclc/cstrike-docker:latest
+    restart: always
+    environment:
+      - PORT=27015
+      - MAP=de_dust2
+      - MAXPLAYERS=16
+      - SV_LAN=0
+    ports:
+      - 27015:27015/udp
+      - 27015:27015
+    volumes:
+      - /path/to/your/server.cfg:/home/steam/cstrike/cstrike/server.cfg
+      - /path/to/your/mapcycle.txt:/home/steam/cstrike/cstrike/mapcycle.txt
