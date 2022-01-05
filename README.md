@@ -90,7 +90,7 @@ You can find the list of IDs [here](https://developer.valvesoftware.com/wiki/Ste
 The code to install the mods and bots were utilized from other repositories. Please give them some love and support.
 * [counter-strike-docker](https://github.com/jimtouz/counter-strike-docker), created by [Dimitris Touzloudis](https://github.com/jimtouz).
 * [cs16-server](https://github.com/b4k3r/cs16-server), created by [Marcin Prokop](https://github.com/b4k3r).
-* [counter-strike_server](https://github.com/b4k3r/counter-strike_server), created by [febLey](https://github.com/febLey).
+* [counter-strike_server](https://github.com/febLey/counter-strike_server), created by [febLey](https://github.com/febLey).
 
 # WHY?
 My friends and I decided to have a LAN Party (remember those?) at my house and we will be playing some classic games.\
