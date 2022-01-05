@@ -5,8 +5,9 @@ This image is based on [SteamCMD Docker](https://developer.valvesoftware.com/wik
 
 ### What is Metamod?
 * Metamod is a plugin/DLL manager that sits between the Half-Life Engine and an HL Game mod, allowing the dynamic loading/unloading of mod-like DLL plugins to add functionality to the HL server or game mod.
+
 ### What is AMX Mod?
-*AMX Mod X is a Metamod plugin for Half-Life 1. It provides comprehensive scripting for the game engine and its mods. Scripts can intercept network messages, log events, commands, client commands, set cvars, modify entities, and more.
+* AMX Mod X is a Metamod plugin for Half-Life 1. It provides comprehensive scripting for the game engine and its mods. Scripts can intercept network messages, log events, commands, client commands, set cvars, modify entities, and more.
 
 ### WHat is DProto?
 * It allows your server to accept non-Steam clients (clients with a cracked CS), if you don't have dproto installed on your server you can't enter on it without a legit Steam client/account. Dproto makes that possible!
