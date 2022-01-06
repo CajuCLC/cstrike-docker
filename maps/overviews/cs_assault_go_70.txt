@@ -1,0 +1,12 @@
+global  
+{ 
+	ZOOM 	1.66
+	ORIGIN 	192 	-96 	-883
+	ROTATED 0
+} 
+ 
+layer  
+{ 
+	IMAGE 	"overviews/cs_assault_go_70.bmp"
+	HEIGHT 	-883
+} 
