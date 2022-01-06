@@ -1,0 +1,18 @@
+Assault Go - Hostage Rescue
+Edit & Remake by dimaspaf14 (dimaspaf14@outlook.com)
+Original by CryptR (lmuur@dlc.fi)
+CSGO Version by Valve
+CSS Version by Turtle Rock Studio
+
+Counter-Terrorists: Rescue the hostages. 
+Kill all Terrorists without jeopardizing 
+the hostages. The Terrorists may be watching
+you with their cameras.
+
+Terrorists: Prevent Counter-Terrorist
+force from rescuing the hostages, or 
+Kill all the Counter-Terrorist. Use
+whatever force needed.
+
+Other Notes: There are 4 hostages in 
+the mission. Rescue them!

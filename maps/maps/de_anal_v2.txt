@@ -1,0 +1,32 @@
+Just an ordinary gas station (Bomb/Defuse) - Version 2.0
+by Cmdr
+Textures by Cmdr, DeadManiac, TDK
+
+Special thanks to BZ community - www.betreuteszocken.de
+
+A nice, little gas station in a german city. 
+Two teams, Terrorists and Counter-Terrorists, are spawning here
+and... Let's see what they have to do...
+
+Terrorists:
+One of our team has found a bomb in his inventory.
+Look, there is a gasstation! Let's make a huge fireball and have fun!
+
+Counter-Terrorists:
+Well, this is a DE-map. So we guess the terrorists will plant a bomb somewhere.
+Try to find this bomb and defuse it, before all this will gonna blow.
+
+Other notes:
+What have you suspected by the map name?
+This is just an ordinary gas station!
+
+Changes in 2.0:
+-Blocked roof access
+-Added street lights
+-Improved emergency lights of police car
+-Improved lamp of restroom
+-Decreased strenght of front windows
+-Added grill sound
+-Decreased bomb radius
+-Varous minor bugfixes
+

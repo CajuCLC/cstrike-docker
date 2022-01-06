@@ -1,0 +1,12 @@
+global
+{
+	ZOOM	1.78
+	ORIGIN	352	1360	-1
+	ROTATED	1
+}
+
+layer
+{
+	IMAGE "overviews/cs_whitexmas.bmp"
+	HEIGHT	-1
+}
